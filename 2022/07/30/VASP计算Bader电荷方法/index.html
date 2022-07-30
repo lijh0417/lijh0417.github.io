@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="得意喵~"><title>VASP计算Bader电荷方法 · 得意喵~</title><meta name="description" content="什么是Bader电荷？一个分子中，电荷在分子所占据的空间中并不是均匀分布的。在每两个原子之间，电荷密度分布不均匀同时越是靠近原子，电荷密度会显著提高。因此，两个较大的数值之间存在一个极小值，这个极小值就是把原子分开的界限。一个原子周围的极小值点会形成一个封闭的区域这个区域可以用来划分分子中的原子，这"><meta name="keywords" content="None"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="shortcut icon" type="image/x-icon" href="/images/miao.webp"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/insight.css"><link rel="stylesheet" href="/css/search.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 6.2.0"></head><body><div class="page-top animated fadeInDown"><div class="nav"><li> <a href="/">首页</a></li><li> <a href="/archives">归档</a></li><li> <a href="/tags">标签</a></li><li> <a href="/about">关于</a></li><li> <a href="/links">友链</a></li></div><div class="information"><div class="nav_right_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li><li><a class="fa fa-search" onclick="openWindow();"></a></li></div><div class="avatar"><img src="/images/miao.webp"></div></div></div><div class="sidebar animated fadeInDown"><div class="sidebar-top"><div class="logo-title"><div class="title"><img src="/images/yanhui.webp" style="width:200px;" alt="favicon"><h3 title=""><a href="/">得意喵~</a></h3><div class="description"><p>风起沙丘散，日落万物休</p></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/lijh0417"><i class="fa fa-github"></i></a></li><li><a href="mailto:lijh0417@mail.ustc.edu.cn"><i class="fa fa-envelope"></i></a></li><li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/glenn-gould-92"><i class="fa fa-mortar-board"></i></a></li></ul></div></div><div class="footer"><div class="p"> <span> 得意喵喵的小窝~ </span><i class="fa fa-star"></i><span> 得意喵~</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><span>Anatolo </span></div><div class="beian"></div></div></div><div class="main"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>VASP计算Bader电荷方法</a></h3></div><div class="post-content"><p><h2 id="什么是Bader电荷？"><a href="#什么是Bader电荷？" class="headerlink" title="什么是Bader电荷？"></a>什么是Bader电荷？</h2><p>一个分子中，电荷在分子所占据的空间中并不是均匀分布的。在每两个原子之间，电荷密度分布不均匀同时越是靠近原子，电荷密度会显著提高。因此，两个较大的数值之间存在一个极小值，这个极小值就是把原子分开的界限。一个原子周围的极小值点会形成一个封闭的区域这个区域可以用来划分分子中的原子，这个区域中的电荷综合就是Bader电荷。（VASP中使用赝势，因此所计算的电荷总和是当前化学环境中的所有“价层”电子总和）</p>
+<span id="more"></span>
+<h2 id="Bader电荷计算"><a href="#Bader电荷计算" class="headerlink" title="Bader电荷计算"></a>Bader电荷计算</h2><p>​		<a target="_blank" rel="noopener" href="http://theory.cm.utexas.edu/henkelman/code/bader/">Bader</a>是用于计算Bader的软件，读入文件有两种：</p>
+<p>1 VASP CHGCAR文件；</p>
+<p>2 Gaussian CUBE文件 软件会自己识别文件格式，不需要手动指定。</p>
+<p>用法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bader filename</span><br></pre></td></tr></table></figure>
+
+<p>选项如下表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-c bader | voronoi</td>
+<td align="center">开启bader计算&#x2F;Voronoi多面体计算</td>
+</tr>
+<tr>
+<td align="center">-n bader | voronoi</td>
+<td align="center">关闭bader计算&#x2F;Voronoi多面体计算</td>
+</tr>
+<tr>
+<td align="center">-b neargrid | ongrid | weight</td>
+<td align="center">三种Bader网格划分算法</td>
+</tr>
+<tr>
+<td align="center">-r refine_edge_method</td>
+<td align="center">默认-1一般使用-1（新算法 高效；旧算法为-2）</td>
+</tr>
+<tr>
+<td align="center"><strong>-ref reference_charge</strong></td>
+<td align="center">参考电荷（推荐-ref file(AECCAR0+AECCAR2)）</td>
+</tr>
+<tr>
+<td align="center">-vac off | auto | vacuum_density</td>
+<td align="center">默认指定低密度点给真空层（1e-3&#x2F;A^3判断标准）</td>
+</tr>
+<tr>
+<td align="center">-p all_atom | all_bader</td>
+<td align="center">输出选项</td>
+</tr>
+<tr>
+<td align="center">-p sel_atom | sel_bader</td>
+<td align="center">输出选项（选择）</td>
+</tr>
+<tr>
+<td align="center">-p sum_atom | sum_bader</td>
+<td align="center">输出选项（求和）</td>
+</tr>
+<tr>
+<td align="center">-p atom_index | bader_index</td>
+<td align="center">输出选项（指标）</td>
+</tr>
+<tr>
+<td align="center">-i cube | chgcar</td>
+<td align="center">默认会自己判断，一般不设置！</td>
+</tr>
+<tr>
+<td align="center">-cp</td>
+<td align="center">选择关键点</td>
+</tr>
+<tr>
+<td align="center">-h</td>
+<td align="center">帮助</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">冗余输出</td>
+</tr>
+</tbody></table>
+<p>输出文件：</p>
+<table>
+<thead>
+<tr>
+<th align="center">文件名</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ACF.dat</td>
+<td align="center">坐标 电荷 到表面（内层）的最小距离 体积</td>
+</tr>
+<tr>
+<td align="center">BCF.dat</td>
+<td align="center">坐标 电荷 最近的原子 离最近原子的距离</td>
+</tr>
+<tr>
+<td align="center">AVF.dat</td>
+<td align="center">体积</td>
+</tr>
+</tbody></table>
+<p><strong>粗莽做法：</strong></p>
+<p>不考虑内层电子，采用赝势的内层电子数（一般来说内层电子变化不大）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bader CHGCAR</span><br></pre></td></tr></table></figure>
+
+<p><strong>官方建议做法：</strong></p>
+<p>考虑内层电子，考虑全电子状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LAECHG =.TRUE.</span><br><span class="line">LCHARG = .TRUE.</span><br><span class="line">NSW    = 0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chgsum.pl AECCAR0 AECCAR2</span><br><span class="line">BADER CHGCAR -REF CHGCAR_SUM</span><br></pre></td></tr></table></figure>
+
+</p><div class="tip">本文采用CC-BY-SA-3.0协议，转载请注明出处<br>作者: 得意喵~</div></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2022-07-30</span><i class="fa fa-tag"></i><a class="tag" href="/tags/DFT/" title="DFT">DFT </a><a class="tag" href="/tags/VASP/" title="VASP">VASP </a><span class="leancloud_visitors"></span><span>大约582个字, 1分钟56秒读完</span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://lijh0417.github.io/2022/07/30/VASP计算Bader电荷方法/,得意喵~,VASP计算Bader电荷方法,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2022/07/22/%E7%BD%91%E4%B8%8A%E5%85%AC%E4%BC%97%E5%8F%B7%E6%89%80%E6%9C%89%E7%9A%84LAMMPS%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" title="网上公众号所有的LAMMPS学习资源">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'44Vpc17Ogf23PMQhp9kTcrRe-gzGzoHsz',
+  app_key:'pMnSSiKIkbEpN3xSclRHwvTS',
+  placeholder:'hello, world',
+  path: window.location.pathname,
+  serverURLs: '',
+  visitor:true,
+  recordIP:true,
+  avatar:'mm'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script>(function(window){var INSIGHT_CONFIG={TRANSLATION:{POSTS:"文章",PAGES:"页面",CATEGORIES:"分类",TAGS:"标签",UNTITLED:"(无标题)",},CONTENT_URL:"/content.json",};window.INSIGHT_CONFIG=INSIGHT_CONFIG})(window);</script><script src="/js/insight.js" defer></script><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close"><a class="fa fa-times-circle" onclick="closeWindow();"></a></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"><p>Seraching...</p></div></div></div></div></body></html>
