@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Multiscale mechanmics & Geometric Elasticity"
+title: "Multiscale nonlinear mechanics"
 author_profile: true
 redirect_from: 
   - /about/
