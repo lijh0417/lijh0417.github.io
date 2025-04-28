@@ -16,33 +16,33 @@ $$
 \end{array} \right) 
 $$
 
-Due to the orthogonality, $\boldsymbol{d}$ meets $\boldsymbol{d}\cdot\boldsymbol{d}^t=\boldsymbol{I}$, it comes:
+Due to the orthogonality, $ \boldsymbol{d} $ meets $\boldsymbol{d}\cdot\boldsymbol{d}^t=\boldsymbol{I}$, it comes:
 
 $$
 \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}^t+\varepsilon ^2\boldsymbol{B}^t \right) =\boldsymbol{I}+\varepsilon \left( \boldsymbol{A}+\boldsymbol{A}^t \right) +\varepsilon ^2\left( \boldsymbol{B}+\boldsymbol{B}^t+\boldsymbol{AA}^t \right) 
 $$
 
-So \(\boldsymbol{A}\) is a antisymmetric matrix, \(
+So $\boldsymbol{A}$ is a antisymmetric matrix, $
 \boldsymbol{A}=\left( \begin{matrix}
 	0&		\alpha _3&		-\alpha _2\\
 	-\alpha _3&		0&		\alpha _1\\
 	\alpha _2&		-\alpha _1&		0\\
 \end{matrix} \right) 
-\), and \(\boldsymbol{B}=\boldsymbol{C}-1/2\boldsymbol{A}\boldsymbol{A}^t\), where \(\boldsymbol{C}\) is also a antisymmetric matrix.
+$, and $\boldsymbol{B}=\boldsymbol{C}-1/2\boldsymbol{A}\boldsymbol{A}^t$, where $\boldsymbol{C}$ is also a antisymmetric matrix.
 
-The movements of frame in time \(t\) and arc-length \(s\) are descirbed by the second-order antisymmetric tensor \(\boldsymbol{K}\) and \(\boldsymbol{W}\) respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
+The movements of frame in time $t$ and arc-length $s$ are descirbed by the second-order antisymmetric tensor $\boldsymbol{K}$ and $\boldsymbol{W}$ respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
 
 $$
 \dot{\boldsymbol{d}}=\boldsymbol{Wd}
 $$
 
-Expand \(\boldsymbol{d}\) and \(\boldsymbol{W}\):
+Expand $\boldsymbol{d}$ and $\boldsymbol{W}$:
 
 $$
 \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \boldsymbol{W}^{(0)}\boldsymbol{d}+\left( \varepsilon \dot{\boldsymbol{A}}+\varepsilon ^2\dot{\boldsymbol{B}} \right) \boldsymbol{d}=\left( \boldsymbol{W}^{(0)}+\boldsymbol{W}^{(1)}\varepsilon +\boldsymbol{W}^{(2)}\varepsilon ^2 \right) \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \boldsymbol{d}
 $$
 
-By comparing the coefficients of both sides, the perturbation components of \(\boldsymbol{W}\) can be written as:
+By comparing the coefficients of both sides, the perturbation components of $\boldsymbol{W}$ can be written as:
 
 $$
 \boldsymbol{W}^{(1)}=\frac{\partial \boldsymbol{A}}{\partial t}+\boldsymbol{AW}^{(0)}-\boldsymbol{W}^{(0)}\boldsymbol{A}
@@ -52,7 +52,7 @@ $$
 \boldsymbol{W}^{(2)}=\frac{\partial \boldsymbol{B}}{\partial t}+\boldsymbol{BW}^{(0)}-\boldsymbol{W}^{(0)}\boldsymbol{B}-\boldsymbol{AW}^{(1)}
 $$
 
-Similarly, the perturbation components of \(\boldsymbol{K}\) read:
+Similarly, the perturbation components of $\boldsymbol{K}$ read:
 
 $$
 \boldsymbol{K}^{(1)}=\frac{\partial \boldsymbol{A}}{\partial s}+\boldsymbol{AK}^{(0)}-\boldsymbol{K}^{(0)}\boldsymbol{A}
@@ -74,7 +74,7 @@ $$
 \end{cases}
 $$
 
-We expand both \(\boldsymbol{F}\) and \(\boldsymbol{M}\) in material frame:
+We expand both $\boldsymbol{F}$ and $\boldsymbol{M}$ in material frame:
 
 $$
 \begin{cases}
@@ -110,7 +110,7 @@ $$
 \end{cases}
 $$
 
-Note that \(\left( \boldsymbol{d} \right) _s=\boldsymbol{Kd}, \dot{\boldsymbol{d}}=\boldsymbol{Wd}\), the control equation can be simplified as:
+Note that $\left( \boldsymbol{d} \right) _s=\boldsymbol{Kd}, \dot{\boldsymbol{d}}=\boldsymbol{Wd}$, the control equation can be simplified as:
 
 $$
 \begin{cases}
@@ -128,7 +128,7 @@ $$
 \end{cases}  
 $$
 
-By expanding the Kirchhoff equation into first order we can derive the second-derivation of \(\{f_1, f_2, f_3, \alpha_1, \alpha_2, \alpha_3\}\), which can be used to judge the buckling modes.
+By expanding the Kirchhoff equation into first order we can derive the second-derivation of $\{f_1, f_2, f_3, \alpha_1, \alpha_2, \alpha_3\}$, which can be used to judge the buckling modes.
 
 
 
@@ -149,7 +149,7 @@ $$
 \end{cases}
 $$
 
-The geometry of static solution is a ring (must be isotropic cross section) with twist \(\tau\) and the material strain can be written as: \(\kappa_3=\tau_0, \bar{\kappa}_3=\bar{\kappa}_1=\bar{\kappa}_2=0,\alpha=\beta\).
+The geometry of static solution is a ring (must be isotropic cross section) with twist $\tau$ and the material strain can be written as: $\kappa_3=\tau_0, \bar{\kappa}_3=\bar{\kappa}_1=\bar{\kappa}_2=0,\alpha=\beta$.
 
 Finally, it reads:
 
