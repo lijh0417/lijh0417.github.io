@@ -16,7 +16,7 @@ $$
 \end{array} \right) 
 $$
 
-Due to the orthogonality, $\boldsymbol{d}\) meets \(\boldsymbol{d}\cdot\boldsymbol{d}^t=\boldsymbol{I}$, it comes:
+Due to the orthogonality, $\boldsymbol{d}$ meets $\boldsymbol{d}\cdot\boldsymbol{d}^t=\boldsymbol{I}$, it comes:
 
 $$
 \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}^t+\varepsilon ^2\boldsymbol{B}^t \right) =\boldsymbol{I}+\varepsilon \left( \boldsymbol{A}+\boldsymbol{A}^t \right) +\varepsilon ^2\left( \boldsymbol{B}+\boldsymbol{B}^t+\boldsymbol{AA}^t \right) 
