@@ -204,11 +204,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  math_engine: mathjax       # 指定数学引擎
-  math_engine_opts: {}       # 可选额外配置
-  syntax_highlighter: rouge  # 避免与代码块冲突
-  hard_wrap: false           # 禁用自动换行干扰公式
-  input: GFM                 # 兼容 GitHub Flavored Markdown
+  math_engine: null
 
 
 
