@@ -2,7 +2,8 @@
 title: "Non-Euclidean Euler Buckling"
 date: 2025-11-26
 ---
-# Non-Euclidean Euler Buckling
+This notes presents a basic theory for curved surface constrained kirchhoff rods theory.
+<!-- more -->
 
 In the classical Euler buckling, a beam lies on a plane. However, when a rod lies on a curved surfaced, what will happen? Exactly, what is the effect of gaussian curvature on the buckling critical loading.
 
@@ -111,7 +112,11 @@ $$
 \begin{aligned} \mathbf{\bar{F}}_s+\mathbf{\bar{F}}\mathbf{\Gamma}+\mathbf{\bar{f}}&=0 \\ \mathbf{\bar{M}}_s+\mathbf{\bar{M}}\mathbf{\Gamma}+\mathbf{\bar{F}}\mathbf{\Lambda}+\mathbf{\bar{m}}&=0\end{aligned}
 $$
 
-where $\mathbf{\Lambda}=\begin{pmatrix} 0 & 1 &0 \\ -1 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$ is the cross time matrix. The variable $(\cdot)$ with $\bar{(\cdot)}$ is the components form in $\mathbf{e}$, for example $\mathbf{\bar{F}}=\{F_1,F_2,F_3\} \left( \begin{array}{c} \mathbf{e}_1 \\ \mathbf{e}_2 \\ \mathbf{e}_3\end{array}\right)$.
+$$
+\mathbf{\Lambda} =\begin{pmatrix} 0 & 1 &0 \\ -1 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}
+$$
+
+where $\mathbf{\Lambda}$ is the cross time matrix. The variable $(\cdot)$ with $\bar{(\cdot)}$ is the components form in $\mathbf{e}$, for example $\mathbf{\bar{F}}=\{F_1,F_2,F_3\} \left( \begin{array}{c} \mathbf{e}_1 \\ \mathbf{e}_2 \\ \mathbf{e}_3\end{array}\right)$.
 
 ## Constitutive law
 

@@ -2,7 +2,8 @@
 title: "The Geometry in Shell Theory"
 date: 2025-05-30
 ---
-# The General Theory of Elastic Shell
+This note presents the geometry of elastic shells based on [P. Ciarlet's work](https://link.springer.com/article/10.1007/s10659-005-4738-8).
+<!-- more -->
 
 We aim to derive the general theory for elastic shells using differential geometry. The primary challenge lies in the complex geometry arising from the shell's natural curvature, which complicates the relationship between strain and displacement, especially under large rotations. This note develops a mathematical framework to systematically compute this relationship.
 
@@ -66,7 +67,7 @@ $$
 \delta U_e=\int_\mathcal{S} \left[A^{\alpha\beta}\mathbf{a}_\alpha\cdot\delta\partial_\beta\mathbf{r}+B^{\alpha\beta}\mathbf{n}\cdot\delta\partial_{\alpha\beta}\mathbf{r}-B^{\alpha\beta}\Gamma_{\alpha\beta}^{\gamma}\mathbf{n}\cdot\delta\partial_\gamma\mathbf{r}\right] dx_1dx_2
 $$
 
-where $A^{\alpha\beta}=n^{\alpha\beta}\sqrt{|a|}$ and $B^{\alpha\beta}=m^{\alpha\beta}\sqrt{|a|}$ represent the stress resultants and moment resultants, respectively.
+where $A^{\alpha\beta}=n^{\alpha\beta}\sqrt{\|a\|}$ and $B^{\alpha\beta}=m^{\alpha\beta}\sqrt{\|a\|}$ represent the stress resultants and moment resultants, respectively.
 
 **Applying integration by parts** to the energy variation expression gives the complete form with both domain and boundary terms:
 

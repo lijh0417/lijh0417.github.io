@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Multiscale nonlinear mechanics"
+title: "Multiscale Nonlinear Mechanics"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,10 +8,5 @@ redirect_from:
 ---
 
 ## Research Overview
-I am interested in multiscale mechanics spanning from nanoscale phenomena to nonlinear behaviors of flexible structures. In my research, atomic-scale deformation mechanisms are investigated through computational tools including First-Principles Calculations and Molecular Dynamics (MD) simulations. My current focus extends to modeling nonlinear phenomena in flexible structures (rods, ribbons, shells) undergoing finite deformations, with emphasis on buckling instabilities, bifurcation patterns, and post-critical behaviors. These mechanical models ultimately serve the goal of inverse material design, targeting functional systems such as architectured materials, shape-morphing materials, and active soft robotics.
+Welcome! My name is JiaHao Li, and I am currently a Ph.D. student in the Department of Modern Mechanics at the University of Science and Technology of China. I received my B.Eng. degree from Xi'an Jiaotong University from September 2018 to July 2022. My research interests lie in multiscale mechanics, spanning from nanoscale phenomena to the nonlinear behavior of flexible structures. I study atomic scale deformation mechanisms using computational approaches such as density functional theory (DFT) and molecular dynamics (MD) simulations. My current work focuses on modeling nonlinear responses in flexible structures, including rods, ribbons, and shells, under finite deformations.
 
-## About
-Mr. Jiahao Li is currently a PHD student at University of Science and Technology of China, CN. He received his B. Eng. degree from Xi'an Jiaotong University, China (2018.09 - 2022.07).
-
-## Contact
-lijh0417@mail.ustc.edu.cn

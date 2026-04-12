@@ -2,7 +2,9 @@
 title: "The Instability of Kirchhoff Rod"
 date: 2025-04-04
 ---
-The note of frame perturbation method applied in analyzing the instability of Kirchhoff Rod.
+This note presents the basic theory of frame perturbation method applied in analyzing the instability of Kirchhoff Rod.
+<!-- more -->
+
 ## The basic equation
 In this section, we review the basic equation of Kirchhoff rod and derive the basic perturbation format of local frame based on the orthogonality laying the foudation for the instability analysis in next section.
 
@@ -22,15 +24,15 @@ $$
 \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}^t+\varepsilon ^2\boldsymbol{B}^t \right) =\boldsymbol{I}+\varepsilon \left( \boldsymbol{A}+\boldsymbol{A}^t \right) +\varepsilon ^2\left( \boldsymbol{B}+\boldsymbol{B}^t+\boldsymbol{AA}^t \right) 
 $$
 
-So $\boldsymbol{A}$ is a antisymmetric matrix, $
+$$
 \boldsymbol{A}=\left( \begin{matrix}
 	0&		\alpha _3&		-\alpha _2\\
 	-\alpha _3&		0&		\alpha _1\\
 	\alpha _2&		-\alpha _1&		0\\
 \end{matrix} \right) 
-$, and $\boldsymbol{B}=\boldsymbol{C}-1/2\boldsymbol{A}\boldsymbol{A}^t$, where $\boldsymbol{C}$ is also a antisymmetric matrix.
+$$
 
-The movements of frame in time $t$ and arc-length $s$ are descirbed by the second-order antisymmetric tensor $\boldsymbol{K}$ and $\boldsymbol{W}$ respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
+So $\boldsymbol{A}$ is a antisymmetric matrix, and $\boldsymbol{B}=\boldsymbol{C}-1/2\boldsymbol{A}\boldsymbol{A}^t$, where $\boldsymbol{C}$ is also a antisymmetric matrix. The movements of frame in time $t$ and arc-length $s$ are descirbed by the second-order antisymmetric tensor $\boldsymbol{K}$ and $\boldsymbol{W}$ respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
 
 $$
 \dot{\boldsymbol{d}}=\boldsymbol{Wd}

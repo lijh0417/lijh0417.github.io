@@ -2,6 +2,9 @@
 title: "Multiscale model of non-Euclide plate"
 date: 2025-04-28
 ---
+This note presents a basic theory for non-Euclide plate model.
+<!-- more -->
+
 As a successful model, non-Euclide plate is widely applied in predicting the morphing behavior of bilayer structure. However, although anisotropic swelling can be well describe by this model, the mechanics properties, specifically speaking the Young's modulus, are isotropic in this model. In reality, it is nearly impossible to find materials with such characteristics. In general, the swelling direction constrained by the alligned fibril is the micromechanism of the anisotropic swelling, which inevitably leads to the anisotropy of Young's modulus. Understanding the coupling effect of ansiotrpic Young's modulus and anisotropic swelling is still far from being investigated. In this note, we build the multiscale non-Euclide plate model from fibril-matrix mesomechanics constitutive. The effect of anisotropic mechanics properties is evaluated by taking the helicoid-to-helix ribbon transformation as an example.
 
  
