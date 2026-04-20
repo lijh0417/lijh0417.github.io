@@ -86,7 +86,7 @@ $$
 \end{aligned}
 $$
 
-where $(\cdot)_{ss}=\partial_s\partial_s(\cdot)$ and $\Gamma_{\alpha\beta}^{\gamma}=\frac{1}{2}g^{\gamma\theta}(\frac{\partial g_{\theta \alpha}}{\partial x^\beta}+\frac{\partial g_{\theta \beta}}{\partial x^\alpha}-\frac{\partial g_{\alpha\beta}}{\partial x^{\theta}})$ is the Christoffel symbol.
+where $(\cdot{}){ss}=\partial^2(\cdot)/\partial_s^2$ and $\Gamma_{\alpha \beta}^{\gamma}=\frac{1}{2}g^{\gamma \theta}(\frac{\partial g_{\theta \alpha}}{\partial x^{\beta}}+\frac{\partial g_{\theta \beta}}{\partial x^{\alpha}}-\frac{\partial g_{\alpha\beta}}{\partial x^{\theta}})$ is the Christoffel symbol.
 
 $$
 \kappa_{n}(s) = \frac{L u_s^{2} + 2M u_s v_s + N v_s^{2}}{E u_s^{2} + 2F u_s v_s + G v_s^{2}},
@@ -215,7 +215,7 @@ M_1=\mathrm{EI}_1(\omega _1-\bar{\omega}_1)
 \\
 M_2=\mathrm{EI}_2(\omega _2-\bar{\omega}_2)
 \\
-M_3=\mathrm{GJ(}\omega _3-\bar{\omega}_3)
+M_3=\mathrm{GJ}(\omega _3-\bar{\omega}_3)
 \\
 \kappa _g(s)=\sqrt{EG-F^2}\times \left[ \Gamma _{11}^{2}u_{s}^{3}-\Gamma _{22}^{1}v_{s}^{3}+\left( 2\Gamma _{12}^{2}-\Gamma _{11}^{1} \right) u_{s}^{2}v_s-\left( 2\Gamma _{12}^{1}-\Gamma _{22}^{2} \right) u_sv_{s}^{2}+u_sv_{ss}-u_{ss}v_s \right] 
 \\
