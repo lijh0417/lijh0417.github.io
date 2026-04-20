@@ -1,8 +1,11 @@
 ---
 title: "General Biomimetic Turing Machine"
 date: 2025-11-24
+tags:
+  - Ribbon
+  - Inverse design
 ---
-This note presents the general theory based on [Biomimetic Turing Machine](../files/A_00-Biomimetic%20Turing%20machine%20A%20multiscale%20theoretical%20framework%20for%20the%20inverse%20design%20of%20target%20space%20curves.pdf).
+This note presents the general theory based on [Biomimetic Turing Machine](../files/A_00-Biomimetic Turing machine A multiscale theoretical framework for the inverse design of target space curves.pdf).
 <!-- more -->
 
 ![](/assets/images/BTM.png)
