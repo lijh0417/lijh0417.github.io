@@ -5,6 +5,8 @@ date: 2025-11-24
 This note presents the general theory based on [Biomimetic Turing Machine](../files/A_00-Biomimetic%20Turing%20machine%20A%20multiscale%20theoretical%20framework%20for%20the%20inverse%20design%20of%20target%20space%20curves.pdf).
 <!-- more -->
 
+![](/assets/images/BTM.png)
+
 We consier a morphing slender kirgami ribbon for conformable deformation. The movement equation of the principal curvatrue frame can be written as:
 
 $$
@@ -79,4 +81,5 @@ $$
 \end{cases}
 $$
 
-![](assets/20251124_041852_image.png)
+
+

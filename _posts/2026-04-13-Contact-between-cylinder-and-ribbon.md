@@ -8,9 +8,9 @@ This note presents the contact between a cylinder and a ribbon.
 
 We consider the contact problem of between a cantilever beam and a rigid cylinder, as shown in Fig.1 (b):
 
-![Contact model](assets/f1.png)
+![Contact model](/assets/images/f1.png)
 
-The beam can be divided into two parts: the contact part (CP, A-B, red) and the non-contact part(NCP, B-C, blue). The geometry of CP is completely determined by the cylinder and the configuraiton of NCP is determined by the force in point B and the gravity.
+The beam can be divided into two parts: the contact part (CP, A-B, red) and the non-contact part (NCP, B-C, blue). The geometry of CP is completely determined by the cylinder and the configuraiton of NCP is determined by the force in point B and the gravity.
 
 We consider a 2D elastica as shown in Fig.1 (a), the vector equation can be written as:
 
