@@ -2,7 +2,7 @@
 title: "Inverse Elastica Toy Model"
 date: 2025-04-28
 tags:
-  - Ribbon
+  - Rod
   - Inverse design
 ---
 

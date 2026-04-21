@@ -1,6 +1,8 @@
 ---
 title: "The Instability of Kirchhoff Rod"
 date: 2025-04-04
+  - Geometric Elasticity
+  - Rod
 ---
 This note presents the basic theory of frame perturbation method applied in analyzing the instability of Kirchhoff Rod.
 <!-- more -->
@@ -11,57 +13,57 @@ In this section, we review the basic equation of Kirchhoff rod and derive the ba
 Consider the local frame can be expanded as:
 
 $$
-\boldsymbol{d}=\left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \left( \begin{array}{c}
-	\boldsymbol{d}_1\\
-	\boldsymbol{d}_2\\
-	\boldsymbol{d}_3\\
+\mathbf{d}=\left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \left( \begin{array}{c}
+	\mathbf{d}_1\\
+	\mathbf{d}_2\\
+	\mathbf{d}_3\\
 \end{array} \right) 
 $$
 
-Due to the orthogonality, $ \boldsymbol{d} $ meets $\boldsymbol{d}\cdot\boldsymbol{d}^t=\boldsymbol{I}$, it comes:
+Due to the orthogonality, $ \mathbf{d} $ meets $\mathbf{d}\cdot\mathbf{d}^t=\mathbf{I}$, it comes:
 
 $$
-\left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}^t+\varepsilon ^2\boldsymbol{B}^t \right) =\boldsymbol{I}+\varepsilon \left( \boldsymbol{A}+\boldsymbol{A}^t \right) +\varepsilon ^2\left( \boldsymbol{B}+\boldsymbol{B}^t+\boldsymbol{AA}^t \right) 
+\left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \left( \mathbf{I}+\varepsilon \mathbf{A}^t+\varepsilon ^2\mathbf{B}^t \right) =\mathbf{I}+\varepsilon \left( \mathbf{A}+\mathbf{A}^t \right) +\varepsilon ^2\left( \mathbf{B}+\mathbf{B}^t+\mathbf{AA}^t \right) 
 $$
 
 $$
-\boldsymbol{A}=\left( \begin{matrix}
+\mathbf{A}=\left( \begin{matrix}
 	0&		\alpha _3&		-\alpha _2\\
 	-\alpha _3&		0&		\alpha _1\\
 	\alpha _2&		-\alpha _1&		0\\
 \end{matrix} \right) 
 $$
 
-So $\boldsymbol{A}$ is a antisymmetric matrix, and $\boldsymbol{B}=\boldsymbol{C}-1/2\boldsymbol{A}\boldsymbol{A}^t$, where $\boldsymbol{C}$ is also a antisymmetric matrix. The movements of frame in time $t$ and arc-length $s$ are descirbed by the second-order antisymmetric tensor $\boldsymbol{K}$ and $\boldsymbol{W}$ respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
+So $\mathbf{A}$ is a antisymmetric matrix, and $\mathbf{B}=\mathbf{C}-1/2\mathbf{A}\mathbf{A}^t$, where $\mathbf{C}$ is also a antisymmetric matrix. The movements of frame in time $t$ and arc-length $s$ are descirbed by the second-order antisymmetric tensor $\mathbf{K}$ and $\mathbf{W}$ respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
 
 $$
-\dot{\boldsymbol{d}}=\boldsymbol{Wd}
+\dot{\mathbf{d}}=\mathbf{Wd}
 $$
 
-Expand $\boldsymbol{d}$ and $\boldsymbol{W}$:
+Expand $\mathbf{d}$ and $\mathbf{W}$:
 
 $$
-\left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \boldsymbol{W}^{(0)}\boldsymbol{d}+\left( \varepsilon \dot{\boldsymbol{A}}+\varepsilon ^2\dot{\boldsymbol{B}} \right) \boldsymbol{d}=\left( \boldsymbol{W}^{(0)}+\boldsymbol{W}^{(1)}\varepsilon +\boldsymbol{W}^{(2)}\varepsilon ^2 \right) \left( \boldsymbol{I}+\varepsilon \boldsymbol{A}+\varepsilon ^2\boldsymbol{B} \right) \boldsymbol{d}
+\left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \mathbf{W}^{(0)}\mathbf{d}+\left( \varepsilon \dot{\mathbf{A}}+\varepsilon ^2\dot{\mathbf{B}} \right) \mathbf{d}=\left( \mathbf{W}^{(0)}+\mathbf{W}^{(1)}\varepsilon +\mathbf{W}^{(2)}\varepsilon ^2 \right) \left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \mathbf{d}
 $$
 
-By comparing the coefficients of both sides, the perturbation components of $\boldsymbol{W}$ can be written as:
+By comparing the coefficients of both sides, the perturbation components of $\mathbf{W}$ can be written as:
 
 $$
-\boldsymbol{W}^{(1)}=\frac{\partial \boldsymbol{A}}{\partial t}+\boldsymbol{AW}^{(0)}-\boldsymbol{W}^{(0)}\boldsymbol{A}
-$$
-
-$$
-\boldsymbol{W}^{(2)}=\frac{\partial \boldsymbol{B}}{\partial t}+\boldsymbol{BW}^{(0)}-\boldsymbol{W}^{(0)}\boldsymbol{B}-\boldsymbol{AW}^{(1)}
-$$
-
-Similarly, the perturbation components of $\boldsymbol{K}$ read:
-
-$$
-\boldsymbol{K}^{(1)}=\frac{\partial \boldsymbol{A}}{\partial s}+\boldsymbol{AK}^{(0)}-\boldsymbol{K}^{(0)}\boldsymbol{A}
+\mathbf{W}^{(1)}=\frac{\partial \mathbf{A}}{\partial t}+\mathbf{AW}^{(0)}-\mathbf{W}^{(0)}\mathbf{A}
 $$
 
 $$
-\boldsymbol{K}^{(2)}=\frac{\partial \boldsymbol{B}}{\partial s}+\boldsymbol{BK}^{(0)}-\boldsymbol{K}^{(0)}\boldsymbol{B}-\boldsymbol{AK}^{(1)}
+\mathbf{W}^{(2)}=\frac{\partial \mathbf{B}}{\partial t}+\mathbf{BW}^{(0)}-\mathbf{W}^{(0)}\mathbf{B}-\mathbf{AW}^{(1)}
+$$
+
+Similarly, the perturbation components of $\mathbf{K}$ read:
+
+$$
+\mathbf{K}^{(1)}=\frac{\partial \mathbf{A}}{\partial s}+\mathbf{AK}^{(0)}-\mathbf{K}^{(0)}\mathbf{A}
+$$
+
+$$
+\mathbf{K}^{(2)}=\frac{\partial \mathbf{B}}{\partial s}+\mathbf{BK}^{(0)}-\mathbf{K}^{(0)}\mathbf{B}-\mathbf{AK}^{(1)}
 $$
 
 Now we consider the perturbation of Kirchhoff equations in next section.
@@ -71,17 +73,17 @@ The control equation of Kirchhoff rod can be written as:
 
 $$
 \begin{cases}
-	\left( \boldsymbol{F} \right) _{ss}=\rho A\ddot{\boldsymbol{d}}_3\\
-	\left( \boldsymbol{M} \right) _s+\boldsymbol{d}_3\times \boldsymbol{F}=\rho \left( I_2\boldsymbol{d}_1\times \ddot{\boldsymbol{d}}_1+I_1\boldsymbol{d}_2\times \ddot{\boldsymbol{d}}_2 \right)\\
+	\left( \mathbf{F} \right) _{ss}=\rho A\ddot{\mathbf{d}}_3\\
+	\left( \mathbf{M} \right) _s+\mathbf{d}_3\times \mathbf{F}=\rho \left( I_2\mathbf{d}_1\times \ddot{\mathbf{d}}_1+I_1\mathbf{d}_2\times \ddot{\mathbf{d}}_2 \right)\\
 \end{cases}
 $$
 
-We expand both $\boldsymbol{F}$ and $\boldsymbol{M}$ in material frame:
+We expand both $\mathbf{F}$ and $\mathbf{M}$ in material frame:
 
 $$
 \begin{cases}
-	\boldsymbol{F}=f\boldsymbol{d}, f=\left( f_1, f_2, f_3 \right)\\
-	\boldsymbol{M}=m\boldsymbol{d}, m=\left( m_1, m_2, m_3 \right) =\left( EI_1\left( \kappa _1-\bar{\kappa}_1 \right) , EI_2\left( \kappa _2-\bar{\kappa}_2 \right) , GJ\left( \kappa _3-\bar{\kappa}_3 \right) \right)\\
+	\mathbf{F}=f\mathbf{d}, f=\left( f_1, f_2, f_3 \right)\\
+	\mathbf{M}=m\mathbf{d}, m=\left( m_1, m_2, m_3 \right) =\left( EI_1\left( \kappa _1-\bar{\kappa}_1 \right) , EI_2\left( \kappa _2-\bar{\kappa}_2 \right) , GJ\left( \kappa _3-\bar{\kappa}_3 \right) \right)\\
 \end{cases}
 $$
 
@@ -92,13 +94,13 @@ The dimensionless form of the equation can be written as:
 
 $$
 \begin{cases}
-	\left( \boldsymbol{F} \right) _{ss}=\ddot{\boldsymbol{d}}_3\\
-	 \left( \boldsymbol{M} \right) _s+\boldsymbol{d}_3\times \boldsymbol{F}=\beta  \boldsymbol{d}_1\times \ddot{\boldsymbol{d}}_1+\alpha  \boldsymbol{d}_2\times \ddot{\boldsymbol{d}}_2\\
+	\left( \mathbf{F} \right) _{ss}=\ddot{\mathbf{d}}_3\\
+	 \left( \mathbf{M} \right) _s+\mathbf{d}_3\times \mathbf{F}=\beta  \mathbf{d}_1\times \ddot{\mathbf{d}}_1+\alpha  \mathbf{d}_2\times \ddot{\mathbf{d}}_2\\
 \end{cases}
 \\
 \begin{cases}
-	\boldsymbol{F}=f\boldsymbol{d},f=\left( f_1,f_2,f_3 \right)\\
-	\boldsymbol{M}=m\boldsymbol{d},m=\left( m_1,m_2,m_3 \right) =\left( \alpha \left( \kappa _1-\bar{\kappa}_1 \right) ,\beta \left( \kappa _2-\bar{\kappa}_2 \right) ,\gamma \left( \kappa _3-\bar{\kappa}_3 \right) \right)\\
+	\mathbf{F}=f\mathbf{d},f=\left( f_1,f_2,f_3 \right)\\
+	\mathbf{M}=m\mathbf{d},m=\left( m_1,m_2,m_3 \right) =\left( \alpha \left( \kappa _1-\bar{\kappa}_1 \right) ,\beta \left( \kappa _2-\bar{\kappa}_2 \right) ,\gamma \left( \kappa _3-\bar{\kappa}_3 \right) \right)\\
 \end{cases}
 $$
 
@@ -106,18 +108,18 @@ where
 
 $$
 \begin{cases}
-	\boldsymbol{F}\rightarrow \boldsymbol{F}AE, \boldsymbol{M}\rightarrow \boldsymbol{M}E\sqrt{AJ}\\
+	\mathbf{F}\rightarrow \mathbf{F}AE, \mathbf{M}\rightarrow \mathbf{M}E\sqrt{AJ}\\
 	EI_1\rightarrow \alpha EJ, EI_2\rightarrow \beta EJ, G=\gamma E\\
 	s\rightarrow s\sqrt{J/A}, t\rightarrow t\sqrt{J\rho /AE}\\
 \end{cases}
 $$
 
-Note that $\left( \boldsymbol{d} \right) _s=\boldsymbol{Kd}, \dot{\boldsymbol{d}}=\boldsymbol{Wd}$, the control equation can be simplified as:
+Note that $\left( \mathbf{d} \right) _s=\mathbf{Kd}, \dot{\mathbf{d}}=\mathbf{Wd}$, the control equation can be simplified as:
 
 $$
 \begin{cases}
-	\left( \left( f_s+f\boldsymbol{K} \right) _s+\left( f_s+f\boldsymbol{K} \right) \boldsymbol{K} \right) \boldsymbol{d}=\Delta \boldsymbol{d}\\
-	\left( \gamma \left( m_s+m\boldsymbol{K} \right) +f\Lambda \right) \boldsymbol{d}=\Theta \boldsymbol{d}\\
+	\left( \left( f_s+f\mathbf{K} \right) _s+\left( f_s+f\mathbf{K} \right) \mathbf{K} \right) \mathbf{d}=\Delta \mathbf{d}\\
+	\left( \gamma \left( m_s+m\mathbf{K} \right) +f\Lambda \right) \mathbf{d}=\Theta \mathbf{d}\\
 \end{cases}
 \\
 \begin{cases}

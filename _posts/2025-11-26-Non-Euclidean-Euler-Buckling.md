@@ -1,6 +1,9 @@
 ---
 title: "Non-Euclidean Euler Buckling"
 date: 2025-11-26
+tags:
+  - Geometric Elasticity
+  - Rod
 ---
 This notes presents a basic theory for curved surface constrained kirchhoff rods theory.
 <!-- more -->

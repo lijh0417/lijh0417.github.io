@@ -2,13 +2,13 @@
 title: "General Biomimetic Turing Machine"
 date: 2025-11-24
 tags:
-  - Ribbon
+  - Rod
   - Inverse design
 ---
 This note presents the general theory based on [Biomimetic Turing Machine](../files/A_00-Biomimetic Turing machine A multiscale theoretical framework for the inverse design of target space curves.pdf).
 <!-- more -->
 
-![](/assets/images/BTM.png)
+![](../assets/images/2025-11-24-General-Biomimetic-Turing-Machine/BTM.png)
 
 We consier a morphing slender kirgami ribbon for conformable deformation. The movement equation of the principal curvatrue frame can be written as:
 

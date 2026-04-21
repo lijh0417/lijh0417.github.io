@@ -1,6 +1,8 @@
 ---
 title: "The Geometry in Shell Theory"
 date: 2025-05-30
+  - Geometric Elasticity
+  - Shell
 ---
 This note presents the geometry of elastic shells based on [P. Ciarlet's work](https://link.springer.com/article/10.1007/s10659-005-4738-8).
 <!-- more -->
@@ -20,7 +22,9 @@ $$
 
 The fundamental forms characterizing the surface geometry are:
 
-- **First fundamental form** (metric tensor): $a_{\alpha\beta}=\mathbf{a}_\alpha\cdot\mathbf{a}_\beta$
+- **First fundamental form** (metric tensor): $a_{\alpha\beta}=\partial_\alpha \mathbf{a} \cdot \partial_\beta \mathbf{a}$
+
+
 - **Second fundamental form** (curvature tensor): $b_{\alpha\beta}=\partial_\alpha\mathbf{a}_\beta\cdot\mathbf{n}$
 
 The shell geometry is described relative to its middle surface:

@@ -1,6 +1,8 @@
 ---
 title: "Multiscale model of non-Euclide plate"
 date: 2025-04-28
+  - Geometric Elasticity
+  - Rod
 ---
 This note presents a basic theory for non-Euclide plate model.
 <!-- more -->
@@ -15,16 +17,16 @@ In this note, we will bulid a multiscale non-Euclide plate model. We aim to solv
 The energy functional of a bilayer plate subject to intrinsic strain is given by:
 
 $$
-U=\frac{1}{2}\int{\left( \int_0^{t/2}{\left( \boldsymbol{\varepsilon }_a-\boldsymbol{\eta }_a \right) :\boldsymbol{D}_a}:\left( \boldsymbol{\varepsilon }_a-\boldsymbol{\eta }_a \right) dz+\int_{-t/2}^0{\left( \boldsymbol{\varepsilon }_b-\boldsymbol{\eta }_b \right) :\boldsymbol{D}_b}:\left( \boldsymbol{\varepsilon }_b-\boldsymbol{\eta }_b \right) dz \right) dA}
+U=\frac{1}{2}\int{\left( \int_0^{t/2}{\left( \mathbf{\varepsilon }_a-\mathbf{\eta }_a \right) :\mathbf{D}_a}:\left( \mathbf{\varepsilon }_a-\mathbf{\eta }_a \right) dz+\int_{-t/2}^0{\left( \mathbf{\varepsilon }_b-\mathbf{\eta }_b \right) :\mathbf{D}_b}:\left( \mathbf{\varepsilon }_b-\mathbf{\eta }_b \right) dz \right) dA}
 $$
 
 The in-plane strain and the out-of-plane strain can be coupled together by Kirchhoff-Love assumption. Then the strain of the plane in thickness direction can be expressed as:
 
 $$
-\boldsymbol{\varepsilon }_a=\boldsymbol{\varepsilon }_{\boldsymbol{b}}=\frac{1}{2}\left( \mathbf{a}-\mathbf{I} \right) +z\mathbf{b}
+\mathbf{\varepsilon }_a=\mathbf{\varepsilon }_{\mathbf{b}}=\frac{1}{2}\left( \mathbf{a}-\mathbf{I} \right) +z\mathbf{b}
 $$
 
-$\boldsymbol{a}$ and $\boldsymbol{b}$ are the first and second foundamental form of the plate middle surface:
+$\mathbf{a}$ and $\mathbf{b}$ are the first and second foundamental form of the plate middle surface:
 
 $$\mathbf{a}=\left( \begin{array}{c}
 	\mathrm{E}\\
@@ -38,11 +40,11 @@ $$\mathbf{a}=\left( \begin{array}{c}
 
 For the orthogonal symmetric bilayer structure, the intrinsic strain can be expressed as:
 
-$$\boldsymbol{\eta }_a=\left( \begin{array}{c}
+$$\mathbf{\eta }_a=\left( \begin{array}{c}
 	\eta _1\\
 	\eta _2\\
 	0\\
-\end{array} \right) , \boldsymbol{\eta }_b=\left( \begin{array}{c}
+\end{array} \right) , \mathbf{\eta }_b=\left( \begin{array}{c}
 	\eta _2\\
 	\eta _1\\
 	0\\
