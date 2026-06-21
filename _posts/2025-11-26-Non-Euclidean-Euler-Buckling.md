@@ -6,6 +6,7 @@ tags:
   - Rod
 ---
 This notes presents a basic theory for curved surface constrained kirchhoff rods theory.
+
 <!-- more -->
 
 In the classical Euler buckling, a beam lies on a plane. However, when a rod lies on a curved surfaced, what will happen? Exactly, what is the effect of gaussian curvature on the buckling critical loading.
@@ -231,4 +232,60 @@ p=F_3\omega _1-(F_2)_s-F_1\omega _3
 \kappa _g=\omega _2\cos \phi +\omega_1\sin \phi\end{cases}
 $$
 
-always $0$. The control equation can be simplified as:
+## Special cases
+
+Now we consider some special cases: we consider the Euler buckling of a cylinder constrained half-circle and a sphere constrained half-circle.
+
+For the cylinder, the parameteric equation and the curvature can be written as:
+
+$$
+\mathbf{r}(s)=\{R \cos u_1(s), R\sin u_1(s), R u_2(s)\}
+$$
+
+The geomdesic curvature, normal curvature and geodesic torsion can be expresed as:
+
+$$
+\begin{array}{l}
+\kappa_g = R^2 (u_1'(s)u_2''(s)-u_2'(s)u_1''(s)) \\
+\kappa_n = R u_2'(s)^2 - 1/R \\
+\tau_g = R u_1'(s)u_2'(s)
+\end{array}
+$$
+
+The control equation can be simplified as:
+
+$$
+\begin{cases}
+	(F_1)_s+F_3\omega _2-F_2\omega _3=0\\
+	(F_3)_s+F_2\omega _1-F_1\omega _2=0\\
+	(M_2)_s+M_1\omega _3-M_3\omega _1+F_1=0\\
+	(M_3)_s+M_2\omega _1-M_1\omega _2=0\\
+	(\phi )_s=\tau _g-\omega _3\\
+	\left( \omega _1 \right) _s=\left( \left( \omega _2-\kappa _n \right) /\cos \phi \right) _s\\
+	\left( q_0 \right) _s=-\frac{1}{2}\left( q_1\omega _1+q_2\omega _2+q_3\omega _3 \right)\\
+	\left( q_1 \right) _s=\frac{1}{2}\left( q_0\omega _1-q_3\omega _2+q_2\omega _3 \right)\\
+	\left( q_2 \right) _s=\frac{1}{2}\left( q_3\omega _1+q_0\omega _2-q_1\omega _3 \right)\\
+	\left( q_3 \right) _s=\frac{1}{2}\left( q_1\omega _2-q_2\omega _1+q_0\omega _3 \right)\\
+	(u)_s =-\frac{2\csc \left( u\left( s \right) \right) \left( q_0\left( s \right) q_2\left( s \right) +q_1\left( s \right) q_3\left( s \right) \right)}{R}\\
+	(v)_s =\frac{2\left( q_0\left( s \right) ^2+q_3\left( s \right) ^2-1/2 \right)}{R}\\
+\end{cases}
+$$
+
+
+
+
+For the sphere, the parameteric equation and the curvature can be written as:
+
+$$
+\mathbf{r}(s)=\{R \sin u_1(s)\cos u_2(s), R\sin u_1(s)\sin u_2(s), R \cos u_1(s)\}
+$$
+
+The geomdesic curvature, normal curvature and geodesic torsion can be expresed as:
+
+$$
+\begin{array}{l}
+\kappa_g = R^2\sin u_1\bigl[ u_1' u_2'' -u_2' u_1'' -(u_2' )^3\sin u_1\cos u_1 \bigr] +2\cos u_1\,u_2' \\
+\kappa_n = -1/R \\
+\tau_g = 0
+\end{array}
+$$

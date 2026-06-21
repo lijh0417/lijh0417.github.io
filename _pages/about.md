@@ -7,6 +7,11 @@ redirect_from:
   - /about.html
 ---
 
+
+## Material Design: Advanced material and soft robotics; 
+## Numerical algorithm
+## Inverse Design
+
 ## Research Overview
 Welcome! My name is JiaHao Li, and I am currently a Ph.D. student in the Department of Modern Mechanics at the University of Science and Technology of China. I received my B.Eng. degree from Xi'an Jiaotong University from September 2018 to July 2022. My research interests lie in multiscale mechanics, spanning from nanoscale phenomena to the nonlinear behavior of flexible structures. My current interests focus on understanding and designing the nonlinear behavior of flexible structures under finite deformations.
 
