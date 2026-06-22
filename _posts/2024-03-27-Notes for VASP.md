@@ -4,13 +4,15 @@ date: 2024-03-27 08:18:51
 tags:
     - Multiscale modeling
 lang: zh
+ref: notes-for-vasp
+permalink: /zh/2024/03/notes-for-vasp/
 ---
 
 VASP计算参数总结。
 
 <!--more-->
 
-![VASP计算参数总结](../assets/images/2024-03-27-Notes for VASP/VASP.jpg)
+![VASP计算参数总结](/assets/images/2024-03-27-Notes for VASP/VASP.jpg)
 
 ## Global
 

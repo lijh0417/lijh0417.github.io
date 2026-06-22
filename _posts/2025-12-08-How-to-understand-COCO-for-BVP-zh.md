@@ -1,47 +1,49 @@
 ---
-title: "How to understand COCO for BVP"
+title: "如何理解用于BVP的COCO"
 date: 2025-12-08
 tags:
 - Mathematics
-lang: en
+lang: zh
 ref: how-to-understand-coco-for-bvp
-permalink: /2025/12/how-to-understand-coco-for-bvp/
+permalink: /zh/2025/12/how-to-understand-coco-for-bvp/
 ---
-This note presents the basic usage of COCO for BVPs.
+
+本篇笔记介绍了COCO用于BVP的基本用法。
+
 <!-- more -->
 
-First, we need to load the toolbox:
+首先，我们需要加载工具箱：
 
 ```matlab
 coco_use_recipes_toolbox coll_v1 bvp_v1
 ```
 
-Then we need to write the coll_args:
+然后需要编写coll_args：
 
 ```matlab
 coll_args={@ODE, t0, x0, {'par1','par2','...'},[par10,par20,...]}
 ```
 
-The BVP args are also needed to be writen:
+BVP参数也需要编写：
 
 ```matlab
 bvp_args=[coll_args, {@BC,@BC_JAC}]
 ```
 
-The problem is defined as follows:
+问题定义如下：
 
 ```matlab
 prob=bvp_isol2seg(coco_prob(),'',bvp_args{:});
 ```
 
-The parameters needed to be set:
+需要设置的参数：
 
 ```matlab
 prob = coco_set(prob, 'cont', 'NAdapt', 20, 'ItMX', 1000, 'NPR',0.4);
 prob = coco_set(prob, 'corr', 'LogLevel',0,'NGrid',10000);
 ```
 
-run the code:
+运行代码：
 
 ```matlab
 bd1=coco(prob,runName,[],1,{'par1'},[p10,p11])

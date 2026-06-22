@@ -35,6 +35,16 @@ docker compose up
 
 - `_config.yml`: `locale: zh-CN`, `future: true`（未来日期的文章可见）
 
+### 双语系统
+
+详见 [TRANSLATION_GUIDE.md](./TRANSLATION_GUIDE.md)。简而言之：
+
+- EN 文章：`lang: en`, `permalink: /:year/:month/:ref/`
+- ZH 文章：`lang: zh`, `permalink: /zh/:year/:month/:ref/`
+- 配对靠 `ref` 字段（同一篇文章两个语言版本 `ref` 相同）
+- 图片路径必须是绝对路径 `/assets/images/...`（不能用 `../assets/images/...`）
+- 语言切换按钮通过 URL 前缀 `/zh/` 有无来跳转
+
 ## 维护脚本
 
 ### CV 更新

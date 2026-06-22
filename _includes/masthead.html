@@ -1,12 +1,7 @@
 {% include base_path %}
-{% comment %}site_lang = navigation language (URL-based); lang_target = toggle button label{% endcomment %}
 {% assign site_lang = "en" %}
-{% assign lang_target = "zh" %}
 {% if page.url contains "/zh/" or page.url == "/zh" %}
   {% assign site_lang = "zh" %}
-  {% assign lang_target = "en" %}
-{% elsif page.lang == "zh" %}
-  {% assign lang_target = "en" %}
 {% endif %}
 
 <div class="masthead">
@@ -37,7 +32,7 @@
           <li id="lang-toggle" class="masthead__menu-item persist tail">
             <a id="lang-toggle-link" href="#" title="Switch language">
               <i class="fa-solid fa-language"></i>
-              {% if lang_target == "en" %}EN{% else %}中{% endif %}
+              {% if site_lang == "zh" %}EN{% else %}中{% endif %}
             </a>
           </li>
         </ul>

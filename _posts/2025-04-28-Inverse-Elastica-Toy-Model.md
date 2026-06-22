@@ -5,6 +5,8 @@ tags:
   - Rod
   - Inverse design
 lang: en
+ref: inverse-elastica-toy-model
+permalink: /2025/04/inverse-elastica-toy-model/
 ---
 
 This note presents a toy model based on [Inverse elastica theory](../files/A_02-InverseElastica.pdf).
@@ -47,7 +49,7 @@ EI(\kappa_s - \bar{\kappa}_s) + F_1 &= 0
 \tag{2}
 $$
 
-If the objective configuration is an arc, we have $\kappa = c = \rm{const}$, eq. (2) can be solved as:
+If the objective configuration is an arc, we have $\kappa = c = \mathrm{const}$, eq. (2) can be solved as:
 
 $$
 \left\{
@@ -63,7 +65,7 @@ $$
 
 Finally, we have:
 $\bar{\kappa} = \frac{F_0 R}{EI} \sin(s/R) + \bar{\kappa}_0$,
-where $\bar{\kappa}_0 = \rm{const}$ is an integrate constant.
+where $\bar{\kappa}_0 = \mathrm{const}$ is an integrate constant.
 
 $$
 \bar{\kappa} = \frac{F_0 R}{EI} \sin(s/R) + \bar{\kappa}_0

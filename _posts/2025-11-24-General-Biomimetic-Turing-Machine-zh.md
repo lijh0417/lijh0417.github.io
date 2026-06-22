@@ -1,19 +1,20 @@
 ---
-title: "General Biomimetic Turing Machine"
+title: "广义仿生图灵机"
 date: 2025-11-24
 tags:
   - Rod
   - Inverse design
-lang: en
+lang: zh
 ref: general-biomimetic-turing-machine
-permalink: /2025/11/general-biomimetic-turing-machine/
+permalink: /zh/2025/11/general-biomimetic-turing-machine/
 ---
-This note presents the general theory based on [Biomimetic Turing Machine](../files/A_00-Biomimetic Turing machine A multiscale theoretical framework for the inverse design of target space curves.pdf).
+
+本篇笔记介绍了基于[仿生图灵机](../files/A_00-Biomimetic Turing machine A multiscale theoretical framework for the inverse design of target space curves.pdf)的广义理论。
 <!-- more -->
 
 ![](/assets/images/2025-11-24-General-Biomimetic-Turing-Machine/BTM.png)
 
-We consier a morphing slender kirgami ribbon for conformable deformation. The movement equation of the principal curvatrue frame can be written as:
+我们考虑一种可变形细长剪纸带以实现共形变形。主曲率标架的运动方程可以写为：
 
 $$
 \partial_s\left( \begin{array}{c}
@@ -31,7 +32,7 @@ $$
 \end{array} \right)
 $$
 
-The movement equation of the twisted Frenet frame can be written as:
+扭曲Frenet标架的运动方程可以写为：
 
 $$
 \partial_s\left( \begin{array}{c}
@@ -49,7 +50,7 @@ $$
 \end{array} \right)
 $$
 
-We can also write the movement of the ribbon as material strain:
+我们也可以将带的运动表示为材料应变：
 
 $$
 \partial_s\left( \begin{array}{c}
@@ -67,7 +68,7 @@ $$
 \end{array} \right)
 $$
 
-Finally we have the equation for inverse design:
+最终我们得到逆向设计的方程：
 
 $$
 \begin{cases}
@@ -77,7 +78,7 @@ $$
 \end{cases}
 $$
 
-When $\kappa_2=-\kappa_1$, we have:
+当 $\kappa_2=-\kappa_1$ 时，我们有：
 
 $$
 \begin{cases}
@@ -86,6 +87,3 @@ $$
 \kappa_1=\frac{m_2}{\cos2\theta}
 \end{cases}
 $$
-
-
-

@@ -37,28 +37,8 @@ $(document).ready(function () {
     toggleTheme();
   });
 
-  // Translate post via Google Translate redirect
-  var translatePost = function () {
-    var lang = $('#post-lang').text().trim();
-    var target = lang === "zh" ? "en" : "zh-CN";
-    var url = "https://translate.google.com/translate?sl=auto&tl=" + target + "&u=" + encodeURIComponent(window.location.href);
-    window.location.href = url;
-  };
-
-  // Translate button on posts
-  $(document).on('click', '.translate-trigger', function (e) {
-    e.preventDefault();
-    translatePost();
-  });
-
-  // Language toggle in masthead
+  // Language toggle: navigate between EN and ZH versions via URL prefix
   var langToggle = function () {
-    var $postLang = $('#post-lang');
-    if ($postLang.length) {
-      translatePost();
-      return;
-    }
-    // On a regular page: navigate between /page/ and /zh/page/
     var path = window.location.pathname.replace(/\/$/, "") || "/";
     var isZh = path === "/zh" || path.startsWith("/zh/");
     var newPath;

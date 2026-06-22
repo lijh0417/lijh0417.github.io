@@ -1,9 +1,12 @@
 ---
 title: "Multiscale model of non-Euclide plate"
 date: 2025-04-28
+tags:
   - Geometric Elasticity
   - Rod
 lang: en
+ref: multiscale-model-of-non-euclide-plate
+permalink: /2025/04/multiscale-model-of-non-euclide-plate/
 ---
 This note presents a basic theory for non-Euclide plate model.
 <!-- more -->

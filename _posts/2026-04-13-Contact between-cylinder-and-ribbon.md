@@ -5,6 +5,8 @@ tags:
   - Geometric Elasticity
   - Rod
 lang: en
+ref: contact-between-cylinder-and-ribbon
+permalink: /2026/04/contact-between-cylinder-and-ribbon/
 ---
 This note presents the contact between a cylinder and a ribbon.
 
@@ -12,7 +14,7 @@ This note presents the contact between a cylinder and a ribbon.
 
 We consider the contact problem of between a cantilever beam and a rigid cylinder, as shown in Fig.1 (b):
 
-![Contact model](../assets/images/2026-04-13-Contact%20between-cylinder-and-ribbon/f1.png)
+![Contact model](/assets/images/2026-04-13-Contact%20between-cylinder-and-ribbon/f1.png)
 
 The beam can be divided into two parts: the contact part (CP, A-B, red) and the non-contact part (NCP, B-C, blue). The geometry of CP is completely determined by the cylinder and the configuraiton of NCP is determined by the force in point B and the gravity.
 

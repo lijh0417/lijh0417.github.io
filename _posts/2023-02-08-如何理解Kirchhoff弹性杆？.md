@@ -1,6 +1,8 @@
 ---
 title: 如何理解Kirchhoff弹性杆？
 date: 2023-02-08 16:03:13
+ref: understanding-kirchhoff-rod
+permalink: /zh/2023/02/understanding-kirchhoff-rod/
 tags:
   - Geometric Elasticity
   - Rod
@@ -171,7 +173,7 @@ $$
 
 ### 四元数，欧拉角及其与 Frame Tensor 的关系
 
-![四元数，欧拉角及其与 Frame Tensor 的关系](../assets/images/2023-02-08-如何理解Kirchhoff弹性杆？/转换.bmp)
+![四元数，欧拉角及其与 Frame Tensor 的关系](/assets/images/2023-02-08-如何理解Kirchhoff弹性杆？/转换.bmp)
 
 首先，给出 Frame Tensor 的一些性质以及与 Rotate Tensor、Darboux Vector 之间的关系。这里提前说明一点，用 $s$ 作为变量只是为了方便起见，并不具有物理意义，这里并没有说局部标架是通过时间对初始标架进行变换，还是通过弧长参数对初始标架进行变换得到。
 
@@ -303,7 +305,8 @@ $$
 \mathbf{e}_{1} \\
 \mathbf{e}_{2} \\
 \mathbf{e}_{3}
-\end{array}\right)\left(\begin{array}{l}
+\end{array}\right), \qquad
+\left(\begin{array}{l}
 \mathbf{d}_{1 s} \\
 \mathbf{d}_{2 s} \\
 \mathbf{d}_{3 s}
@@ -409,7 +412,7 @@ $$
 \frac{\partial^{2} \mathbf{A}}{\partial \mathrm{s} \partial \mathrm{t}}=\frac{\partial^{2} \mathbf{A}}{\partial t \partial s}
 $$
 
-不妨考虑 $\rm \mathbf{A}_i(s,t)$ 恒定的情况，由 (5) 式得到：
+不妨考虑 $\mathrm{\m}athbf{A}_i(s,t)$ 恒定的情况，由 (5) 式得到：
 
 $$
 \mathrm{A}_{i} \frac{\partial\left(\omega \times \mathbf{d}_{i}\right)}{\partial \mathrm{s}}=\mathrm{A}_{i} \frac{\partial\left(\mathbf{k} \times \mathbf{d}_{i}\right)}{\partial \mathrm{t}}
@@ -433,7 +436,7 @@ $$
 \left(\omega_{s}-\mathbf{k}_{t}+\omega \times \mathbf{k}\right) \times \mathbf{A}=0
 $$
 
-$\rm \mathbf{A}$ 是任意的，得到恒等式：$\left(\omega_{s}-\mathbf{k}_{t}+\omega \times \mathbf{k}\right)=0$
+$\mathrm{\m}athbf{A}$ 是任意的，得到恒等式：$\left(\omega_{s}-\mathbf{k}_{t}+\omega \times \mathbf{k}\right)=0$
 
 利用 Darboux Vector 与 Frame Tensor 的关系 $\omega=\frac{1}{2} \epsilon: \Gamma$ 可以得到：
 
@@ -441,7 +444,7 @@ $$
 \mathbf{\Omega}_{s}-\mathbf{K}_{t}=[ \mathbf{K},\mathbf{\Omega}]
 $$
 
-$\rm \mathbf{\Omega},\mathbf{K}$ 分别为 $\omega,k$ 对应的 Frame Tensor。
+$\mathrm{\m}athbf{\Omega},\mathbf{K}$ 分别为 $\omega,k$ 对应的 Frame Tensor。
 
 **这是一个冗余方程，因为：**
 
@@ -490,7 +493,7 @@ Kirchhoff [Über das Gleichgewicht und die Bewegung einer elastischen Scheibe](h
 
 ### 力平衡
 
-![弹性杆微元受力图](../assets/images/2023-02-08-如何理解Kirchhoff弹性杆？/受力.bmp)
+![弹性杆微元受力图](/assets/images/2023-02-08-如何理解Kirchhoff弹性杆？/受力.bmp)
 
 前面已经提到，无剪弹性杆本构关系的产生来自平截面假设，这里又一次用到了（无剪）条件。弹性杆运动过程中，截面与轴线始终是垂直的，因此轴线上点的运动可以代表弹性杆微元的运动。注意，轴线是截面质心随弧长参数变化所演化出的一条曲线。
 
@@ -506,11 +509,11 @@ $$
 
 ### 矩平衡
 
-矩平衡方程的推导比较讲究，因为我们是站在固有坐标系中看待弹性杆运动的，因此可以把弹性杆微元的角动量分解为两个部分：相对质心的角动量＋质心角动量，即：$\rm \mathbf{L=L_c+L_r}$ 。首先来看 $\rm \mathbf{L_c}$，相当于轴线中心点处质点相对于原点的角动量，直接可以写为：$\rm{\mathbf{L_c=r\times \dot{r}}}\rho A ds$。
+矩平衡方程的推导比较讲究，因为我们是站在固有坐标系中看待弹性杆运动的，因此可以把弹性杆微元的角动量分解为两个部分：相对质心的角动量＋质心角动量，即：$\mathrm{\m}athbf{L=L_c+L_r}$ 。首先来看 $\mathrm{\m}athbf{L_c}$，相当于轴线中心点处质点相对于原点的角动量，直接可以写为：$\mathrm{\mathbf{L_c=r\times \dot{r}}}\rho A ds$。
 
 下面考虑微元截面上物质点相对质心的角动量：
 
-![弹性杆微元矩平衡图](../assets/images/2023-02-08-如何理解Kirchhoff弹性杆？/矩平衡.bmp)
+![弹性杆微元矩平衡图](/assets/images/2023-02-08-如何理解Kirchhoff弹性杆？/矩平衡.bmp)
 
 $$
 \mathbf{L}_{r}=\iint_{S} \mathbf{p} \times \dot{\mathbf{p}} d x d y \rho d s
@@ -532,7 +535,7 @@ $$
 \frac{\mathrm{d} \mathbf{L}_{s}}{\mathrm{dt}}=\rho A \mathbf{r} \times \ddot{\mathbf{r}}+\mathrm{I}_{3} \mathbf{d}_{2} \times \ddot{\mathbf{d}}_{2}+\mathrm{I}_{2} \mathbf{d}_{3} \times \ddot{\mathbf{d}}_{3}
 $$
 
-$\rm \mathbf{I_3,I_2}$ 分别表示对 $\rm \mathbf{d}_3\ \mathbf{d}_2$ 轴的惯性矩，$\rm \mathbf{L_s}$ 表示单位线元的角动量。结合 (16) (17) 式，并利用 (13) 式进行化简，得到矩平衡方程：
+$\mathrm{\m}athbf{I_3,I_2}$ 分别表示对 $\mathrm{\m}athbf{d}_3\ \mathbf{d}_2$ 轴的惯性矩，$\mathrm{\m}athbf{L_s}$ 表示单位线元的角动量。结合 (16) (17) 式，并利用 (13) 式进行化简，得到矩平衡方程：
 
 $$
 \frac{\partial \mathbf{M}}{\partial s}+\frac{\partial \mathbf{r}}{\partial s} \times \mathbf{F}+\mathbf{m}=\mathrm{I}_{3} \mathbf{d}_{2} \times \ddot{\mathbf{d}}_{2}+\mathrm{I}_{2} \mathbf{d}_{3} \times \ddot{\mathbf{d}}_{3}

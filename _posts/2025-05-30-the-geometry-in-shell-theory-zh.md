@@ -1,60 +1,60 @@
 ---
-title: "The Geometry in Shell Theory"
+title: "壳理论中的几何"
 date: 2025-05-30
 tags:
   - Geometric Elasticity
   - Shell
-lang: en
+lang: zh
 ref: geometry-in-shell-theory
-permalink: /2025/05/geometry-in-shell-theory/
+permalink: /zh/2025/05/geometry-in-shell-theory/
 ---
-This note presents the geometry of elastic shells based on [P. Ciarlet's work](https://link.springer.com/article/10.1007/s10659-005-4738-8).
+
+本文基于[P. Ciarlet的工作](https://link.springer.com/article/10.1007/s10659-005-4738-8)介绍弹性壳的几何理论。
 <!-- more -->
 
-We aim to derive the general theory for elastic shells using differential geometry. The primary challenge lies in the complex geometry arising from the shell's natural curvature, which complicates the relationship between strain and displacement, especially under large rotations. This note develops a mathematical framework to systematically compute this relationship.
+我们旨在利用微分几何推导弹性壳的一般理论。主要挑战在于壳的自然曲率引起的复杂几何，这使应变与位移之间的关系变得复杂，尤其是在大转动情况下。本文发展了一个数学框架来系统地计算这种关系。
 
-## 1. Geometric Foundations and Strain Definitions
+## 1. 几何基础与应变定义
 
-We begin by establishing the geometric framework for describing shell morphology and defining key strain measures.
+我们首先建立描述壳形态的几何框架，并定义关键的应变度量。
 
-A shell surface is parameterized by $\mathbf{r}(x_1,x_2)$, with basis vectors defined as:
+壳面由 $\mathbf{r}(x_1,x_2)$ 参数化，基向量定义为：
 
 $$
 \mathbf{a}_\alpha=\frac{\partial \mathbf{r}}{\partial x_\alpha}, \quad 
 \mathbf{n}=\frac{\mathbf{a}_1\times\mathbf{a}_2}{\|\mathbf{a}_1\times\mathbf{a}_2\|}
 $$
 
-The fundamental forms characterizing the surface geometry are:
+表征曲面几何的基本形式包括：
 
-- **First fundamental form** (metric tensor): $a_{\alpha\beta}=\partial_\alpha \mathbf{a} \cdot \partial_\beta \mathbf{a}$
+- **第一基本形式**（度量张量）：$a_{\alpha\beta}=\partial_\alpha \mathbf{a} \cdot \partial_\beta \mathbf{a}$
 
+- **第二基本形式**（曲率张量）：$b_{\alpha\beta}=\partial_\alpha\mathbf{a}_\beta\cdot\mathbf{n}$
 
-- **Second fundamental form** (curvature tensor): $b_{\alpha\beta}=\partial_\alpha\mathbf{a}_\beta\cdot\mathbf{n}$
-
-The shell geometry is described relative to its middle surface:
+壳的几何相对于其中面描述：
 
 $$
 \mathbf{x}(x_1,x_2,x_3)=\mathbf{r}(x_1,x_2)+x_3\mathbf{n}
 $$
 
-Based on these geometric quantities, we define two fundamental strain measures:
+基于这些几何量，我们定义两个基本的应变度量：
 
-- **Membrane strain:** $\varepsilon_{\alpha\beta}^s=\frac{1}{2}(a_{\alpha\beta}-\bar{a}_{\alpha\beta})$
-- **Bending strain:** $\varepsilon_{\alpha\beta}^b=b_{\alpha\beta}-\bar{b}_{\alpha\beta}$
+- **薄膜应变：** $\varepsilon_{\alpha\beta}^s=\frac{1}{2}(a_{\alpha\beta}-\bar{a}_{\alpha\beta})$
+- **弯曲应变：** $\varepsilon_{\alpha\beta}^b=b_{\alpha\beta}-\bar{b}_{\alpha\beta}$
 
-where overbars denote quantities in the reference configuration.
+其中上划线表示参考构型中的量。
 
-## 2. Variational Derivation of Equilibrium Equations
+## 2. 平衡方程的变分推导
 
-We now derive the governing equations and boundary conditions through variational principles, establishing equilibrium conditions by considering the system's energy variations.
+我们现在通过变分原理推导控制方程和边界条件，通过考虑系统的能量变分来建立平衡条件。
 
-**The variations of the strains** form the core of the energy expression. The membrane strain variation is:
+**应变的变分**构成能量表达式的核心。薄膜应变变分为：
 
 $$
 \delta\varepsilon_{\alpha\beta}^s=\frac{1}{2}(\mathbf{a}_\alpha\cdot\delta\mathbf{a}_\beta+\mathbf{a}_\beta\cdot\delta\mathbf{a}_\alpha)
 $$
 
-The bending strain variation involves more complex derivation:
+弯曲应变变分涉及更复杂的推导：
 
 $$
 \begin{aligned}
@@ -63,21 +63,21 @@ $$
 \end{aligned}
 $$
 
-**The variation of elastic strain energy** is expressed as:
+**弹性应变能的变分**表示为：
 
 $$
 \delta U_e=\int_\mathcal{S}(n^{\alpha\beta}\delta\varepsilon_{\alpha\beta}^s+m^{\alpha\beta}\delta\varepsilon_{\alpha\beta}^b)\sqrt{|a|}dx_1dx_2
 $$
 
-Substituting the strain variations yields:
+代入应变变分得到：
 
 $$
 \delta U_e=\int_\mathcal{S} \left[A^{\alpha\beta}\mathbf{a}_\alpha\cdot\delta\partial_\beta\mathbf{r}+B^{\alpha\beta}\mathbf{n}\cdot\delta\partial_{\alpha\beta}\mathbf{r}-B^{\alpha\beta}\Gamma_{\alpha\beta}^{\gamma}\mathbf{n}\cdot\delta\partial_\gamma\mathbf{r}\right] dx_1dx_2
 $$
 
-where $A^{\alpha\beta}=n^{\alpha\beta}\sqrt{\|a\|}$ and $B^{\alpha\beta}=m^{\alpha\beta}\sqrt{\|a\|}$ represent the stress resultants and moment resultants, respectively.
+其中 $A^{\alpha\beta}=n^{\alpha\beta}\sqrt{\|a\|}$ 和 $B^{\alpha\beta}=m^{\alpha\beta}\sqrt{\|a\|}$ 分别表示应力合力和弯矩合力。
 
-**Applying integration by parts** to the energy variation expression gives the complete form with both domain and boundary terms:
+**对能量变分表达式应用分部积分**，得到包含区域项和边界项的完整形式：
 
 $$
 \begin{aligned}
@@ -86,14 +86,14 @@ $$
 \end{aligned}
 $$
 
-**Simplification using the Gauss-Weingarten equations**:
+**利用高斯-温加滕方程简化**：
 
 $$
 \partial_\beta \mathbf{a}_\alpha = \Gamma_{\beta\alpha}^{\gamma}\mathbf{a}_\gamma + b_{\alpha\beta}\mathbf{n}, \quad 
 \partial_\alpha\mathbf{n} = -b^{\gamma}_{\alpha}\mathbf{a}_\gamma
 $$
 
-leads to the final simplified variational expression with complete boundary terms:
+得到含完整边界项的最终简化变分表达式：
 
 $$
 \begin{aligned}
@@ -102,7 +102,7 @@ $$
 \end{aligned}
 $$
 
-where the simplified notation is introduced:
+其中引入简化符号：
 
 $$
 C^{\beta} = \partial_{\alpha}B^{\alpha\beta} + \Gamma_{\alpha\gamma}^{\beta}B^{\alpha\gamma} = \sqrt{|a|} \nabla_{\alpha} m^{\beta\alpha}=\sqrt{|a|}q^{\beta}
@@ -112,11 +112,11 @@ $$
 D^{\beta\gamma} = -\left( b_{\alpha}^{\gamma}B^{\alpha\beta} + A^{\gamma\beta} \right) = -\sqrt{|a|}(b_\alpha^\gamma m^{\alpha\beta} + s^{\gamma\beta}) = -\sqrt{|a|}p^{\gamma\beta}
 $$
 
-where $q^\beta$ is the effective shear force.
+其中 $q^\beta$ 是有效剪切力。
 
-**From the stationarity condition**, we obtain the complete set of equilibrium equations and boundary conditions:
+**从驻值条件**，我们得到完整的平衡方程和边界条件组：
 
-**Field equations on $\mathcal{S}$:**
+**$\mathcal{S}$ 上的场方程：**
 
 $$
 \begin{aligned}
@@ -125,18 +125,18 @@ $$
 \end{aligned}
 $$
 
-**Natural boundary conditions on $\partial\mathcal{S}$:**
+**$\partial\mathcal{S}$ 上的自然边界条件：**
 
 $$
 \begin{aligned}
-B^{\alpha\beta}n_\alpha n_\beta &= 0 \quad \text{(Bending moment condition)} \\
-(D^{\gamma\beta}\mathbf{a}_\gamma + C^\beta \mathbf{n})n_\beta &= 0 \quad \text{(Force resultant condition)}
+B^{\alpha\beta}n_\alpha n_\beta &= 0 \quad \text{(弯矩条件)} \\
+(D^{\gamma\beta}\mathbf{a}_\gamma + C^\beta \mathbf{n})n_\beta &= 0 \quad \text{(力合力条件)}
 \end{aligned}
 $$
 
-**Final form of the equilibrium equations:**
+**平衡方程的最终形式：**
 
-The equilibrium equations of the shell can be finally simplified as:
+壳的平衡方程最终可以简化为：
 
 $$
 \begin{aligned}
@@ -146,97 +146,95 @@ $$
 \end{aligned}
 $$
 
-with the natural boundary conditions expressed as:
+自然边界条件表示为：
 
 $$
 \begin{aligned}
-m^{\alpha\beta}n_\alpha n_\beta &= 0 \quad \text{(Bending moment condition)} \\
-(q^\beta \mathbf{n}-p^{\gamma\beta}\mathbf{a}_\gamma)n_\beta &= 0 \quad \text{(Force resultant condition)}
+m^{\alpha\beta}n_\alpha n_\beta &= 0 \quad \text{(弯矩条件)} \\
+(q^\beta \mathbf{n}-p^{\gamma\beta}\mathbf{a}_\gamma)n_\beta &= 0 \quad \text{(力合力条件)}
 \end{aligned}
 $$
 
-These equations can be further simplified to a more compact tensor form, but the above formulation explicitly shows all boundary contributions.
+这些方程可以进一步简化为更紧凑的张量形式，但上述公式明确显示了所有边界贡献。
 
-## 3. Strain-Displacement Relationships and Constitutive Laws
+## 3. 应变-位移关系与本构定律
 
-We complete the theoretical framework by establishing the strain-displacement relationships and material constitutive equations.
+我们通过建立应变-位移关系和材料本构方程来完善理论框架。
 
-**The displacement field** is defined as:
+**位移场**定义为：
 
 $$
 \mathbf{u} = \mathbf{x} - \bar{\mathbf{x}} = u^{\alpha}\mathbf{a}_\alpha + w\mathbf{n}
 $$
 
-**The membrane strain** derivation involves the deformed tangent vectors and metric tensor:
+**薄膜应变**的推导涉及变形切向量和度量张量：
 
 $$
 \mathbf{a}_\alpha = \bar{\mathbf{a}}_\alpha + \mathbf{u}_{,\alpha}, \quad 
 a_{\alpha\beta} = \bar{a}_{\alpha\beta} + \mathbf{a}_\alpha\cdot\mathbf{u}_{,\beta} + \mathbf{a}_\beta\cdot\mathbf{u}_{,\alpha} + \mathbf{u}_{,\alpha}\cdot\mathbf{u}_{,\beta}
 $$
 
-Using the geometric relation $\mathbf{a}_{\alpha,\beta} = \Gamma_{\alpha\beta}^{\gamma}\mathbf{a}_{\gamma} - b_{\alpha\beta}\mathbf{n}$, we obtain the Green-Lagrange strain tensor:
+利用几何关系 $\mathbf{a}_{\alpha,\beta} = \Gamma_{\alpha\beta}^{\gamma}\mathbf{a}_{\gamma} - b_{\alpha\beta}\mathbf{n}$，我们得到格林-拉格朗日应变张量：
 
 $$
 \varepsilon_{\alpha\beta}^s = \frac{1}{2}(u_{\alpha,\beta}+u_{\beta,\alpha}+w_{,\alpha}w_{,\beta}) - \Gamma_{\alpha\beta}^{\gamma}u_{\gamma} - b_{\alpha\beta}w
 $$
 
-**For the bending strain**, analysis of the deformed normal vector and curvature tensor yields the linearized expression:
+**对于弯曲应变**，对变形法向量和曲率张量的分析得到线性化表达式：
 
 $$
 \varepsilon_{\alpha\beta}^b \approx w_{,\alpha\beta} - w_{,\gamma}\Gamma_{\alpha\beta}^{\gamma} - w b_\alpha^{\gamma}b_{\gamma\beta}
 $$
 
-**The constitutive relations** complete the theoretical framework. The total shell strain combines membrane and bending components:
+**本构关系**完善了理论框架。壳的总应变结合了薄膜和弯曲分量：
 
 $$
 \varepsilon_{\alpha\beta} = \varepsilon_{\alpha\beta}^s + x_3\varepsilon_{\alpha\beta}^b
 $$
 
-**The elastic strain energy density** is given by:
+**弹性应变能密度**由下式给出：
 
 $$
 U_e = \frac{1}{2}\int_{\mathcal{S}}\mathcal{A}^{\alpha\beta\gamma\delta}(\mathcal{D}\varepsilon_{\alpha\beta}^s\varepsilon_{\gamma\delta}^s + \mathcal{B}\varepsilon_{\alpha\beta}^b\varepsilon_{\gamma\delta}^b)dS
 $$
 
-where the material stiffness coefficients are:
+其中材料刚度系数为：
 
 $$
 \mathcal{D} = \frac{Eh}{1-\nu^2}, \quad \mathcal{B} = \frac{Eh^3}{12(1-\nu^2)}
 $$
 
-and the elastic tensor is:
+弹性张量为：
 
 $$
 \mathcal{A}^{\alpha\beta\gamma\delta} = \nu a^{\alpha\beta}a^{\gamma\delta} + \frac{1-\nu}{2}(a^{\alpha\gamma}a^{\beta\delta} + a^{\alpha\delta}a^{\beta\gamma})
 $$
 
-**The stress resultants** are determined by the constitutive relations:
+**应力合力**由本构关系确定：
 
 $$
 s^{\alpha\beta} = \mathcal{D}\mathcal{A}^{\alpha\beta\gamma\delta}\varepsilon_{\gamma\delta}^s, \quad 
 m^{\alpha\beta} = \mathcal{B}\mathcal{A}^{\alpha\beta\gamma\delta}\varepsilon_{\gamma\delta}^b
 $$
 
-This completes the general theoretical framework for elastic shells, providing a comprehensive foundation for analyzing shell deformation and stress under various loading conditions, with particular attention to the proper treatment of boundary conditions.
+这完成了弹性壳的一般理论框架，为分析各种加载条件下的壳变形和应力提供了全面的基础，特别关注边界条件的正确处理。
 
-## 4. The axisymmetric case
+## 4. 轴对称情况
 
-We consider the special case of axisymmetric shells, the symmetry can be exploited to simplify the equations.
-The geometry axisymmetric shell is described by the two parameters: the arc-length of the cross section curve $s$ and the rotation angle $\phi$. We assume the radius the cross section circle is $R(s)$, the shape of the shell can be written as:
+我们考虑轴对称壳的特殊情况，可以利用对称性来简化方程。轴对称壳的几何由两个参数描述：截面曲线的弧长 $s$ 和旋转角 $\phi$。假设截面圆的半径为 $R(s)$，壳的形状可以写为：
 
 $$
 \mathbf{x}=\{R(s)\cos\phi, R(s)\sin\phi, z(s)\},
 $$
 
-where $z(s)$ is the vertical coordinate.
-We define the slope angle of cross section curve as $\psi$, we have:
+其中 $z(s)$ 是垂直坐标。我们将截面曲线的倾角定义为 $\psi$，有：
 
 $$
 \frac{d}{ds}R(s) = \cos\psi(s), \quad
 \frac{d}{ds}z(s) = \sin\psi(s)
 $$
 
-The none zero component of the Christoffel symbols is:
+克里斯托费尔符号的非零分量为：
 
 $$
 \Gamma^{\phi}_{s \phi} = \frac{\cos\psi(s)}{R(s)},
@@ -244,7 +242,7 @@ $$
 \Gamma^{s}_{\phi \phi} = -R(s)\cos \psi(s)
 $$
 
-The control equation can be simplified as:
+控制方程可以简化为：
 
 $$
 \begin{aligned}
@@ -257,7 +255,7 @@ n^{\phi\phi}+b_{\phi}^{\phi}m^{\phi\phi}=p^{\phi\phi}
 \end{aligned}
 $$
 
-The constitutive law for the axisymmetric case is:
+轴对称情况的本构规律为：
 
 $$
 \begin{aligned}
@@ -268,7 +266,7 @@ m_{\phi}^{\phi} &= B\left[\left(\kappa_{\phi}-a^{\phi\phi}\bar{a}_{\phi\phi}\bar
 \end{aligned}
 $$
 
-Finally the control equation of the axis-symmetry shell can be written as:
+最终轴对称壳的控制方程可以写为：
 
 $$
 \begin{aligned}
@@ -282,7 +280,7 @@ B \left( \frac{\sin\psi}{R} - \frac{R_0 \sin\psi_0}{R^2} + \nu (\psi' - \psi_0')
 \end{aligned}
 $$
 
-The geomtery can be recoveried by:
+几何可以通过以下方式恢复：
 
 $$
 \begin{aligned}

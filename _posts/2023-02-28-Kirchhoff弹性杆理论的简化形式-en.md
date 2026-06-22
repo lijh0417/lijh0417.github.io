@@ -1,21 +1,21 @@
 ---
-title: Kirchhoff弹性杆理论的简化形式
+title: "Simplified Forms of Kirchhoff Rod Theory"
 date: 2023-02-28 09:27:18
-ref: kirchhoff-rod-simplified
-permalink: /zh/2023/02/kirchhoff-rod-simplified/
 tags:
   - Geometric Elasticity
   - Rod
-lang: zh
+lang: en
+ref: kirchhoff-rod-simplified
+permalink: /2023/02/kirchhoff-rod-simplified/
 ---
 
-Kirchhoff弹性杆如何退化到一些经典理论？
+How does the Kirchhoff rod reduce to some classical theories?
 
 <!--more-->
 
-**均假设为恒定圆截面弹性杆**
+**All assumed to be constant circular cross-section elastic rods**
 
-## 静态弹性杆
+## Static Elastic Rod
 
 $$
 \begin{array}{c}
@@ -29,7 +29,7 @@ $$
 \end{array}
 $$
 
-上式化简为：
+The above simplifies to:
 
 $$
 \mathrm{F}_s+\left( \mathrm{FR}_{\mathrm{s}}+\mathrm{q} \right) \mathrm{R}^{\mathrm{T}}=0
@@ -61,11 +61,11 @@ $$
 \end{pmatrix}
 $$
 
-分两种情况讨论：
+Two cases are discussed:
 
-### ① 转动采用欧拉角形式表示（3-2-3转动）
+### ① Rotation expressed in Euler angles (3-2-3 rotation)
 
-转动矩阵为：
+The rotation matrix is:
 
 $$
 \mathrm{R}=\begin{pmatrix}
@@ -75,7 +75,7 @@ c_{\beta}c_{\gamma}s_{\alpha}+c_{\alpha}s_{\gamma} & c_{\alpha}c_{\gamma}-c_{\be
 \end{pmatrix}
 $$
 
-Frenet矩阵为：
+The Frenet matrix is:
 
 $$
 \Gamma =\begin{pmatrix}
@@ -85,7 +85,7 @@ $$
 \end{pmatrix}
 $$
 
-(2) (3) (4)结合表达为分量形式可以得到：
+Combining (2), (3), and (4) in component form:
 
 $$
 \begin{pmatrix}
@@ -196,11 +196,11 @@ $$
 \end{pmatrix}
 $$
 
-共有12组方程，12个变量($\omega_i; \mathrm{M}_i; \mathrm{F}_i; \alpha; \beta; \gamma$)。上述方程组是封闭的。
+There are 12 sets of equations and 12 variables ($\omega_i; \mathrm{M}_i; \mathrm{F}_i; \alpha; \beta; \gamma$). The system is closed.
 
-### ② 转动采用四元数形式表示
+### ② Rotation expressed in quaternion form
 
-转动矩阵为：
+The rotation matrix is:
 
 $$
 \mathrm{R}=\begin{pmatrix}
@@ -210,7 +210,7 @@ $$
 \end{pmatrix}
 $$
 
-Frenet矩阵为：
+The Frenet matrix is:
 
 $$
 \Gamma=\begin{pmatrix}
@@ -220,13 +220,13 @@ $$
 \end{pmatrix}
 $$
 
-加上约束：
+Plus the constraint:
 
 $$
 q_0(s)^2+q_1(s)^2+q_2(s)^2+q_3(s)^2=1
 $$
 
-(2) (6) (7) (8)结合表达为分量形式可以得到：
+Combining (2), (6), (7), and (8) in component form:
 
 $$
 \begin{pmatrix}
@@ -325,11 +325,11 @@ $$
 \end{pmatrix}
 $$
 
-转动表达形式选取影响的只是(5)式，在存在载荷时会体现出与欧拉角求解的差异，外部载荷为零时，由于是局部标架与整体标架是解耦的。
+The choice of rotation representation only affects equation (5). When external loads are present, it differs from the Euler angle solution; when external loads are zero, the local frame and global frame are decoupled.
 
-### 简化讨论
+### Simplified Discussion
 
-若外载荷为0，欧拉角从上述方程中解耦出来。得到：
+If the external load is zero, the Euler angles decouple from the above equations, giving:
 
 $$
 \begin{pmatrix}
@@ -412,7 +412,7 @@ $$
 \end{pmatrix}
 $$
 
-化简为：
+Simplifying:
 
 $$
 \begin{cases}
@@ -422,7 +422,7 @@ $$
 \end{cases}
 $$
 
-即使对于无外载荷的Kirchhoff弹性杆，求得的控制方程已经足够复杂。现在考虑选取Frenet坐标系，即令 $\omega_3=\kappa;\omega_2=0;\omega_1=\tau$，上式化简为：
+Even for a Kirchhoff rod without external loads, the governing equations are already quite complex. Now consider choosing the Frenet frame, i.e., let $\omega_3=\kappa;\omega_2=0;\omega_1=\tau$. The above simplifies to:
 
 $$
 \begin{cases}
@@ -431,7 +431,7 @@ $$
 \end{cases}
 $$
 
-定义 $\frac{\mathrm{EI}}{\mathrm{GI}}=\nu+1$，$\nu$为泊松比。得到控制方程：
+Define $\frac{\mathrm{EI}}{\mathrm{GI}}=\nu+1$, $\nu$ is Poisson's ratio. The governing equations become:
 
 $$
 \begin{cases}
@@ -440,7 +440,7 @@ $$
 \end{cases}
 $$
 
-通过(9)积分得到：
+Integrating (9):
 
 $$
 \begin{cases}
@@ -449,17 +449,17 @@ $$
 \end{cases}
 $$
 
-求出含扭转无载静态弹性杆的控制方程为：
+The governing equation for the unloaded static elastic rod with torsion is:
 
 $$
 \kappa''+\frac{1}{2}\kappa^3+\mathrm{c}_1\kappa -\frac{\nu}{\nu+1}\mathrm{c}_0^2\frac{1}{\kappa^{3+\frac{2}{\nu}}}=0
 $$
 
-可以看出，如果不考虑扭转能，令 $\mathrm{GI}\rightarrow0;\nu\rightarrow\infty$，(11)退化到[弹性线问题与数值求解](https://lijh0417.github.io/2022/11/02/%E5%BC%B9%E6%80%A7%E7%BA%BF%E9%97%AE%E9%A2%98%E4%B8%8E%E6%95%B0%E5%80%BC%E6%B1%82%E8%A7%A3/)中通过能量泛函求出的Euler's Elastica Rod方程。
+If torsional energy is neglected, i.e., $\mathrm{GI}\rightarrow0;\nu\rightarrow\infty$, (11) reduces to the Euler's Elastica Rod equation obtained via the energy functional in [The Elastic Rod Problem and Its Numerical Solution](https://lijh0417.github.io/2022/11/02/%E5%BC%B9%E6%80%A7%E7%BA%BF%E9%97%AE%E9%A2%98%E4%B8%8E%E6%95%B0%E5%80%BC%E6%B1%82%E8%A7%A3/).
 
-## 稳态弹性杆（沿绳子运动）
+## Steady-State Elastic Rod (Moving Along the Rope)
 
-局部标架二阶导表达式为：
+The second derivative of the local frame is:
 
 $$
 \ddot{\mathbf{d}}=\left( v_t\Gamma +v^2\left( \Gamma_s+\Gamma\Gamma \right) \right) \mathbf{d}
@@ -469,7 +469,7 @@ $$
 \ddot{r}=r_{ss}v^2+r_sv_t=v_t\mathbf{d}_1+v^2\left( m_1\mathbf{d}_2+m_2\mathbf{d}_3 \right)
 $$
 
-弹性杆方程：
+The elastic rod equations:
 
 $$
 \frac{\partial \mathbf{F}}{\partial s}+\mathbf{q}=\rho \mathbf{A}\ddot{\mathbf{r}}=\rho \mathbf{A}(v_t\mathbf{d}_1+v^2(m_1\mathbf{d}_2+m_2\mathbf{d}_3))
@@ -503,11 +503,11 @@ $$
 \mathbf{M}=\mathrm{EI}(\mathbf{\Gamma})
 $$
 
-## 二维理论
+## Two-Dimensional Theory
 
-### 二维静态理论
+### Two-Dimensional Static Theory
 
-从静态理论的代码开始简化：
+Starting from the static theory equations:
 
 $$
 \frac{\partial \mathbf{F}}{\partial s}+\mathbf{q}=0
@@ -537,7 +537,7 @@ $$
 \mathbf{M}=\mathrm{EI}(\mathbf{\Gamma})
 $$
 
-简化条件：
+Simplification conditions:
 
 $$
 \mathbf{F}=\mathrm{F}_1\mathbf{d}_1+\mathrm{F}_2\mathbf{d}_2
@@ -623,7 +623,7 @@ q_x(s) & q_y(s)
 \end{pmatrix}
 $$
 
-矢量方程化简为：
+The vector equations simplify to:
 
 $$
 \begin{cases}
@@ -634,9 +634,9 @@ $$
 \end{cases}
 $$
 
-在这里分两种情况进行讨论：
+Two cases are discussed:
 
-**① 小角度情况：** $\theta(s)\approx0$，此时标架与固定坐标系重合，(6)式化简为：
+**① Small angle case:** $\theta(s)\approx0$, the frame coincides with the fixed coordinate system. Equation (6) simplifies to:
 
 $$
 \begin{cases}
@@ -648,7 +648,7 @@ $$
 \end{cases}
 $$
 
-对于不可拉伸梁结构，轴力为常数。对于悬臂梁右端轴力为零，因此 $\mathrm{F}_1 =0$。
+For an inextensible beam, the axial force is constant. For a cantilever beam with zero axial force at the right end, $\mathrm{F}_1 =0$.
 
 $$
 \begin{cases}
@@ -660,17 +660,17 @@ $$
 \end{cases}
 $$
 
-由(8)式得到：$q_y(s) =\mathrm{EI}\kappa''(s) +m'(s)$。
+From equation (8): $q_y(s) =\mathrm{EI}\kappa''(s) +m'(s)$.
 
-对于恒定弯矩载荷作用梁，上式退化为经典的欧拉梁公式：
+For a beam under constant bending moment load, the above reduces to the classical Euler beam formula:
 
 $$
 q_y(s) =(\mathrm{EI}\kappa(s))''=\frac{\partial^2}{\partial s^2}(\mathrm{EI}\frac{\partial^2u(s)}{\partial s^2})
 $$
 
-**② 外力载荷为0的情况：** 此时 $q_x(s)=0, q_y(s)=0$。
+**② Case with zero external load:** $q_x(s)=0, q_y(s)=0$.
 
-(6)式化简为：
+Equation (6) simplifies to:
 
 $$
 \begin{cases}
@@ -682,7 +682,7 @@ $$
 \end{cases}
 $$
 
-(10)式化简为：
+Equation (10) simplifies to:
 
 $$
 \begin{cases}
@@ -692,15 +692,15 @@ $$
 \end{cases}
 $$
 
-如果外力矩载荷为零，$\mathrm{m}(s)=0$。得到：$\frac{\kappa(s)^2}{2}+\frac{\kappa''(s)}{\kappa(s)}=c$，展开后即为Euler Elastica方程（[弹性线问题与数值求解](https://lijh0417.github.io/2022/11/02/%E5%BC%B9%E6%80%A7%E7%BA%BF%E9%97%AE%E9%A2%98%E4%B8%8E%E6%95%B0%E5%80%BC%E6%B1%82%E8%A7%A3/)中通过能量方法已经得到）：
+If the external moment load is zero, $\mathrm{m}(s)=0$. We obtain: $\frac{\kappa(s)^2}{2}+\frac{\kappa''(s)}{\kappa(s)}=c$, which expands to the Euler Elastica equation (already obtained via the energy method in [The Elastic Rod Problem and Its Numerical Solution](https://lijh0417.github.io/2022/11/02/%E5%BC%B9%E6%80%A7%E7%BA%BF%E9%97%AE%E9%A2%98%E4%B8%8E%E6%95%B0%E5%80%BC%E6%B1%82%E8%A7%A3/)):
 
 $$
 \kappa''(s) +\frac{\kappa(s)^3}{2}+\mathrm{c}\kappa(s) =0
 $$
 
-### 二维稳态理论
+### Two-Dimensional Steady-State Theory
 
-二维稳态理论可简化为：
+The two-dimensional steady-state theory can be simplified to:
 
 $$
 \frac{\partial \mathbf{F}}{\partial s}+\mathbf{q}=\rho\mathrm{A}\left( v_t\mathbf{d}_1+v^2\kappa(s) \mathbf{d}_2 \right)
@@ -730,7 +730,7 @@ $$
 \mathbf{M}=\mathrm{EI}(\mathbf{\Gamma})
 $$
 
-简化条件：
+Simplification conditions:
 
 $$
 \mathbf{F}=\mathrm{F}_1\mathbf{d}_1+\mathrm{F}_2\mathbf{d}_2
@@ -816,7 +816,7 @@ q_x(s) & q_y(s)
 \end{pmatrix}
 $$
 
-矢量方程简化为：
+The vector equations simplify to:
 
 $$
 \begin{cases}
@@ -827,7 +827,7 @@ $$
 \end{cases}
 $$
 
-上式化简为：
+The above simplifies to:
 
 $$
 \begin{cases}

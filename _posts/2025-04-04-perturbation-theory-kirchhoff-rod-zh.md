@@ -1,20 +1,22 @@
 ---
-title: "The Instability of Kirchhoff Rod"
+title: "基尔霍夫杆的不稳定性"
 date: 2025-04-04
 tags:
   - Geometric Elasticity
   - Rod
-lang: en
+lang: zh
 ref: perturbation-theory-kirchhoff-rod
-permalink: /2025/04/perturbation-theory-kirchhoff-rod/
+permalink: /zh/2025/04/perturbation-theory-kirchhoff-rod/
 ---
-This note presents the basic theory of frame perturbation method applied in analyzing the instability of Kirchhoff Rod.
+
+本文介绍了框架摄动法在分析基尔霍夫杆不稳定性中的基本理论。
 <!-- more -->
 
-## The basic equation
-In this section, we review the basic equation of Kirchhoff rod and derive the basic perturbation format of local frame based on the orthogonality laying the foudation for the instability analysis in next section.
+## 基本方程
 
-Consider the local frame can be expanded as:
+在本节中，我们回顾基尔霍夫杆的基本方程，并基于正交性推导局部框架的基本摄动格式，为下一节的不稳定性分析奠定基础。
+
+考虑局部框架可以展开为：
 
 $$
 \mathbf{d}=\left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \left( \begin{array}{c}
@@ -24,7 +26,7 @@ $$
 \end{array} \right) 
 $$
 
-Due to the orthogonality, $ \mathbf{d} $ meets $\mathbf{d}\cdot\mathbf{d}^t=\mathbf{I}$, it comes:
+由于正交性，$ \mathbf{d} $ 满足 $\mathbf{d}\cdot\mathbf{d}^t=\mathbf{I}$，可得：
 
 $$
 \left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \left( \mathbf{I}+\varepsilon \mathbf{A}^t+\varepsilon ^2\mathbf{B}^t \right) =\mathbf{I}+\varepsilon \left( \mathbf{A}+\mathbf{A}^t \right) +\varepsilon ^2\left( \mathbf{B}+\mathbf{B}^t+\mathbf{AA}^t \right) 
@@ -38,19 +40,19 @@ $$
 \end{matrix} \right) 
 $$
 
-So $\mathbf{A}$ is a antisymmetric matrix, and $\mathbf{B}=\mathbf{C}-1/2\mathbf{A}\mathbf{A}^t$, where $\mathbf{C}$ is also a antisymmetric matrix. The movements of frame in time $t$ and arc-length $s$ are descirbed by the second-order antisymmetric tensor $\mathbf{K}$ and $\mathbf{W}$ respectively, the perturbation of these two tensors can also be calculated. Take the movement of the frame in time as an example:
+因此 $\mathbf{A}$ 是反对称矩阵，$\mathbf{B}=\mathbf{C}-1/2\mathbf{A}\mathbf{A}^t$，其中 $\mathbf{C}$ 也是反对称矩阵。框架在时间 $t$ 和弧长 $s$ 上的运动分别由二阶反对称张量 $\mathbf{K}$ 和 $\mathbf{W}$ 描述，这两个张量的摄动也可以计算。以框架在时间上的运动为例：
 
 $$
 \dot{\mathbf{d}}=\mathbf{Wd}
 $$
 
-Expand $\mathbf{d}$ and $\mathbf{W}$:
+展开 $\mathbf{d}$ 和 $\mathbf{W}$：
 
 $$
 \left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \mathbf{W}^{(0)}\mathbf{d}+\left( \varepsilon \dot{\mathbf{A}}+\varepsilon ^2\dot{\mathbf{B}} \right) \mathbf{d}=\left( \mathbf{W}^{(0)}+\mathbf{W}^{(1)}\varepsilon +\mathbf{W}^{(2)}\varepsilon ^2 \right) \left( \mathbf{I}+\varepsilon \mathbf{A}+\varepsilon ^2\mathbf{B} \right) \mathbf{d}
 $$
 
-By comparing the coefficients of both sides, the perturbation components of $\mathbf{W}$ can be written as:
+通过比较两边的系数，$\mathbf{W}$ 的摄动分量可以写为：
 
 $$
 \mathbf{W}^{(1)}=\frac{\partial \mathbf{A}}{\partial t}+\mathbf{AW}^{(0)}-\mathbf{W}^{(0)}\mathbf{A}
@@ -60,7 +62,7 @@ $$
 \mathbf{W}^{(2)}=\frac{\partial \mathbf{B}}{\partial t}+\mathbf{BW}^{(0)}-\mathbf{W}^{(0)}\mathbf{B}-\mathbf{AW}^{(1)}
 $$
 
-Similarly, the perturbation components of $\mathbf{K}$ read:
+类似地，$\mathbf{K}$ 的摄动分量为：
 
 $$
 \mathbf{K}^{(1)}=\frac{\partial \mathbf{A}}{\partial s}+\mathbf{AK}^{(0)}-\mathbf{K}^{(0)}\mathbf{A}
@@ -70,10 +72,11 @@ $$
 \mathbf{K}^{(2)}=\frac{\partial \mathbf{B}}{\partial s}+\mathbf{BK}^{(0)}-\mathbf{K}^{(0)}\mathbf{B}-\mathbf{AK}^{(1)}
 $$
 
-Now we consider the perturbation of Kirchhoff equations in next section.
+现在我们在下一节中考虑基尔霍夫方程的摄动。
 
-## Kirchhoff rod
-The control equation of Kirchhoff rod can be written as:
+## 基尔霍夫杆
+
+基尔霍夫杆的控制方程可以写为：
 
 $$
 \begin{cases}
@@ -82,7 +85,7 @@ $$
 \end{cases}
 $$
 
-We expand both $\mathbf{F}$ and $\mathbf{M}$ in material frame:
+我们在材料框架中展开 $\mathbf{F}$ 和 $\mathbf{M}$：
 
 $$
 \begin{cases}
@@ -91,8 +94,7 @@ $$
 \end{cases}
 $$
 
-The dimensionless form of the equation can be written as:
-
+方程的无量纲形式可以写为：
 
 
 
@@ -108,7 +110,7 @@ $$
 \end{cases}
 $$
 
-where
+其中
 
 $$
 \begin{cases}
@@ -118,14 +120,16 @@ $$
 \end{cases}
 $$
 
-Note that $\left( \mathbf{d} \right) _s=\mathbf{Kd}, \dot{\mathbf{d}}=\mathbf{Wd}$, the control equation can be simplified as:
+注意 $\left( \mathbf{d} \right) _s=\mathbf{Kd}, \dot{\mathbf{d}}=\mathbf{Wd}$，控制方程可以简化为：
 
 $$
 \begin{cases}
 	\left( \left( f_s+f\mathbf{K} \right) _s+\left( f_s+f\mathbf{K} \right) \mathbf{K} \right) \mathbf{d}=\Delta \mathbf{d}\\
 	\left( \gamma \left( m_s+m\mathbf{K} \right) +f\Lambda \right) \mathbf{d}=\Theta \mathbf{d}\\
 \end{cases}
-\\
+$$
+
+$$
 \begin{cases}
 	\Delta =\left( \omega _1\omega _3+\begin{matrix}
 	\left( \omega _2 \right) _t&		\omega _2\omega _3-\left( \omega _1 \right) _t&		-\omega _{1}^{2}-\omega _{2}^{2}\\
@@ -136,15 +140,13 @@ $$
 \end{cases}  
 $$
 
-By expanding the Kirchhoff equation into first order we can derive the second-derivation of $\{f_1, f_2, f_3, \alpha_1, \alpha_2, \alpha_3\}$, which can be used to judge the buckling modes.
+通过将基尔霍夫方程展开到一阶，我们可以推导出 $\{f_1, f_2, f_3, \alpha_1, \alpha_2, \alpha_3\}$ 的二阶导数，用于判断屈曲模式。
 
+## 案例分析
 
+### 第一种情况
 
-
-## Cases study
-### First case
-We consider the first case: the twist buckling of a planar ring.
-Firstly we should slove the static configuration and then perturbate based on this basic mode. Kirchhoff equation can be expressed as:
+我们考虑第一种情况：平面环的扭转屈曲。首先我们求解静态构型，然后基于该基本模式进行摄动。基尔霍夫方程可以表示为：
 
 $$
 \begin{cases}
@@ -157,9 +159,9 @@ $$
 \end{cases}
 $$
 
-The geometry of static solution is a ring (must be isotropic cross section) with twist $\tau$ and the material strain can be written as: $\kappa_3=\tau_0, \bar{\kappa}_3=\bar{\kappa}_1=\bar{\kappa}_2=0,\alpha=\beta$.
+静态解的几何形状是一个环（必须是各向同性截面），扭转角为 $\tau$，材料应变可以写为：$\kappa_3=\tau_0, \bar{\kappa}_3=\bar{\kappa}_1=\bar{\kappa}_2=0,\alpha=\beta$。
 
-Finally, it reads:
+最终得到：
 
 $$
 \begin{cases}
@@ -168,7 +170,7 @@ $$
 \end{cases}
 $$
 
-Simplify the perturbation format, the 
+简化摄动格式，
 
 $$
 \left(

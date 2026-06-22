@@ -1,13 +1,13 @@
 ---
 title: "Some Fragmented Mathematical Notes"
 date: 2022-10-06 12:37:47
-ref: fragmented-mathematical-notes
-permalink: /zh/2022/10/fragmented-mathematical-notes/
 mathjax: true
 tags:
   - Mathematics
   - Geometric Elasticity
-lang: zh
+lang: en
+ref: fragmented-mathematical-notes
+permalink: /2022/10/fragmented-mathematical-notes/
 ---
 
 Some fragmented mathematical notes.
@@ -18,11 +18,11 @@ Some fragmented mathematical notes.
 
 ### Notes on Classical Curve Theory
 
-传统微分几何对曲线论的介绍中常以 Frenet 标架引入（具有几何直观），但是如何以张量的观点看待曲线论呢？
+Classical differential geometry often introduces curve theory via the Frenet frame (geometrically intuitive). But how can we view curve theory from the perspective of tensors?
 
-#### 定义
+#### Definitions
 
-Frame 指一组向量 $\{ \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \}$，满足
+A frame is a set of vectors $\{ \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \}$ satisfying
 
 $$
 \begin{cases}
@@ -31,9 +31,9 @@ $$
 \end{cases}
 $$
 
-#### 性质
+#### Properties
 
-由上式可以推出如下性质。
+The following properties can be derived from the above equations.
 
 #### 1. $\Gamma_j^{\,i} + \Gamma_i^{\,j} = 0$
 
@@ -45,7 +45,7 @@ $$
 = 0.
 $$
 
-#### 2. $\{ \Omega, \omega, \Gamma \}$ 之间的关系
+#### 2. Relations among $\{ \Omega, \omega, \Gamma \}$
 
 $$
 \frac{d\mathbf{e}_j}{ds}
@@ -61,25 +61,25 @@ $$
 = \epsilon_{ijk}\Gamma_i^{\,j}\mathbf{e}_k.
 $$
 
-因此
+Therefore
 
 $$
 \mathbf{\omega} = \frac{1}{2}\epsilon_{ijk}\Gamma_i^{\,j}\mathbf{e}_k.
 $$
 
-对于 Frenet 标架：
+For the Frenet frame:
 
 $$
 \mathbf{\omega} = \kappa \mathbf{e}_3 + \tau \mathbf{e}_1.
 $$
 
-对于 Bishop 标架：
+For the Bishop frame:
 
 $$
 \mathbf{\omega} = \kappa_1 \mathbf{b}_2 - \kappa_2 \mathbf{b}_1.
 $$
 
-若 $\mathbf{\Omega} \cdot \mathbf{a} = \mathbf{\omega} \times \mathbf{a}$，则有
+If $\mathbf{\Omega} \cdot \mathbf{a} = \mathbf{\omega} \times \mathbf{a}$, then
 
 $$
 \begin{cases}
@@ -88,7 +88,7 @@ $$
 \end{cases}
 $$
 
-结合上述表达式：
+Combining the above expressions:
 
 $$
 \Omega_{ij}
@@ -97,9 +97,9 @@ $$
 = -\Gamma_i^{\,j}.
 $$
 
-注意这里 $\delta$ 不求和。
+Note that $\delta$ is not summed here.
 
-可以得到如下结论：
+We obtain the following conclusion:
 
 $$
 \begin{cases}
@@ -111,11 +111,11 @@ $$
 \end{cases}
 $$
 
-可以发现 Darboux 矢量和旋转张量 $\mathbf{\Omega}$ 完全是由 $\mathbf{\Gamma}$ 和 $\mathbf{\epsilon}$ 诱导出来的。
+It can be seen that the Darboux vector and the rotation tensor $\mathbf{\Omega}$ are entirely induced by $\mathbf{\Gamma}$ and $\mathbf{\epsilon}$.
 
-因此说 Frenet 方程决定了曲线的内禀结构。
+Thus the Frenet equations determine the intrinsic structure of a curve.
 
-#### 3. Bishop、Frenet、Material frame 之间的关系
+#### 3. Relations among Bishop, Frenet, and Material frames
 
 $$
 \begin{cases}
@@ -124,7 +124,7 @@ $$
 \end{cases}
 $$
 
-考虑 $\mathbf{p}_i = R_i^{\,j}\mathbf{e}_j$，即参考标架之间的转动。
+Consider $\mathbf{p}_i = R_i^{\,j}\mathbf{e}_j$, i.e., a rotation between reference frames.
 
 $$
 \frac{d\mathbf{p}_i}{ds}
@@ -143,7 +143,7 @@ $$
 + R_i^{\,n}{\Gamma_0}_n^{\,m}R_j^{\,m}.
 $$
 
-得到重要表达式：
+Obtaining the important expression:
 
 $$
 \Gamma_i^{\,j}
@@ -151,7 +151,7 @@ $$
 + R_i^{\,n}{\Gamma_0}_n^{\,m}R_j^{\,m}.
 $$
 
-考虑转动以及三种形式的标架：
+Consider the rotation and the three types of frames:
 
 $$
 R =
@@ -173,7 +173,7 @@ $$
 \theta'(s).
 $$
 
-三种 frame 的连接矩阵分别为：
+The connection matrices of the three frames are:
 
 $$
 \text{Bishop}\;
@@ -198,9 +198,9 @@ $$
 \end{bmatrix}.
 $$
 
-由上式张量方程可以得到：
+From the above tensor equations:
 
-Bishop 沿 $\mathbf{e}_1$ 轴转动 $\theta$，得到 Frenet 标架，$\theta$ 满足
+Rotating the Bishop frame about the $\mathbf{e}_1$ axis by $\theta$ gives the Frenet frame, where $\theta$ satisfies
 
 $$
 \begin{cases}
@@ -210,7 +210,7 @@ $$
 \end{cases}
 $$
 
-Bishop 沿 $\mathbf{e}_1$ 轴转动 $\theta$，得到 Material 标架，$\theta$ 满足
+Rotating the Bishop frame about the $\mathbf{e}_1$ axis by $\theta$ gives the Material frame, where $\theta$ satisfies
 
 $$
 \begin{cases}
@@ -220,7 +220,7 @@ m = \theta'.
 \end{cases}
 $$
 
-Frenet 沿 $\mathbf{e}_1$ 轴转动 $\theta$，得到 Material 标架，$\theta$ 满足
+Rotating the Frenet frame about the $\mathbf{e}_1$ axis by $\theta$ gives the Material frame, where $\theta$ satisfies
 
 $$
 \begin{cases}
@@ -232,9 +232,9 @@ $$
 
 ### Notes on Classical Surface Theory
 
-#### 曲面基本型
+#### Fundamental Forms of a Surface
 
-考虑曲面参数方程 $\mathbf{r}(u,v)$，微元线段的度量写为
+Consider a surface parametrized by $\mathbf{r}(u,v)$. The line element is written as
 
 $$
 \mathrm{I} = d\mathbf{r} \cdot d\mathbf{r}
@@ -242,11 +242,11 @@ $$
 = E\,du^2 + 2F\,du\,dv + G\,dv^2.
 $$
 
-称为第一基本型。
+This is called the first fundamental form.
 
 ![](/assets/images/2022-10-06-Some%20fragmentaed%20mathematical%20notes/几何弹性/kappa.bmp)
 
-由图中几何关系有
+From the geometric relations in the figure:
 
 $$
 \theta\,ds
@@ -256,7 +256,7 @@ $$
 = d^2\mathbf{r} \cdot \mathbf{n}.
 $$
 
-定义 $d^2\mathbf{r} \cdot \mathbf{n} = \mathrm{II}$ 为第二基本型。
+Define $d^2\mathbf{r} \cdot \mathbf{n} = \mathrm{II}$ as the second fundamental form.
 
 $$
 \mathrm{II}
@@ -266,13 +266,13 @@ $$
 = L\,du^2 + 2M\,du\,dv + N\,dv^2.
 $$
 
-法曲率 $\kappa_n$ 表示为
+The normal curvature $\kappa_n$ is expressed as
 
 $$
 \kappa_n = \frac{\mathrm{II}}{\mathrm{I}}.
 $$
 
-**总结：**
+**Summary:**
 
 $$
 \begin{cases}
@@ -288,11 +288,11 @@ N = \mathbf{r}_{vv} \cdot \mathbf{n} = -\mathbf{r}_v \cdot \mathbf{n}_v, \\
 \end{cases}
 $$
 
-显然 $\dfrac{du}{dv}$ 决定了曲面上法曲率的方向。
+Clearly $\dfrac{du}{dv}$ determines the direction of normal curvature on the surface.
 
-#### 主曲率、平均曲率、高斯曲率
+#### Principal Curvature, Mean Curvature, Gaussian Curvature
 
-关注法曲率的极值，令 $du/dv = p$，有
+Focusing on the extremum of normal curvature, let $du/dv = p$, then
 
 $$
 \left( \kappa_n E - L \right)p^2
@@ -300,21 +300,21 @@ $$
 + \kappa_n G - N = 0.
 $$
 
-二次方程有解，必然 $\Delta \ge 0$，因此
+For a quadratic equation to have a solution, $\Delta \ge 0$, therefore
 
 $$
 (EG - F^2)\kappa_n^2 - (EN - 2FM + GL)\kappa_n + LN - M^2 \le 0.
 $$
 
-由 Cauchy 不等式必然有
+By the Cauchy inequality we always have
 
 $$
 (\mathbf{r}_u \cdot \mathbf{r}_v)^2 \le |\mathbf{r}_u|^2 |\mathbf{r}_v|^2,
 $$
 
-即 $F^2 \le EG$。二次项系数大于零，二次型小于零，$\kappa_n$ 被限制在两个零点之间。
+i.e., $F^2 \le EG$. The quadratic coefficient is positive, the quadratic form is negative, and $\kappa_n$ is bounded between the two roots.
 
-主曲率的极大极小值分别为
+The maximum and minimum principal curvatures are
 
 $$
 \begin{cases}
@@ -339,19 +339,19 @@ $$
 \end{cases}
 $$
 
-其中
+where
 
 $$
 K = \kappa_1 \kappa_2
 $$
 
-称为高斯曲率，
+is called the Gaussian curvature, and
 
 $$
 H = \frac{\kappa_1 + \kappa_2}{2}
 $$
 
-称为平均曲率。
+is called the mean curvature.
 
 #### Gauss Theorem Egregium
 
@@ -363,7 +363,7 @@ N = \dfrac{\langle \mathbf{r}_{vv}, \mathbf{r}_u, \mathbf{r}_v \rangle}{EG - F^2
 \end{cases}
 $$
 
-第二基本型的行列式可以写作
+The determinant of the second fundamental form can be written as
 
 $$
 LN - M^2
@@ -383,7 +383,7 @@ F_v - \dfrac{G_u}{2} & E & F \\
 \end{bmatrix}.
 $$
 
-进一步可化为
+This can be further transformed to
 
 $$
 LN - M^2
@@ -403,11 +403,11 @@ F_v - \dfrac{G_u}{2} & E & F \\
 \end{bmatrix}.
 $$
 
-因此高斯曲率只与第一基本型（曲面的度量）有关，意味着当曲面不伸长（由弯曲能主导）时，高斯曲率不变。
+Therefore, the Gaussian curvature depends only on the first fundamental form (the metric of the surface), meaning that when the surface does not stretch (dominated by bending energy), the Gaussian curvature is invariant.
 
-#### 曲面的结构方程
+#### Structure Equations of a Surface
 
-类似于 Frenet frame，考虑到 $\mathbf{n}$ 为单位法矢量，切方向与自身垂直，曲面的结构方程可以写为
+Similar to the Frenet frame, considering $\mathbf{n}$ as the unit normal vector (perpendicular to the tangent plane), the structure equations of a surface can be written as
 
 $$
 \begin{cases}
@@ -417,15 +417,15 @@ $$
 \end{cases}
 $$
 
-可以看出，$b$ 就是第二基本型的系数。
+It can be seen that $b$ is the coefficient of the second fundamental form.
 
-考虑导数可交换性，首先对于 $\mathbf{n}$，有
+Considering the commutativity of partial derivatives, first for $\mathbf{n}$:
 
 $$
 \mathbf{n}_{\alpha\beta} = \mathbf{n}_{\beta\alpha}.
 $$
 
-于是
+Thus
 
 $$
 \left( b_{\alpha\beta}^{\,\gamma} + b_\alpha^{\,\xi}\Gamma_{\xi\beta}^{\,\gamma} \right) \mathbf{r}_\gamma
@@ -435,7 +435,7 @@ $$
 + b_\beta^{\,\xi} b_{\xi\alpha} \mathbf{n}.
 $$
 
-对比系数得到
+Comparing coefficients gives
 
 $$
 \begin{cases}
@@ -446,9 +446,9 @@ b_\alpha^{\,\xi} b_{\xi\beta} = b_\beta^{\,\xi} b_{\xi\alpha}.
 \end{cases}
 $$
 
-上式中第二式自然满足，第一式称为 Codazzi 方程。
+The second equation is automatically satisfied, and the first is called the Codazzi equation.
 
-对于 $\mathbf{r}$ 有
+For $\mathbf{r}$:
 
 $$
 \mathbf{r}_{\alpha\beta\gamma}
@@ -460,7 +460,7 @@ $$
 - b_{\alpha\beta} b_\gamma^{\,\xi} \mathbf{r}_\xi.
 $$
 
-由 $\mathbf{r}_{\alpha\beta\gamma} = \mathbf{r}_{\alpha\gamma\beta}$，对比系数得到
+From $\mathbf{r}_{\alpha\beta\gamma} = \mathbf{r}_{\alpha\gamma\beta}$, comparing coefficients gives
 
 $$
 \begin{cases}
@@ -477,11 +477,11 @@ $$
 \end{cases}
 $$
 
-第一式称为 Gauss 方程，第二式称为 Codazzi 方程。
+The first equation is called the Gauss equation, and the second is the Codazzi equation.
 
-现在证明上式第二式与前面的 Codazzi 形式相同。
+Now we show that the second equation above has the same form as the earlier Codazzi equation.
 
-Christoffel 记号可以表示为
+The Christoffel symbols can be expressed as
 
 $$
 g_{\gamma\xi}\Gamma_{\alpha\beta}^{\,\xi}
@@ -496,7 +496,7 @@ g_{\beta\gamma,\alpha}
 \right).
 $$
 
-记 $g^{\alpha\beta}g_{\beta\gamma} = \delta^\alpha_\gamma$，则有
+Let $g^{\alpha\beta}g_{\beta\gamma} = \delta^\alpha_\gamma$, then
 
 $$
 \Gamma_{\alpha\beta}^{\,\xi}
@@ -511,7 +511,7 @@ g_{\beta\gamma,\alpha}
 \right).
 $$
 
-Gauss 方程可以记为
+The Gauss equation can be written as
 
 $$
 {R_{\gamma\alpha\beta}^{\ \ \ \ \xi}}
@@ -525,7 +525,7 @@ b_{\alpha\beta} b_\gamma^{\,\xi}
 - b_{\alpha\gamma} b_\beta^{\,\xi}.
 $$
 
-进一步，
+Furthermore,
 
 $$
 R_{\alpha\beta\delta\gamma}
@@ -536,17 +536,17 @@ b_{\alpha\delta} b_{\beta\gamma}
 - b_{\alpha\gamma} b_{\beta\delta}.
 $$
 
-可以看出黎曼曲率张量具有大对称性，同时具有小反对称性。
+It can be seen that the Riemann curvature tensor has large symmetries as well as small anti-symmetries.
 
-由于二维曲面只有两个指标，同时考虑到黎曼曲率张量的小反对称性，因此二维只有一个不为零的黎曼曲率张量：
+Since a two-dimensional surface has only two indices, and considering the small anti-symmetry of the Riemann curvature tensor, there is only one non-zero Riemann curvature component in two dimensions:
 
 $$
 R_{1212} = b_{11}b_{22} - b_{12}b_{12}.
 $$
 
-即二维曲面的 Gauss 方程。
+This is the Gauss equation for a two-dimensional surface.
 
-Gauss 曲率表示为
+The Gaussian curvature can be expressed as
 
 $$
 K
@@ -558,7 +558,7 @@ K
 \frac{1}{2} g^{\alpha\delta} g^{\beta\gamma} R_{\alpha\beta\delta\gamma}.
 $$
 
-黎曼曲率即为高斯曲率乘以第一基本型的行列式。并且
+The Riemann curvature is equal to the Gaussian curvature multiplied by the determinant of the first fundamental form. Moreover,
 
 $$
 g^{\alpha\delta} g^{\beta\gamma} R_{\alpha\beta\delta\gamma}
@@ -577,7 +577,7 @@ b_\alpha^{\,\alpha} b_\beta^{\,\beta}
 2K.
 $$
 
-有趣的是板的能量可以写为
+Interestingly, the energy of a plate can be written as
 
 $$
 \text{energy}
@@ -591,14 +591,14 @@ $$
 D\left( \nu(\tau^2 - K) + 2H^2 \right).
 $$
 
-#### 能否把杆和板的形式统一起来？
+#### Can rod and plate theories be unified?
 
-1. 如果把无泊松效应的曲面定义为理想曲面，可以看出同时为理想曲面和极小曲面的弹性曲面能量为零。  
-2. 对于理想曲面，平均曲率取极小时能量取极小值，这正是 Marie-Sophie Germain 首次考虑弹性板时的能量形式。此外，数学中寻找的恒平均曲率曲面，正是不考虑泊松效应时的等能量弹性曲面。
+1. If a surface without Poisson effect is defined as an ideal surface, then an elastic surface that is both ideal and minimal has zero energy.
+2. For an ideal surface, the energy is minimized when the mean curvature is minimized — this is precisely the energy form first considered by Marie-Sophie Germain for elastic plates. Furthermore, surfaces of constant mean curvature found in mathematics are exactly the iso-energy elastic surfaces when the Poisson effect is neglected.
 
-#### 曲面结构方程的简化形式
+#### Simplified Form of the Surface Structure Equations
 
-首先考虑 Codazzi 方程：
+First, consider the Codazzi equation:
 
 $$
 \Gamma_{\alpha\beta}^{\,p} b_{p\gamma} + b_{\alpha\beta,\gamma}
@@ -606,9 +606,9 @@ $$
 \Gamma_{\alpha\gamma}^{\,p} b_{p\beta} + b_{\alpha\gamma,\beta}.
 $$
 
-可以看出 $\beta,\gamma$ 必然不同，此外只有 $12$ 和 $21$ 两种选择。
+It can be seen that $\beta,\gamma$ must be distinct, and there are only the choices $12$ and $21$.
 
-不妨令 $\beta = 1$，$\gamma = 2$，$\alpha$ 分别等于 $1,2$，得到
+Let $\beta = 1$, $\gamma = 2$, and let $\alpha$ take the values $1,2$ respectively, giving
 
 $$
 \Gamma_{12}^{\,1}L
@@ -624,21 +624,21 @@ $$
 = M_v - N_u.
 $$
 
-即为 Codazzi--Mainardi 方程。
+These are the Codazzi–Mainardi equations.
 
-由黎曼张量的对称性，有
+From the symmetry of the Riemann tensor:
 
 $$
 R_{1212} = LN - M^2.
 $$
 
-Gauss 方程为
+The Gauss equation is
 
 $$
 K = \frac{LN - M^2}{EG - F^2}.
 $$
 
-Gauss 方程还可以表示为
+The Gauss equation can also be expressed as
 
 $$
 K
@@ -684,9 +684,9 @@ K
 \right].
 $$
 
-**Christoffel 记号与 Gauss 参数的关系：**
+**Christoffel symbols in terms of the Gauss parameters:**
 
-由
+From
 
 $$
 \Gamma_{\alpha\beta}^{\,\xi}
@@ -701,7 +701,7 @@ g_{\beta\gamma,\alpha}
 \right)
 $$
 
-以及
+and
 
 $$
 g^{\alpha\beta}
@@ -713,7 +713,7 @@ G & -F \\
 \end{bmatrix},
 $$
 
-有
+we have
 
 $$
 \Gamma_{11}^{\,1}
@@ -755,9 +755,9 @@ $$
 \frac{EG_v + FG_u - 2FF_v}{2\det(a)}.
 $$
 
-### Darboux 矢量与旋转张量之间的关系
+### Relations Between the Darboux Vector and the Rotation Tensor
 
-若矢量 $\mathbf{\omega}$ 与 $\mathbf{\Omega}$ 满足
+If the vector $\mathbf{\omega}$ and the tensor $\mathbf{\Omega}$ satisfy
 
 $$
 \mathbf{\omega}\times\vec{u}
@@ -765,7 +765,7 @@ $$
 \mathbf{\Omega}\cdot\vec{u},
 $$
 
-则二者满足以下关系式：
+then they satisfy the following relations:
 
 $$
 \mathbf{\omega} \times \mathbf{u} = \mathbf{\Omega} \cdot \mathbf{u},
@@ -781,7 +781,7 @@ $$
 (\Omega_{ij} + \epsilon_{ijk}\omega_k)u_j \vec{e}^{\,i} = 0.
 $$
 
-**分量形式：**
+**Component form:**
 
 $$
 \Omega_{ij} + \epsilon_{ijk}\omega_k = 0,
@@ -791,7 +791,7 @@ $$
 \epsilon_{ijk}\Omega_{ij} + 2\omega_k = 0.
 $$
 
-**张量形式：**
+**Tensor form:**
 
 $$
 \mathbf{\epsilon} : \mathbf{\Omega} + 2\mathbf{\omega} = 0,
@@ -803,21 +803,21 @@ $$
 
 ## Linear Algebra
 
-### 常用矩阵公式
+### Useful Matrix Formulas
 
-三阶：
+Third order:
 
 $$
 \det(A-B) = \det(A) - \det(B) + \operatorname{adj}(B):A - \operatorname{adj}(A):B.
 $$
 
-二阶：
+Second order:
 
 $$
 \det(A+B) = \det(A) + \det(B) + \frac{\operatorname{adj}(B):A + \operatorname{adj}(A):B}{2}.
 $$
 
-### 向量叉乘公式推导
+### Derivation of the Cross Product Formula
 
 $$
 \mathbf{a}\times\mathbf{b}
@@ -845,13 +845,13 @@ $$
 \mathbf{b}\frac{\partial \mathbf{a}^t}{\partial\mathbf{c}}.
 $$
 
-能量可以写为：
+The energy can be written as:
 
 $$
 \mathbf{n}_1 \cdot \mathbf{n}_1.
 $$
 
-有：
+Then:
 
 $$
 \frac{\partial(\mathbf{n}_1\cdot\mathbf{n}_1)}{\partial\mathbf{e}_1}
@@ -863,13 +863,13 @@ $$
 \frac{\partial(\mathbf{e}_1\times\mathbf{e}_2)^t}{\partial\mathbf{e}_1}.
 $$
 
-因此只需要推导：
+Thus we only need to derive:
 
 $$
 \frac{\partial(\mathbf{e}_1\times\mathbf{e}_2)^t}{\partial\mathbf{e}_1}.
 $$
 
-一些有用的求导公式：
+Some useful derivative formulas:
 
 $$
 \mathbf{c}\cdot
@@ -916,20 +916,20 @@ $$
 \frac{\mathbf{x}}{|\mathbf{x}|}.
 $$
 
-### 莱布尼茨公式为什么和二项式定理相似
-偶然发现了一个有趣的类比。
+### Why Leibniz's Rule Resembles the Binomial Theorem
+I stumbled upon an interesting analogy.
 
-在高等数学中，Leibniz 公式非常常见，但在工科数学分析课程中往往不强调其证明。这里给出一个不严格但直观的理解。
+In higher mathematics, Leibniz's rule is very common, but engineering mathematics courses often do not emphasize its proof. Here is an informal but intuitive understanding.
 
 ---
 
-**Leibniz 公式**
+**Leibniz's Rule**
 
 $$
 (\mu v)^{(n)} = \sum_{k=0}^{n} C_n^k \, \mu^{(k)} \, v^{(n-k)}
 $$
 
-其中：
+where:
 
 $$
 \mu^{(0)} = \mu, \quad v^{(0)} = v
@@ -937,9 +937,9 @@ $$
 
 ---
 
-Leibniz 公式在形式上与**二项式定理**非常相似，那么它们之间是否存在某种联系？
+Leibniz's rule bears a strong formal resemblance to the **binomial theorem**. Is there a connection between them?
 
-一个有趣的想法是，引入一种“算子”：
+An interesting idea is to introduce an "operator":
 
 $$
 \square + \Delta
@@ -947,15 +947,15 @@ $$
 
 ---
 
-**算子的定义与性质**
+**Definition and Properties of the Operator**
 
-我们希望这个算子满足如下性质：
+We want this operator to satisfy:
 
-- $\square$ 只作用在 $\mu$ 上，不作用在 $v$
-- $\Delta$ 只作用在 $v$ 上，不作用在 $\mu$
-- 两者的作用都是“求导”
+- $\square$ only acts on $\mu$, not on $v$
+- $\Delta$ only acts on $v$, not on $\mu$
+- Both act as "differentiation"
 
-因此：
+Thus:
 
 $$
 \square^n \mu = \mu^{(n)}, \quad \Delta^n v = v^{(n)}
@@ -963,9 +963,9 @@ $$
 
 ---
 
-**一阶导数**
+**First Derivative**
 
-对乘积 $\mu v$ 求导，可以写为：
+The derivative of the product $\mu v$ can be written as:
 
 $$
 (\square + \Delta)\, \mu v
@@ -974,19 +974,19 @@ $$
 
 ---
 
-**二阶导数**
+**Second Derivative**
 
-对一阶结果再次作用算子：
+Applying the operator again to the first result:
 
 $$
 (\square + \Delta)^2 \mu v
 $$
 
-可以验证该表达是正确的（可用归纳法）。
+This expression can be verified (by induction).
 
 ---
 
-**一般情形（n 阶导）**
+**General Case (n-th Derivative)**
 
 $$
 (\mu v)^{(n)}
@@ -994,81 +994,84 @@ $$
 = \sum_{k=0}^{n} C_n^k \, \square^k \Delta^{n-k} (\mu v)
 $$
 
-由于：
+Since:
 
 $$
 \square^k \mu = \mu^{(k)}, \quad \Delta^{n-k} v = v^{(n-k)}
 $$
 
-于是得到：
+We obtain:
 
 $$
 (\mu v)^{(n)}
 = \sum_{k=0}^{n} C_n^k \, \mu^{(k)} v^{(n-k)}
 $$
 
-这正是 Leibniz 公式。
+This is Leibniz's rule.
 
 ---
 
-**进一步思考**
+**Further Thoughts**
 
-如果不是两个函数相乘，而是多个函数相乘，可以引入更多类似 $\square$ 的算子。
+If there are more than two functions multiplied together, we can introduce more operators analogous to $\square$.
 
-这种推广本质上对应于：
+This generalization essentially corresponds to:
 
-> **多项式展开 → 广义二项式定理**
+> **Polynomial expansion → generalized binomial theorem**
 
 ---
 
-**一个直观理解**
+**An Intuitive Understanding**
 
-导数的线性性质，在这里体现为：
+The linearity of differentiation is reflected here as:
 
 $$
-\text{“导数”} \leftrightarrow \text{“分配律”}
+\text{"differentiation"} \leftrightarrow \text{"distributive law"}
 $$
 
 ---
 
-其实，这个问题从高中就开始困扰我，直到大学才逐渐理解这一点。
+This question had puzzled me since high school, and I only came to understand it in university.
 
-### 浅谈分部积分公式
-分部积分并非高数中表现的那么简单单纯，这个东西在变分过程中会经常用到。
-之前发现过一些关于分部积分有趣的性质，记录如下：
+### A Brief Discussion of Integration by Parts
 
-**分部积分公式的几何意义**
+Integration by parts is not as simple as it appears in calculus; it is frequently used in variational methods.
+
+I previously discovered some interesting properties of integration by parts, recorded below:
+
+**Geometric meaning of integration by parts**
 $\int ydx=xy-\int x dy$
-即为：   
+Which is:
 $xy=\int ydx+\int x dy$
 ![1](/assets/images/fragmented-mathematical-notes/分部积分.png)
-分部积分中的两部分在力学中表现为应变能与应变余能。
+The two parts in integration by parts manifest as strain energy and complementary strain energy in mechanics.
 
-**高阶公式以及在变分法中的应用**
+**Higher-order formulas and their application in calculus of variations**
 $\int gf'dx+\int fg'dx=gf$
 $\int gf''dx-\int fg''dx=gf'-fg'$
 $\int gf'''dx+\int fg'''dx=f''g-f'g'+fg''$
-一般地可表示为:  
-$\int gf^{\alpha}dx+(-1)^{\alpha+1}\int fg^{\alpha}dx=\Sigma_{i=0}^{\alpha-1}(-1)^{i}f^{\alpha-1-i}g^{i}$   
-Euler's Elastica Rod控制方程求解中，泛函可以写成如下形式：   
-$\frac{1}{2}\int |\mathbf{r}''|^2+\Lambda*(|\mathbf{r}'|^2-1)ds$   
-$\mathbf{r} \rightarrow \mathbf{r}+\mathbf{\epsilon W}$   
-求变分后得到   
-$\int \Lambda \mathbf{r}'\mathbf{W}'+\mathbf{r}''\mathbf{W}''ds=0$   
-此时上面的公式就派上用场了，直接带入得到：   
+In general, this can be expressed as:
+$\int gf^{\alpha}dx+(-1)^{\alpha+1}\int fg^{\alpha}dx=\Sigma_{i=0}^{\alpha-1}(-1)^{i}f^{\alpha-1-i}g^{i}$
+
+In solving the governing equation for Euler's Elastica Rod, the functional can be written as:
+$\frac{1}{2}\int |\mathbf{r}''|^2+\Lambda*(|\mathbf{r}'|^2-1)ds$
+$\mathbf{r} \rightarrow \mathbf{r}+\mathbf{\epsilon W}$
+After taking the variation:
+$\int \Lambda \mathbf{r}'\mathbf{W}'+\mathbf{r}''\mathbf{W}''ds=0$
+The formula above comes in handy; substituting directly gives:
 $(\Lambda \mathbf{r}'\mathbf{W}+\mathbf{r}''\mathbf{W}'-\mathbf{r}'''\mathbf{W})|_{s_1}^{s_2}+\int(\mathbf{r}''''-(\Lambda\mathbf{r}')')ds=0$
 
-**上面那个一般性公式有没有更好看更对称的写法?**
+**Is there a nicer, more symmetric way to write that general formula?**
 
-**如何从给定泛函中直接看出变分后的结果?**   
+**How can the result of a variation be directly read from a given functional?**
 
-分部积分公式的正负交错导致了含有高阶项拉格朗日方程的正负交错结果！
-(我也能从单变量泛函中直接看出来变分后的结果了！)
+The alternating signs in integration by parts lead to the alternating signs in the Lagrange equations with higher-order terms!
+(I can now directly read the result of variation from a single-variable functional!)
 
-**含高阶导数的Lagrange方程的一般形式：**    
-利用上面的一般性分部积分公式，可以得到含高阶导数的Lagrange方程的一般形式：     
-$\int{\Sigma _{p=0}^{n}\left( -1 \right) ^p\frac{d^p}{dx^p}\left( \frac{\partial L}{\partial y_p} \right) \epsilon dx}+\Sigma _{p=0}^{n}\Sigma _{i=0}^{p-1}\left( -1 \right) ^i\epsilon _{p-1-i}\frac{d^i}{dx^i}\left( \frac{\partial L}{\partial y_p} \right)=0$   
-得到高阶Lagrange方程为：   
-$\Sigma _{p=0}^{n}\left( -1 \right) ^p\frac{d^p}{dx^p}\left( \frac{\partial L}{\partial y_p} \right)=0$   
-若满足诺特定理，守恒量为：   
+**General form of the Lagrange equation with higher-order derivatives:**
+Using the general integration by parts formula above, the general form of the Lagrange equation with higher-order derivatives is:
+$\int{\Sigma _{p=0}^{n}\left( -1 \right) ^p\frac{d^p}{dx^p}\left( \frac{\partial L}{\partial y_p} \right) \epsilon dx}+\Sigma _{p=0}^{n}\Sigma _{i=0}^{p-1}\left( -1 \right) ^i\epsilon _{p-1-i}\frac{d^i}{dx^i}\left( \frac{\partial L}{\partial y_p} \right)=0$
+The higher-order Lagrange equation is:
+$\Sigma _{p=0}^{n}\left( -1 \right) ^p\frac{d^p}{dx^p}\left( \frac{\partial L}{\partial y_p} \right)=0$
+If Noether's theorem applies, the conserved quantity is:
 $\Sigma _{p=0}^{n}\Sigma _{i=0}^{p-1}\left( -1 \right) ^i\epsilon _{p-1-i}\frac{d^i}{dx^i}\left( \frac{\partial L}{\partial y_p} \right)$
