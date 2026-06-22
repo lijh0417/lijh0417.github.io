@@ -1,8 +1,10 @@
 ---
 title: "The Instability of Kirchhoff Rod"
 date: 2025-04-04
+tags:
   - Geometric Elasticity
   - Rod
+lang: en
 ---
 This note presents the basic theory of frame perturbation method applied in analyzing the instability of Kirchhoff Rod.
 <!-- more -->

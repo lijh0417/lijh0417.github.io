@@ -4,6 +4,7 @@ date: 2023-02-08 16:03:13
 tags:
   - Geometric Elasticity
   - Rod
+lang: zh
 ---
 
 Notes for Kirchhoff rod theory.

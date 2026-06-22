@@ -4,6 +4,7 @@ date: 2023-02-28 09:27:18
 tags:
   - Geometric Elasticity
   - Rod
+lang: zh
 ---
 
 Kirchhoff弹性杆如何退化到一些经典理论？

@@ -4,6 +4,7 @@ date: 2026-04-13
 tags:
   - Geometric Elasticity
   - Rod
+lang: en
 ---
 This note presents the contact between a cylinder and a ribbon.
 

@@ -4,6 +4,7 @@ date: 2025-11-24
 tags:
   - Rod
   - Inverse design
+lang: en
 ---
 This note presents the general theory based on [Biomimetic Turing Machine](../files/A_00-Biomimetic Turing machine A multiscale theoretical framework for the inverse design of target space curves.pdf).
 <!-- more -->

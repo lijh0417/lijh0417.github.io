@@ -5,6 +5,7 @@ mathjax: true
 tags:
   - Mathematics
   - Geometric Elasticity
+lang: zh
 ---
 
 Some fragmented mathematical notes.

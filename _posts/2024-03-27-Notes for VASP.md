@@ -3,6 +3,7 @@ title: Notes for VASP
 date: 2024-03-27 08:18:51
 tags:
     - Multiscale modeling
+lang: zh
 ---
 
 VASP计算参数总结。

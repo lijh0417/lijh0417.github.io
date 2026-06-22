@@ -4,6 +4,7 @@ date: 2025-04-28
 tags:
   - Rod
   - Inverse design
+lang: en
 ---
 
 This note presents a toy model based on [Inverse elastica theory](../files/A_02-InverseElastica.pdf).

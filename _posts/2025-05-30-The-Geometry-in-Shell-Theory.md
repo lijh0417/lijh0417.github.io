@@ -3,6 +3,7 @@ title: "The Geometry in Shell Theory"
 date: 2025-05-30
   - Geometric Elasticity
   - Shell
+lang: en
 ---
 This note presents the geometry of elastic shells based on [P. Ciarlet's work](https://link.springer.com/article/10.1007/s10659-005-4738-8).
 <!-- more -->

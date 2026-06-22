@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: "Multiscale Nonlinear Mechanics"
+lang: en
+ref: home
 author_profile: true
 redirect_from: 
   - /about/

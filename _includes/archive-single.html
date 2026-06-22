@@ -32,6 +32,9 @@
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
+      {% if post.lang %}
+        <span class="lang-badge lang-{{ post.lang }}">{% if post.lang == "zh" %}中文{% else %}EN{% endif %}</span>
+      {% endif %}
     </h2>
     
     {% if post.read_time %}

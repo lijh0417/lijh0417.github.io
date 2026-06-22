@@ -3,6 +3,7 @@ title: "How to understand COCO for BVP"
 date: 2025-12-08
 tags:
 - Mathematics
+lang: en
 ---
 This note presents the basic usage of COCO for BVPs.
 <!-- more -->

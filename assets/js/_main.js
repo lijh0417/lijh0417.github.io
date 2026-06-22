@@ -3,6 +3,16 @@
    ========================================================================== */
 
 $(document).ready(function () {
+  // Language auto-redirect on homepage based on saved preference
+  var langPref = localStorage.getItem("lang");
+  var curPath = window.location.pathname.replace(/\/$/, "") || "/";
+  var isZhPage = curPath === "/zh" || curPath.startsWith("/zh/");
+  if (curPath === "/" && langPref === "zh") {
+    window.location.href = "/zh/";
+  } else if (curPath === "/zh" && langPref === "en") {
+    window.location.href = "/";
+  }
+
   // Set the theme on page load
   var setTheme = function (theme) {
     const use_theme = theme || localStorage.getItem("theme") || $("html").attr("data-theme");
@@ -25,6 +35,43 @@ $(document).ready(function () {
   }
   $('#theme-toggle').on('click', function () {
     toggleTheme();
+  });
+
+  // Translate post via Google Translate redirect
+  var translatePost = function () {
+    var lang = $('#post-lang').text().trim();
+    var target = lang === "zh" ? "en" : "zh-CN";
+    var url = "https://translate.google.com/translate?sl=auto&tl=" + target + "&u=" + encodeURIComponent(window.location.href);
+    window.location.href = url;
+  };
+
+  // Translate button on posts
+  $(document).on('click', '.translate-trigger', function (e) {
+    e.preventDefault();
+    translatePost();
+  });
+
+  // Language toggle in masthead
+  var langToggle = function () {
+    var $postLang = $('#post-lang');
+    if ($postLang.length) {
+      translatePost();
+      return;
+    }
+    // On a regular page: navigate between /page/ and /zh/page/
+    var path = window.location.pathname.replace(/\/$/, "") || "/";
+    var isZh = path === "/zh" || path.startsWith("/zh/");
+    var newPath;
+    if (isZh) {
+      newPath = path.replace("/zh", "") || "/";
+    } else {
+      newPath = path === "/" ? "/zh/" : "/zh" + path + "/";
+    }
+    window.location.href = newPath;
+  };
+  $('#lang-toggle').on('click', function (e) {
+    e.preventDefault();
+    langToggle();
   });
 
   // These should be the same as the settings in _variables.scss
