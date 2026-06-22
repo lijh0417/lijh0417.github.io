@@ -1,9 +1,0 @@
-{% if page.lang %}
-<span id="post-lang" style="display:none">{{ page.lang }}</span>
-<p class="page__translate">
-  <button class="btn btn--primary btn--small translate-trigger">
-    <i class="fa-solid fa-language"></i>
-    {% if page.lang == "zh" %}Translate to English{% else %}翻译成中文{% endif %}
-  </button>
-</p>
-{% endif %}

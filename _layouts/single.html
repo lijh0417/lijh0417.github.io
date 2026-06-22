@@ -44,7 +44,7 @@ layout: default
         </header>
       {% endunless %}
 
-      {% include translate-post.html %}
+      {% if page.lang and page.collection == "posts" %}<span id="post-lang" style="display:none">{{ page.lang }}</span>{% endif %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
