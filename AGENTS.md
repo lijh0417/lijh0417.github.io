@@ -68,6 +68,36 @@ npm run uglify
 ```
 生成 `assets/js/main.min.js`
 
+## 公式引擎
+
+站点使用 **KaTeX**（由 `_includes/head/custom.html` 加载），`_config.yml` 中 `math_engine: mathjax`（kramdown 的 HTML 输出格式，与客户端渲染引擎无关）。
+
+KaTeX 相关文件：
+- `_includes/head/custom.html` — KaTeX CSS + JS + auto-render（唯一生效的配置）
+- `_includes/head.html` — 曾包含已废弃的 MathJax v2 脚本（2026-06 已移除）
+- `_includes/latex.html` — 旧的 MathJax v2 配置，未在任何 layout 中引用，已删除
+
+### 工作流程
+
+1. kramdown 识别 `$...$` / `$$...$$`，输出 `\(...\)` / `\[...\]`（受 `math_engine: mathjax` 控制）
+2. `input: Kramdown` 确保 `_` 在公式内不被解析为 `<em>`
+3. KaTeX auto-render 扫描页面中的 `\(...\)` / `\[...\]`（以及 `$...$` / `$$...$$` 作为 fallback）进行渲染
+
+> **坑：** `_config.yml` 中 `kramdown: input: GFM` 会导致 `_` 在 `$...$` 内被解析成 `<em>`，破坏公式渲染。必须使用 `input: Kramdown`（默认值），让 kramdown 在解析斜体之前先识别数学公式，保护 `_`。
+
+## 公式乱码修复
+
+当笔记中公式出现乱码时，按下述规则处理：
+
+1. 识别乱码模式：常见于 **KaTeX 行内公式 `$...$`** 被过度转义，例如 `\$...\$`、`​$...$`（含零宽字符）、或 `$...$` 内 latex 命令被 HTML entity 编码（如 `&lt;`→`<`）
+2. 修复方法：
+   - 移除多余的 `\` 转义（`\$` → `$`）
+   - 移除零宽字符（`&ZeroWidthSpace;`、`​`、`&#8203;` 等）
+   - 将 HTML entity 解码回原文（`&lt;` → `<`, `&gt;` → `>`, `&amp;` → `&`）
+   - 确保公式两侧只有一对 `$`（行内）或 `$$`（块级），无多余空格或零宽字符干扰
+3. 验证：修复后 `jekyll build` 不应报错，且公式在浏览器中正确渲染
+4. 常见问题文件：`_posts/` 和 `_pages/` 下的 `.md` 文件
+
 ## Git 注意
 
 - `Gemfile.lock` 和 `package-lock.json` 均被 gitignore

@@ -142,7 +142,7 @@ IBRION = 0.015
 <!--more-->
 ## Bader电荷计算
 
-​		[Bader](http://theory.cm.utexas.edu/henkelman/code/bader/)是用于计算Bader的软件，读入文件有两种：
+		[Bader](http://theory.cm.utexas.edu/henkelman/code/bader/)是用于计算Bader的软件，读入文件有两种：
 
 1 VASP CHGCAR文件；
 
