@@ -3,6 +3,7 @@ title: "Magnetic oxygen-generating robots via a self-healing hydrogel-based modu
 collection: publications
 permalink: /publication/2025-01-01-Magnetic-oxygen-generating-robots-via-a-self-healing-hydrogel-based-modular-assembly-strategy
 date: 2025-01-01
+categories: [材料力学行为多尺度设计]
 venue: 'Science China Materials, 1--12'
 citation: 'Jingjing Qin, <strong>Jiahao Li</strong>, Kaibin Chu, Haoxiang Chen, Pengyang Xuan, Xiuming Wu, Hongliang Dong, Xiaoyuan Peng, Yun Qian, Silvio Osella, others, "Magnetic oxygen-generating robots via a self-healing hydrogel-based modular assembly strategy." <strong>Science China Materials, 1--12, 2025.</strong>'
 ---

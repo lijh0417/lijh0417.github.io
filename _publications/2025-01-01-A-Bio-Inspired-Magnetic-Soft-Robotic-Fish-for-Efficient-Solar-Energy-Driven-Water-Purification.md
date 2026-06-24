@@ -3,6 +3,7 @@ title: "A Bio-Inspired Magnetic Soft Robotic Fish for Efficient Solar-Energy Dri
 collection: publications
 permalink: /publication/2025-01-01-A-Bio-Inspired-Magnetic-Soft-Robotic-Fish-for-Efficient-Solar-Energy-Driven-Water-Purification
 date: 2025-01-01
+categories: [材料力学行为多尺度设计]
 venue: 'Small Methods 9(3), 2400880'
 citation: 'Jingjing Qin, <strong>Jiahao Li</strong>, Guozheng Yang, Kaibin Chu, Leiqian Zhang, Fangping Xu, Yujie Chen, Yaoxin Zhang, Wei Fan, Johan Hofkens, others, "A Bio-Inspired Magnetic Soft Robotic Fish for Efficient Solar-Energy Driven Water Purification." <strong>Small Methods 9(3), 2400880, 2025.</strong>'
 ---

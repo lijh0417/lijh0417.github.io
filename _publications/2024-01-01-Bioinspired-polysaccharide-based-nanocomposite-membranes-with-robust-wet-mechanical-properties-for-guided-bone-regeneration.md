@@ -3,6 +3,7 @@ title: "Bioinspired polysaccharide-based nanocomposite membranes with robust wet
 collection: publications
 permalink: /publication/2024-01-01-Bioinspired-polysaccharide-based-nanocomposite-membranes-with-robust-wet-mechanical-properties-for-guided-bone-regeneration
 date: 2024-01-01
+categories: [材料力学行为多尺度设计]
 venue: 'National Science Review 11(3), nwad333'
 citation: 'Jian-Hong Xiao, Zhen-Bang Zhang, <strong>JiaHao Li</strong>, Si-Ming Chen, Huai-Ling Gao, YinXiu Liao, Lu Chen, ZiShuo Wang, YiFan Lu, YuanZhen Hou, others, "Bioinspired polysaccharide-based nanocomposite membranes with robust wet mechanical properties for guided bone regeneration." <strong>National Science Review 11(3), nwad333, 2024.</strong>'
 ---

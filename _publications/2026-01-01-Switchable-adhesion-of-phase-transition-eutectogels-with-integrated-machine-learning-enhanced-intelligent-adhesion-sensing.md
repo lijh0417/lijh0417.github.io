@@ -3,6 +3,7 @@ title: "Switchable adhesion of phase-transition eutectogels with integrated mach
 collection: publications
 permalink: /publication/2026-01-01-Switchable-adhesion-of-phase-transition-eutectogels-with-integrated-machine-learning-enhanced-intelligent-adhesion-sensing
 date: 2026-01-01
+categories: [材料力学行为多尺度设计]
 venue: 'Nature Communications'
 citation: 'JiaQing He, <strong>JiaHao Li</strong>, HanYang Dong, DeYun Chen, ChangHong Linghu, Qiang Zhou, YinBo Zhu, ShuRong Sheng, HengAn Wu, Wei Feng, "Switchable adhesion of phase-transition eutectogels with integrated machine learning-enhanced intelligent adhesion sensing." <strong>Nature Communications, 2026.</strong>'
 ---

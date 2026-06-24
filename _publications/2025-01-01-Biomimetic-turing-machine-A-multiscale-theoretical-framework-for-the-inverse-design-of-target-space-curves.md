@@ -3,6 +3,7 @@ title: "Biomimetic turing machine: A multiscale theoretical framework for the in
 collection: publications
 permalink: /publication/2025-01-01-Biomimetic-turing-machine-A-multiscale-theoretical-framework-for-the-inverse-design-of-target-space-curves
 date: 2025-01-01
+categories: [几何弹性理论]
 venue: 'Journal of the Mechanics and Physics of Solids 196, 105999'
 citation: '<strong>JiaHao Li</strong>, Xiaohao Sun, Zezhou He, YuanZhen Hou, Hengan Wu, YinBo Zhu, "Biomimetic turing machine: A multiscale theoretical framework for the inverse design of target space curves." <strong>Journal of the Mechanics and Physics of Solids 196, 105999, 2025.</strong>'
 ---

@@ -3,6 +3,7 @@ title: "Inverse elastica: A theoretical framework for inverse design of morphing
 collection: publications
 permalink: /publication/2025-01-01-Inverse-elastica-A-theoretical-framework-for-inverse-design-of-morphing-slender-structures
 date: 2025-01-01
+categories: [几何弹性理论]
 venue: 'Journal of the Mechanics and Physics of Solids, 106488'
 citation: '<strong>JiaHao Li</strong>, Weicheng Huang, YinBo Zhu, Luxia Yu, Xiaohao Sun, Mingchao Liu, HengAn Wu, "Inverse elastica: A theoretical framework for inverse design of morphing slender structures." <strong>Journal of the Mechanics and Physics of Solids, 106488, 2025.</strong>'
 ---

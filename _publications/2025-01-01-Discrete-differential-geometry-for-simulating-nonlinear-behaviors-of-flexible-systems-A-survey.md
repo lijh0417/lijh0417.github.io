@@ -3,6 +3,7 @@ title: "Discrete differential geometry for simulating nonlinear behaviors of fle
 collection: publications
 permalink: /publication/2025-01-01-Discrete-differential-geometry-for-simulating-nonlinear-behaviors-of-flexible-systems-A-survey
 date: 2025-01-01
+categories: [几何弹性理论]
 venue: 'Extreme Mechanics Letters, 102430'
 citation: 'Dezhong Tong, Andrew Choi, Jiaqi Wang, Weicheng Huang, Zexiong Chen, <strong>Jiahao Li</strong>, Xiaonan Huang, Mingchao Liu, Huajian Gao, K Jimmy Hsia, "Discrete differential geometry for simulating nonlinear behaviors of flexible systems: A survey." <strong>Extreme Mechanics Letters, 102430, 2025.</strong>'
 ---

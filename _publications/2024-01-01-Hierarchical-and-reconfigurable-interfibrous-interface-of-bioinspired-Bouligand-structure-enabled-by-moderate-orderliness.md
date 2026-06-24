@@ -3,6 +3,7 @@ title: "Hierarchical and reconfigurable interfibrous interface of bioinspired Bo
 collection: publications
 permalink: /publication/2024-01-01-Hierarchical-and-reconfigurable-interfibrous-interface-of-bioinspired-Bouligand-structure-enabled-by-moderate-orderliness
 date: 2024-01-01
+categories: [材料力学行为多尺度设计]
 venue: 'Science Advances 10(14), eadl1884'
 citation: 'Si-Ming Chen, Guang-Zhen Wang, YuanZhen Hou, Xiao-Nian Yang, Si-Chao Zhang, ZiBo Zhu, <strong>JiaHao Li</strong>, Huai-Ling Gao, Yin-Bo Zhu, HengAn Wu, others, "Hierarchical and reconfigurable interfibrous interface of bioinspired Bouligand structure enabled by moderate orderliness." <strong>Science Advances 10(14), eadl1884, 2024.</strong>'
 ---

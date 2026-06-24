@@ -3,6 +3,7 @@ title: "Biomimetic solar photocatalytic reactor for selective oxidation of aroma
 collection: publications
 permalink: /publication/2024-01-01-Biomimetic-solar-photocatalytic-reactor-for-selective-oxidation-of-aromatic-alcohols-with-enhanced-solar-energy-utilization
 date: 2024-01-01
+categories: [材料力学行为多尺度设计]
 venue: 'Advanced Functional Materials 34(9), 2311214'
 citation: 'Jingjing Qin, <strong>Jiahao Li</strong>, Kaibin Chu, Guozheng Yang, Leiqian Zhang, Xuemeng Xia, Pengyang Xuan, Xin Chen, Bo Weng, Haowei Huang, others, "Biomimetic solar photocatalytic reactor for selective oxidation of aromatic alcohols with enhanced solar-energy utilization." <strong>Advanced Functional Materials 34(9), 2311214, 2024.</strong>'
 ---
