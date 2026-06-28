@@ -98,6 +98,82 @@ KaTeX 相关文件：
 3. 验证：修复后 `jekyll build` 不应报错，且公式在浏览器中正确渲染
 4. 常见问题文件：`_posts/` 和 `_pages/` 下的 `.md` 文件
 
+## 密码保护
+
+部分文章可使用 AES-256-GCM 加密保护，只有输入正确密码才能查看内容。
+
+### 文件说明
+
+| 文件 | 作用 |
+|------|------|
+| `scripts/encrypt-site.js` | Node.js 构建后加密脚本，扫描 `_site/` 加密受保护页面的 HTML |
+| `.github/workflows/deploy.yml` | GitHub Actions 部署流程：jekyll build → 加密 → 部署 |
+| `_layouts/single.html` | 添加 `page.password_protected` 判断 + `<!--ENCRYPT-->` 标记 |
+| `assets/js/_main.js` | Web Crypto API 解密逻辑（PBKDF2 + AES-GCM）+ client-side marked 渲染 |
+
+### 工作机制
+
+```
+本地编辑                       部署 (GitHub Actions)
+─────────────                 ─────────────────────
+源文件为可读                   jekyll build (正常渲染)
+markdown                      ↓
+                              encrypt-site.js 扫描 _site/
+                              ↓
+                              找到受保护页面的 <!--ENCRYPT:start-->
+                              ↓
+                              AES-256-GCM 加密 HTML 内容
+                              ↓
+                              替换为密码框 + 加密数据
+                              ↓
+                              部署到 GitHub Pages
+```
+
+- **本地** `jekyll serve`：内容正常显示，可随意编辑 markdown
+- **正式站**：内容加密，需输入密码才能查看
+
+### 如何使用
+
+1. 在文章 frontmatter 添加 `password_protected: true`
+2. 正常写 markdown，确保有 `<!-- more -->` 分隔摘要和正文
+3. 提交推送即可
+
+```bash
+# 本地开发正常编辑，无需加密步骤
+vim _posts/2026-07-01-my-post.md
+
+# 本地预览（内容可见，无加密）
+bundle exec jekyll serve -l -H localhost
+
+# 提交后 GitHub Actions 自动加密并部署
+git add . && git commit -m "add protected post"
+git push
+```
+
+### 首次设置
+
+1. 在 GitHub 仓库 Settings → Secrets and variables → Actions → 添加 `POST_PASSWORD` 密钥
+2. 在 GitHub 仓库 Settings → Pages → Source → 选择 **GitHub Actions**
+3. 推送代码即可触发自动构建+加密+部署
+
+### 效果
+
+- 列表页：显示标题、日期、摘要，标题旁带 🔒 图标
+- 文章页（本地预览）：内容正常显示（无密码限制）
+- 文章页（正式站）：标题/日期/标签正常显示，内容区域显示密码框
+- 输入正确密码后：解密 markdown → `marked` 浏览器端渲染 HTML → 注入 DOM → KaTeX 自动渲染数学公式
+
+### 更换密码
+
+在 GitHub Secrets 中更新 `POST_PASSWORD` 的值即可。下次部署时所有受保护页面会用新密码重新加密。
+
+### 注意事项
+
+- 密码通过 GitHub Actions Secrets 传入，不在仓库中存储
+- 所有保护文章使用同一密码
+- 解密依赖 Web Crypto API，需要现代浏览器（Chrome 60+, Firefox 60+, Safari 15+, Edge 79+）
+- 客户端渲染使用 `marked`（从 CDN 加载，仅受保护页面加载）
+
 ## Git 注意
 
 - `Gemfile.lock` 和 `package-lock.json` 均被 gitignore

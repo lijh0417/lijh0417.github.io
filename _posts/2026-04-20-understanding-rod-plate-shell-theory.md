@@ -1,25 +1,25 @@
 ---
-title: "如何理解板、壳、杆理论？"
+title: "Understanding Rod, Plate, and Shell Theories"
 date: 2026-04-20
 tags:
   - Geometric Elasticity
   - Rod
   - Shell
-lang: zh
+lang: en
 ref: understanding-rod-plate-shell-theory
-permalink: /zh/2026/04/understanding-rod-plate-shell-theory/
+permalink: /2026/04/understanding-rod-plate-shell-theory/
 ---
-板、壳、杆理论无论对于工程实践还是理解复杂物理现象都具有重要应用，但是如何很好的理解这套基础理论并不容易。
+Rod, plate, and shell theories are essential for both engineering practice and understanding complex physical phenomena, yet developing a solid grasp of these foundational ideas is far from trivial.
 
 <!-- more -->
 
-# 从古典微分几何看杆、板、壳
+# Rod, Plate, and Shell Through the Lens of Classical Differential Geometry
 
-> 从热力学第一定律积分形式出发，结合叠加刚体运动下的不变性，推导 Cosserat 框架下的杆、板、壳理论。
+> Deriving Cosserat rod, plate, and shell theories by applying invariance under superimposed rigid-body motions to the integral form of the first law of thermodynamics.
 
 ---
 
-## 第一部分 — 古典微分几何基础
+## Part 1 — Classical Differential Geometry
 
 ### 1.1 E³ 中的曲线
 
@@ -102,9 +102,9 @@ $$
 
 ---
 
-## 第二部分 — Cosserat 杆（定向曲线）
+## Part 2 — Cosserat Rod (Directed Curve)
 
-### 2.1 运动学
+### 2.1 Kinematics
 
 一条 Cosserat 杆由曲线 $\mathbf{r} = \mathbf{r}(\theta,t)$ 和两个 director $\mathbf{d}_\alpha(\theta,t)$（$\alpha=1,2$）构成。定义基矢量：
 
@@ -144,7 +144,7 @@ $\gamma_{ij}$ 度量伸长与剪切（$i=j=3$ 为轴向伸长，$i=\alpha,j=3$ �
 
 > **替代方案**：Cohen (1966) 使用三 director 体系和 Cartan–Ericksen–Truesdell 应变度量 $Y^\alpha, C_{\alpha\beta}, F^\alpha_\beta$。这些可以通过投影与 $(\gamma_{ij},\sigma_{\alpha i})$ 相互转换，但 Cohen 的第三 director $Y^3, F^3_\beta$ 在两 director 理论中无对应量。
 
-### 2.2 积分形式的能量平衡
+### 2.2 Integral Form of the Energy Balance
 
 要推导运动方程和本构关系，我们需要一个物理出发点。这个出发点就是**热力学第一定律**（能量守恒与转化）的积分形式。对于杆上任意一段 $[\theta_1,\theta_2]$，能量平衡陈述为：**该段杆的动能与内能之和的变化率，等于外力功率、热源供给与边界热流之和**。数学表达为：
 
@@ -166,7 +166,7 @@ $$
 
 **这是整个推导的起点。**
 
-### 2.3 叠加刚体平动不变性 → 线动量方程
+### 2.3 Invariance Under Superimposed Rigid Translations → Linear Momentum Equation
 
 考虑叠加均匀刚体平动速度 $\mathbf{b}$。在新的运动中：
 
@@ -195,7 +195,7 @@ $$
 
 **推导逻辑**：$\mathbf{b}$ 任意 → 系数为零 → 首先给出质量守恒；再由质量守恒简化剩余项 → 线动量方程 (2.2)。这一步消去了能量平衡中与 $\mathbf{v}$ 有关的所有动能项。
 
-### 2.4 叠加刚体转动不变性 → 角动量方程
+### 2.4 Invariance Under Superimposed Rigid Rotations → Angular Momentum Equation
 
 平动不变性已经给出了线动量方程。但能量平衡中还存在与转动相关的项（通过 $\mathbf{w}_\alpha$ 和 $\mathbf{v}$ 中的旋率部分），这些项需要利用**刚体转动不变性**来约束。也就是说，当我们给整个系统叠加一个均匀的刚体角速度 $\boldsymbol{\omega}$ 时，杆在相同占位下的能量平衡形式应保持不变。在新的运动中，各量的变换规则为：
 
@@ -241,7 +241,7 @@ $$
 
 其中 $\pi^{\alpha i}$ 为组合 director 力。
 
-### 2.5 约化能量方程
+### 2.5 Reduced Energy Equation
 
 利用质量守恒 (2.2) 的推论和线动量方程 (2.2)，从完整的能量平衡中消去动能项，局部化后得到 **约化能量方程** $[\text{Green–Laws 1966, Eq 3.16}]$：
 
@@ -265,7 +265,7 @@ $$
 \tag{2.7}
 $$
 
-### 2.6 Clausius–Duhem 熵不等式
+### 2.6 Clausius–Duhem Entropy Inequality
 
 第二定律的积分形式 $[\text{Green–Laws 1966, Eq 3.18}]$：
 
@@ -283,7 +283,7 @@ $$
 \tag{2.8}
 $$
 
-### 2.7 弹性杆本构理论
+### 2.7 Elastic Rod Constitutive Theory
 
 对于弹性杆，自由能函数形式为 $[\text{Green–Laws 1966, Eq 5.1}]$：
 
@@ -343,7 +343,7 @@ $$
 \mathbf{m} = \alpha_2 J\boldsymbol{\lambda} + \alpha_3 J\boldsymbol{\gamma} + \alpha_5\boldsymbol{\lambda}^*.
 $$
 
-### 2.8 特例
+### 2.8 Special Cases
 
 **Kirchhoff 杆**（不可伸长、不可剪切）：$a_{ij}=\delta_{ij}$，$\gamma_{ij}=0$。直接与 Frenet 标架重合：$\mathbf{d}_1=\mathbf{n}$，$\mathbf{d}_2=\mathbf{b}$，$\mathbf{d}_3=\mathbf{t}$。杆的曲率 $\kappa$、挠率 $\tau$ 满足：
 
@@ -368,7 +368,7 @@ $$
 
 ---
 
-## 第三部分 — Cosserat 板与壳（定向曲面）
+## Part 3 — Cosserat Plate and Shell (Directed Surface)
 
 ### 3.1 运动学
 
@@ -544,11 +544,11 @@ $$
 
 ---
 
-## 第四部分 — 联系与扩展
+## Part 4 — Connections and Extensions
 
-### 4.1 从 3D 弹性力学约化到 1D/2D 理论
+### 4.1 Reduction from 3D Elasticity to 1D/2D Theories
 
-#### 4.1.1 Green–Laws–Naghdi 级数展开法
+#### 4.1.1 Green–Laws–Naghdi Series Expansion Method
 
 不将 Cosserat 理论作为基本假设，而是从经典 3D 连续介质力学出发，通过级数展开和厚度/横截面积分得到低维理论 $[\text{Green–Laws–Naghdi 1968}]$。
 
@@ -584,7 +584,7 @@ T^*(\theta^\alpha,\xi,t) = T(\theta^\alpha,t)\quad\text{(壳)},\qquad
 T^*(\theta^\alpha,\theta,t) = T(\theta,t)\quad\text{(杆)}.
 $$
 
-#### 4.1.2 截断近似 → 直接 Cosserat 理论
+#### 4.1.2 Truncated Approximation → Direct Cosserat Theory
 
 对基矢量展开进行截断：
 
@@ -600,7 +600,7 @@ $$
 
 **结论**：直接 Cosserat 是 3D 级数展开的最低阶截断。两种形式在数学上等价，但直接理论的弹性系数是自由的，而截断理论可原则上从 3D 本构积分识别。
 
-#### 4.1.3 Gibbs 函数法：3D 本构 → 1D 系数
+#### 4.1.3 Gibbs Function Method: 3D Constitutive → 1D Coefficients
 
 对于线弹性圆截面杆，Green (1974 I, §5) 使用 Gibbs 函数 $\phi=\phi(\overline{\pi}^{(\alpha\beta)},\overline{\pi}^\alpha,\overline{\pi},p^{\alpha i})$ 实现 3D → 1D 的系数识别。将杆的横截面应力分解为**四个独立模式** $[\text{Green 1974 I, Eq 5.24}]$：
 
@@ -737,7 +737,7 @@ $$
 
 对于 $\nu=0.3$，$\kappa\approx0.886$，与 Cowper (1966) 一致。
 
-### 4.2 热效应
+### 4.2 Thermal Effects
 
 **非等温理论**（Green–Naghdi 1970）：温度 $T$ 作为独立变量进入自由能 $A = A(T, \gamma_{ij}, \sigma_{\alpha i})$。熵 $S = -\partial A/\partial T$，热流本构 $h = -k\,\partial T/\partial\theta$。
 
@@ -749,9 +749,9 @@ $$
 
 这是残余能量方程（热传导方程），与力学本构解耦。
 
-### 4.3 约束理论
+### 4.3 Constraint Theory
 
-#### 4.3.1 三种基本约束类型
+#### 4.3.1 Three Basic Types of Constraints
 
 **(I) 不可伸长**：$\lambda=1$，等价于 $\mathfrak{C}_K\mathfrak{C}^K=1$，或 $\dot{\mathfrak{C}}_K\mathfrak{C}^K=0$。引入一个 Lagrange 乘子 $p$ $[\text{Kafadar 1972, Eq 6.1}]$：
 
@@ -776,7 +776,7 @@ t^k = \rho_0\frac{\partial\psi}{\partial J}\lambda^k - \mu^k,\qquad
 m^k = \rho_0\chi_K^k\frac{\partial\psi}{\partial\Gamma_K}.
 $$
 
-#### 4.3.2 Naghdi–Rubin 约束理论（1984）
+#### 4.3.2 Naghdi–Rubin Constraint Theory (1984)
 
 杆理论中将约束分类为三种变形模式的抑制 $[\text{Naghdi–Rubin 1984}]$：
 
@@ -814,7 +814,7 @@ $$
 
 乘子 $p^{\alpha\beta}, p^{\alpha3}$ 由平衡方程确定，非本构部分。
 
-#### 4.3.3 横截面伸缩效应（Naghdi–Rubin 1989）
+#### 4.3.3 Cross-Sectional Stretch Effects (Naghdi–Rubin 1989)
 
 1989 的论文在 Bernoulli–Euler 约束基础上引入横截面法向伸缩，允许 $\gamma_{11},\gamma_{22}\neq0$。对于等截面梁：
 
@@ -838,7 +838,7 @@ $$
 
 其中 $a^4 = 4\alpha/(h^2\alpha_{16})$，$b^2 = 2\alpha/(h^2\alpha_6)$。这一理论能够预测接触问题中半无限长梁的边界层效应（St. Venant 原理的厚度相关修正）。
 
-### 4.4 热-电-磁相互作用
+### 4.4 Thermo-Electro-Magnetic Coupling
 
 Green–Naghdi (1979, 1985) 将电磁相互作用纳入 Cosserat 理论。3D 能量方程增加电磁功率项 $[\text{Green–Naghdi 1985, Eq A.2}]$：
 
@@ -877,7 +877,7 @@ $$
 B^i_{MN} = -\lambda\frac{\partial\psi_2}{\partial\tilde{H}_{MNi}}.
 $$
 
-### 4.5 数值解法（Cosserat 点方法）
+### 4.5 Numerical Methods (Cosserat Point Approach)
 
 Rubin (2001) 将 Cosserat 杆理论的每个节点视为一个 **Cosserat 点**，具有 6 个 director 变量 $\boldsymbol{d}_i$（$i=0,1,\dots,5$）：
 
@@ -932,7 +932,7 @@ $$
   $$
 - **罚函数法**：在能量中加入 $\tfrac12\epsilon(\text{constraint})^2$，$\epsilon\to\infty$ 时逼近约束
 
-### 4.6 各理论的对比汇总
+### 4.6 Comparison Summary of Theories
 
 | 方面       | 直接 Cosserat 理论                                                                      | 3D 约化截断理论                                                 | 经典工程理论                              |
 | ---------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------- |
@@ -952,7 +952,7 @@ $$
 > - 电磁耦合框架将 Maxwell 方程和 Lorentz 力纳入 Cosserat 理论
 > - Cosserat 点方法提供系统化的计算框架：Newmark-$\beta$ 时间积分 + Newton–Raphson 迭代
 
-### 4.7 杆、板、壳控制方程完整对比表
+### 4.7 Complete Comparison Table of Rod, Plate, and Shell Governing Equations
 
 以下以统一符号系统对比三种理论的最终控制方程。所有符号定义见第二、三部分。
 
@@ -981,52 +981,53 @@ $$
 
 **结构同源性说明**：两种理论的推导链完全平行——均为"积分能量平衡 → 平动不变性 → 线动量 → 转动不变性 → 角动量 → 约化能量 → Clausius–Duhem → 本构"。区别源于几何维度的不同：杆为 1D（一个曲线坐标 $\theta$ 加两个 director），壳为 2D（两个曲面坐标 $\theta^\alpha$ 加一个 director）。面内指标 $\alpha,\beta$ 在杆中为 $\{1,2\}$（两个 director 方向），在壳中也同为 $\{1,2\}$（两个切线方向）。杆的 $i,j=3$ 对应切线方向 $\mathbf{a}_3 = \mathbf{r}_{,\theta}$，壳的 $i=3$ 对应法向 $\mathbf{a}_3 = \mathbf{d}$。若将杆的 $\mathbf{a}_3$ 重新解释为法向、$\mathbf{d}_1,\mathbf{d}_2$ 重新解释为切向基，则两种理论在形式上可完全统一。
 
-## 第五部分 — 从一般理论到经典理论的约化
 
-前面各部分的 Cosserat 理论是最一般的杆/板/壳模型，包含了全部 6 个（杆）或 8 个（壳）独立变形模式。实际工程分析中，对于特定的问题尺度与精度要求，通常使用简化后的经典理论。本节从 Cosserat 理论出发，通过对运动学施加约束、对应变进行线性化，系统地导出各经典理论，并明确每种近似的适用范围。全程保持与前四部分一致的符号体系。
+## Part 5 — Reduction from General to Classical Theories
 
-### 5.1 杆的约化路径：Cosserat → Kirchhoff → Euler
+The Cosserat theories developed in Parts 2–4 are the most general rod/plate/shell models, encompassing all 6 (rod) or 8 (shell) independent deformation modes. In engineering practice, however, simplified classical theories are used when the problem scale and accuracy requirements permit specific kinematic assumptions. This part systematically derives these classical theories from the general Cosserat framework by imposing constraints on the kinematics and linearizing the strain measures, maintaining full consistency with the notation established in the preceding parts.
 
-#### 5.1.1 Kirchhoff 杆：不可伸长 + 不可剪切
+### 5.1 Rod Reduction: Cosserat → Kirchhoff → Euler
 
-回顾第二部分，Cosserat 杆的运动学由 $\mathbf{r}(\theta,t)$ 和 $\mathbf{d}_\alpha(\theta,t)$ 描述，基矢量 $\mathbf{a}_\alpha = \mathbf{d}_\alpha$、$\mathbf{a}_3 = \mathbf{r}_{,\theta}$，应变为 $\gamma_{ij} = a_{ij}-A_{ij}$ 和 $\sigma_{\alpha i} = \kappa_{\alpha i}-K_{\alpha i}$。
+#### 5.1.1 The Kirchhoff Rod: Inextensible and Unshearable
 
-Kirchhoff 杆理论施加两组运动学约束：
+Recall from Part 2 that a Cosserat rod is described by $\mathbf{r}(\theta,t)$ and $\mathbf{d}_\alpha(\theta,t)$, with basis vectors $\mathbf{a}_\alpha = \mathbf{d}_\alpha$, $\mathbf{a}_3 = \mathbf{r}_{,\theta}$, and strain measures $\gamma_{ij} = a_{ij}-A_{ij}$ and $\sigma_{\alpha i} = \kappa_{\alpha i}-K_{\alpha i}$.
+
+The Kirchhoff rod imposes two kinematic constraints:
 
 $$
-\gamma_{33}=0 \quad\text{(不可伸长)},\qquad \gamma_{13}=\gamma_{23}=0 \quad\text{(不可剪切)}.
+\gamma_{33}=0 \quad\text{(inextensibility)},\qquad \gamma_{13}=\gamma_{23}=0 \quad\text{(unshearability)}.
 \tag{5.1}
 $$
 
-在参考构型取为自然状态（$A_{ij}=\delta_{ij}$、$K_{\alpha i}=0$）时，这意味着 $a_{33}=1$ 且 $a_{\alpha 3}=0$，即 $\mathbf{a}_3$ 为单位矢量且与 $\mathbf{a}_1,\mathbf{a}_2$ 正交。此时 $\mathbf{a}_3$ 恰好是曲线 $\mathbf{r}(\theta)$ 的单位切向 $\mathbf{t}$（第一部分 1.1 节的 Frenet 标架）。
+Taking the reference configuration as the natural state ($A_{ij}=\delta_{ij}$, $K_{\alpha i}=0$), these imply $a_{33}=1$ and $a_{\alpha 3}=0$: $\mathbf{a}_3$ is a unit vector orthogonal to $\mathbf{a}_1,\mathbf{a}_2$. Hence $\mathbf{a}_3$ coincides with the unit tangent $\mathbf{t}$ of the curve $\mathbf{r}(\theta)$ (the Frenet frame of §1.1).
 
-**应变缩减**：6 个 $\gamma_{ij}$ 全部为零，6 个 $\kappa_{\alpha i}$（即 $-\sigma_{\alpha i}$，因 $K_{\alpha i}=0$）中独立的仅剩 3 个曲率/扭率分量：
+**Strain reduction**: All six $\gamma_{ij}$ vanish, and of the six $\kappa_{\alpha i}$, only three curvature/twist components remain independent:
 
 $$
 \kappa_{13} \approx \kappa_1,\quad \kappa_{23} \approx \kappa_2,\quad \omega \equiv \tfrac12(\kappa_{12}-\kappa_{21}) \approx \tau,
 \tag{5.2}
 $$
 
-其中 $\kappa_1,\kappa_2$ 对应两个主弯曲方向的曲率变化，$\tau$ 为扭率。$\kappa_{11},\kappa_{22}$ 不独立（由 $\gamma_{\alpha\beta}=0$ 的相容性决定），$\kappa_{12}+\kappa_{21}$ 同理。
+where $\kappa_1,\kappa_2$ are bending curvatures in the two principal directions and $\tau$ is the twist rate. The components $\kappa_{11},\kappa_{22}$ are not independent (they are determined by compatibility with $\gamma_{\alpha\beta}=0$), and neither is $\kappa_{12}+\kappa_{21}$.
 
-**约束的 Lagrange 乘子处理**：按照 4.3 节约束理论的框架，引入乘子 $\bar{n}^i$ 将截面力分解为确定部分与乘子部分：
+**Constraint treatment via Lagrange multipliers**: Following the constraint theory of §4.3, multipliers $\bar{n}^i$ decompose the contact force into determinate and reactive parts:
 
 $$
 \mathbf{n} = \hat{\mathbf{n}} + \bar{\mathbf{n}},\qquad
-\bar{\mathbf{n}} = -\bar{\mathbf{n}}^i\mathbf{a}_i,
+\bar{\mathbf{n}} = -\bar{n}^i\mathbf{a}_i,
 \tag{5.3}
 $$
 
-其中 $\hat{\mathbf{n}}$ 由本构给出（在 Kirchhoff 杆中为零，因为 $\partial A/\partial\gamma_{ij}=0$ 当 $\gamma_{ij}=0$），$\bar{\mathbf{n}}$ 由平衡方程确定，物理上对应约束反力（即经典 Kirchhoff 杆中的剪力和轴力）。
+where $\hat{\mathbf{n}}$ is given by the constitutive law (zero in the Kirchhoff rod since $\partial A/\partial\gamma_{ij}=0$ when $\gamma_{ij}=0$), and $\bar{\mathbf{n}}$ is determined by the balance equations. Physically, $\bar{\mathbf{n}}$ comprises the constraint reactions—the shear forces and axial force of the classical Kirchhoff rod.
 
-**弹性本构**：自由能 $A$ 退化为仅依赖于曲率变化 $\kappa_{\alpha i}$ 的函数。对于各向同性线弹性杆，保留二次项得：
+**Elastic constitutive law**: The free energy $A$ depends only on the curvature changes $\kappa_{\alpha i}$. For a linearly elastic isotropic rod, retaining quadratic terms gives:
 
 $$
 \rho A = \tfrac12 EI_1 \kappa_{13}^2 + \tfrac12 EI_2 \kappa_{23}^2 + \tfrac12 GJ \,\omega^2,
 \tag{5.4}
 $$
 
-其中 $EI_1, EI_2$ 为主弯曲刚度，$GJ$ 为扭转刚度。力矩-曲率关系为：
+where $EI_1, EI_2$ are the principal bending stiffnesses and $GJ$ the torsional stiffness. The moment–curvature relations are:
 
 $$
 p^{13} = \sqrt{a_{33}}\,\rho\frac{\partial A}{\partial\kappa_{13}} = EI_1\kappa_{13},\quad
@@ -1035,7 +1036,7 @@ p^{23} = \sqrt{a_{33}}\,\rho\frac{\partial A}{\partial\kappa_{23}} = EI_2\kappa_
 \tag{5.5}
 $$
 
-**平衡方程**：在静态、无体力情形下，第二部分导出的线动量 (2.2) 和角动量 (2.3) 方程简化为：
+**Equilibrium equations**: In the static, body-force-free case, the linear and angular momentum equations from Part 2 reduce to:
 
 $$
 \frac{1}{\sqrt{a_{33}}}\frac{\partial\mathbf{n}}{\partial\theta} = \mathbf{0},\qquad
@@ -1043,7 +1044,7 @@ $$
 \tag{5.6}
 $$
 
-其中 $\mathbf{m} = \mathbf{a}_\alpha\times\mathbf{p}^\alpha$ 为截面合力矩矢量。化为弧长 $s$（$\mathrm{d}s = \sqrt{a_{33}}\,\mathrm{d}\theta$）得经典 Kirchhoff 杆平衡方程：
+where $\mathbf{m} = \mathbf{a}_\alpha\times\mathbf{p}^\alpha$ is the resultant moment vector. Switching to arc length $s$ ($\mathrm{d}s = \sqrt{a_{33}}\,\mathrm{d}\theta$) yields the classical Kirchhoff rod equilibrium equations:
 
 $$
 \frac{\mathrm{d}\mathbf{n}}{\mathrm{d}s} = \mathbf{0},\qquad
@@ -1051,7 +1052,7 @@ $$
 \tag{5.7}
 $$
 
-将 $\mathbf{n},\mathbf{m}$ 投影到 Frenet 标架 $\{\mathbf{t},\mathbf{n},\mathbf{b}\}$ 上（第一部分 1.1 节），记 $\mathbf{n} = F_t\mathbf{t} + F_n\mathbf{n} + F_b\mathbf{b}$、$\mathbf{m} = M_t\mathbf{t} + M_n\mathbf{n} + M_b\mathbf{b}$，利用 (1.1) 的 Frenet 公式展开 (5.7) 得到 **Kirchhoff 杆的标架方程**：
+Projecting $\mathbf{n}$ and $\mathbf{m}$ onto the Frenet frame $\{\mathbf{t},\mathbf{n},\mathbf{b}\}$ (introduced in §1.1), writing $\mathbf{n} = F_t\mathbf{t} + F_n\mathbf{n} + F_b\mathbf{b}$ and $\mathbf{m} = M_t\mathbf{t} + M_n\mathbf{n} + M_b\mathbf{b}$, and using the Frenet–Serret formulas (1.1) to expand (5.7), we obtain the **Kirchhoff rod frame equations**:
 
 $$
 \begin{aligned}
@@ -1065,13 +1066,11 @@ $$
 \tag{5.8}
 $$
 
-这组方程是 Kirchhoff (1859) 建立的大变形细杆理论的核心，可应用于 DNA 超螺旋、海底电缆和弹性绳索等问题的静力分析。在已知曲率 $\kappa(s)$、扭率 $\tau(s)$ 和本构 (5.5) 后，(5.8) 构成关于 6 个力/力矩分量的封闭一阶 ODE 系统。
+This system, due to Kirchhoff (1859), is the cornerstone of large-deformation slender rod theory. Together with the constitutive relations (5.5) and known $\kappa(s), \tau(s)$, it forms a closed first-order ODE system for the six force/moment components.
 
-#### 5.1.2 Euler 弹性线：直杆 + 平面弯曲
+#### 5.1.2 Euler Elastica: Straight Rod, Planar Bending
 
-当 Kirchhoff 杆进一步限制为**直线参考构型**（初始曲率 $\kappa_0=0$、$\tau_0=0$）并假设变形限于**平面内**时，退化为 Euler 弹性线（Elastica）。此时 $\tau=0$、$F_b=0$、$M_n=0$，仅保留面内曲率 $\kappa$。
-
-平衡方程 (5.8) 简化为三个方程：
+When the Kirchhoff rod is further restricted to a **straight reference configuration** (zero initial curvature and twist) and **planar deformation**, it reduces to the Euler elastica. Here $\tau=0$, $F_b=0$, $M_n=0$, and only the in-plane curvature $\kappa$ remains. The equilibrium equations (5.8) simplify to three components:
 
 $$
 \frac{\mathrm{d}F_t}{\mathrm{d}s} = \kappa F_n,\qquad
@@ -1080,14 +1079,14 @@ $$
 \tag{5.9}
 $$
 
-由 (5.5) 有 $M_b = EI\kappa$。Euler 弹性线的最简洁推导不通过 (5.8) 的力分量展开，而是直接对任意截面取力矩平衡：**截面弯矩等于外力 $\mathbf{P}$ 乘以力臂**。设 $\mathbf{P}$ 沿水平方向（$x$ 轴），大小为 $P$，截面到力作用线的垂距为 $y(s)$，则：
+The simplest derivation bypasses these force component equations and instead uses direct moment equilibrium. For a slender rod subjected to a compressive end load $P$, the bending moment at arc length $s$ equals $P$ times the lever arm $y(s)$:
 
 $$
 M_b(s) = P\,y(s),\qquad y(s) = \int_0^s \sin\phi(\xi)\,\mathrm{d}\xi,
 \tag{5.10}
 $$
 
-其中 $\phi(s)$ 为切线角（$\kappa = \mathrm{d}\phi/\mathrm{d}s$）。代入 $M_b = EI\kappa$ 并对 $s$ 求导：
+where $\phi(s)$ is the tangent angle ($\kappa = \mathrm{d}\phi/\mathrm{d}s$) and $y(s)$ is the transverse deflection. Substituting $M_b = EI\kappa$ from (5.5) and differentiating with respect to $s$ yields:
 
 $$
 EI\frac{\mathrm{d}\phi}{\mathrm{d}s} = P\int_0^s \sin\phi(\xi)\,\mathrm{d}\xi
@@ -1096,31 +1095,31 @@ EI\frac{\mathrm{d}^2\phi}{\mathrm{d}s^2} = P\sin\phi.
 \tag{5.11}
 $$
 
-对于压缩载荷，取 $P > 0$，记标准形式：
+With the sign convention for axial compression ($P > 0$), the governing equation takes its standard form:
 
 $$
 EI\frac{\mathrm{d}^2\phi}{\mathrm{d}s^2} + P\sin\phi = 0.
 \tag{5.12}
 $$
 
-这就是 Euler 弹性线的控制方程。乘以 $\mathrm{d}\phi/\mathrm{d}s$ 积分得首次积分：
+Multiplying by $\mathrm{d}\phi/\mathrm{d}s$ and integrating once gives the first integral:
 
 $$
 \tfrac12 EI\Bigl(\frac{\mathrm{d}\phi}{\mathrm{d}s}\Bigr)^2 - P\cos\phi = C,
 \tag{5.13}
 $$
 
-可通过第一类椭圆积分求得精确解 $[\text{Love 1927, §262}]$。
+which can be solved exactly in terms of elliptic integrals $[\text{Love 1927, §262}]$. The constant $C$ is determined by boundary conditions (e.g., $C = -P\cos\phi_0$ at a clamped end where $\phi = \phi_0$ is known).
 
-当 $\phi \ll 1$ 时，$\sin\phi \approx \phi$，(5.12) 线性化为 $EI\,\phi_{,ss} + P\phi = 0$。对两端铰支柱，边界条件 $\phi_{,s}(0)=\phi_{,s}(L)=0$ 给出特征值 $P_n = n^2\pi^2 EI/L^2$，最小临界载荷 $P_{\mathrm{cr}} = \pi^2 EI/L^2$——Euler 柱屈曲公式。
+When $\phi \ll 1$, $\sin\phi \approx \phi$, and (5.12) linearizes to $EI\,\phi_{,ss} + P\phi = 0$. For a pin-ended column with boundary conditions $\phi_{,s}(0)=\phi_{,s}(L)=0$, the eigenvalues are $P_n = n^2\pi^2 EI/L^2$, giving the classical critical buckling load $P_{\mathrm{cr}} = \pi^2 EI/L^2$.
 
-> **注**：Euler 弹性线（1744 年）是最早的几何非线性弹性理论。从 Cosserat 杆的角度看，它在 Kirchhoff 杆基础上再施加了平面 + 直参考构型的限制，仅保留单一曲率 $\kappa$ 作为自由度。小应变大转角的几何非线性完全由 $\phi(s)$ 的非线性微分方程描述。
+> **Note**: The Euler elastica (1744) is the earliest geometrically nonlinear elastic theory. From the Cosserat rod perspective, it adds the constraints of planarity and straight reference to the Kirchhoff rod, retaining a single curvature degree of freedom $\kappa$ while fully capturing large-rotation nonlinearity through $\phi(s)$.
 
-#### 5.1.3 Timoshenko 梁：线性化 + 保留剪切变形
+#### 5.1.3 Timoshenko Beam: Linearization with Shear Deformation
 
-Timoshenko 梁保留 Kirchhoff 杆所忽略的剪切变形 $\gamma_{\alpha 3}$，但假设变形足够小以允许线性化。其运动学在 4.1.3 节中已从 Green 的 Gibbs 函数法导出；这里从 Cosserat 杆的线性化直接给出。
+The Timoshenko beam retains the shear strains $\gamma_{\alpha 3}$ that the Kirchhoff rod neglects, but assumes small enough deformations to permit linearization. Its derivation via Green's Gibbs function method appears in §4.1.3; here we obtain it directly by linearizing the Cosserat rod equations.
 
-在**小变形**前提下，将 $\mathbf{n}$ 和 $\mathbf{p}^\alpha$ 按参考基展开，忽略 $a_{ij}$ 与 $\delta_{ij}$ 的差异以及 $\kappa_{\alpha i}$ 的高阶项。线动量与角动量方程 (5.6) 化为一阶近似形式（沿 $\theta$ 方向，无体力）：
+Under the **small-deformation** assumption, expand $\mathbf{n}$ and $\mathbf{p}^\alpha$ about the reference basis, neglecting the difference between $a_{ij}$ and $\delta_{ij}$ and higher-order terms in $\kappa_{\alpha i}$. The linear and angular momentum equations (5.6) become (along $\theta$, body forces omitted):
 
 $$
 \frac{\partial n^i}{\partial\theta} = 0,\qquad
@@ -1128,9 +1127,9 @@ $$
 \tag{5.14}
 $$
 
-其中 $m^i$ 为合力矩 $\mathbf{m} = m^i\mathbf{a}_i$ 的分量（在参考构型下 $m^1 \approx -p^{23}$、$m^2 \approx p^{13}$、$m^3 = 0$），$\varepsilon^{ijk}$ 为置换符号。
+where $m^i$ are the components of the resultant moment $\mathbf{m} = m^i\mathbf{a}_i$ (in the reference configuration, $m^1 \approx -p^{23}$, $m^2 \approx p^{13}$, $m^3 = 0$) and $\varepsilon^{ijk}$ is the permutation symbol.
 
-引入工程位移和转角：设 $u_\alpha(\theta)$ 为截面横向位移，$\phi_\alpha(\theta)$ 为截面转角。在小变形下，运动学关系线性化为：
+Introducing engineering displacements and rotations: let $u_\alpha(\theta)$ be the transverse displacements and $\phi_\alpha(\theta)$ the cross-sectional rotations. Linearizing the kinematic relations gives:
 
 $$
 \gamma_{\alpha 3} = u_{\alpha,\theta} + \phi_\alpha,\qquad
@@ -1138,7 +1137,7 @@ $$
 \tag{5.15}
 $$
 
-线弹性本构（对应于 (2.10) 的线性化）：
+The linear elastic constitutive law (linearization of (2.10)) reads:
 
 $$
 n^\alpha = \mu S\kappa_s\,\gamma_{\alpha 3},\qquad
@@ -1146,7 +1145,7 @@ p^{\alpha 3} = EI\,\kappa_{\alpha 3}.
 \tag{5.16}
 $$
 
-其中剪切修正系数 $\kappa_s = 6(1+\nu)^2/(7+14\nu+8\nu^2)$（圆截面，见 4.1.3 节由 Gibbs 函数法导出的精确值）。代入平衡方程得到耦合的二阶系统：
+The shear correction factor $\kappa_s = 6(1+\nu)^2/(7+14\nu+8\nu^2)$ (for a circular cross-section) was derived exactly from the Gibbs function method in §4.1.3. Substituting into the balance equations yields the coupled second-order system:
 
 $$
 \begin{aligned}
@@ -1156,15 +1155,15 @@ EI\,\phi_{\alpha,\theta\theta} - \mu S\kappa_s\,(u_{\alpha,\theta} + \phi_\alpha
 \tag{5.17}
 $$
 
-消去 $\phi_\alpha$ 得仅含挠度的四阶方程 $EI\,u_{\alpha,\theta\theta\theta\theta}=0$，与 Bernoulli–Euler 梁形式相同。区别在于：当梁的长细比 $L/h \lesssim 10$ 或分析高频振动时，必须使用耦合的 Timoshenko 形式 (5.15) 以正确计入剪切变形和转动惯量效应。
+Eliminating $\phi_\alpha$ recovers the fourth-order equation $EI\,u_{\alpha,\theta\theta\theta\theta}=0$, identical in form to the Bernoulli–Euler beam. The distinction lies in the range of validity: when the slenderness ratio $L/h \lesssim 10$ or for high-frequency vibrations, the coupled Timoshenko form (5.15) must be used to correctly account for shear deformation and rotary inertia.
 
-### 5.2 板的约化路径：Cosserat → von Kármán → Kirchhoff-Love
+### 5.2 Plate Reduction: Cosserat → von Kármán → Kirchhoff-Love
 
-#### 5.2.1 von Kármán 板：法线假设 + 中等挠度薄膜耦合
+#### 5.2.1 The von Kármán Plate: Normal Hypothesis with Moderate Deflections
 
-回顾第三部分，Cosserat 板/壳的运动学由 $\mathbf{r}(\theta^\alpha,t)$ 和 $\mathbf{d}(\theta^\alpha,t)$ 描述，基矢量 $\mathbf{a}_\alpha = \mathbf{r}_{,\alpha}$、$\mathbf{a}_3 = \mathbf{d}$，应变为 $e_{\alpha\beta} = \tfrac12(a_{\alpha\beta}-A_{\alpha\beta})$、$\delta_i = d_i - D_i$、$\kappa_{i\alpha} = \lambda_{i\alpha} - \Lambda_{i\alpha}$。
+Recall from Part 3 that a Cosserat plate/shell is described by $\mathbf{r}(\theta^\alpha,t)$ and $\mathbf{d}(\theta^\alpha,t)$, with basis vectors $\mathbf{a}_\alpha = \mathbf{r}_{,\alpha}$, $\mathbf{a}_3 = \mathbf{d}$, and strain measures $e_{\alpha\beta} = \tfrac12(a_{\alpha\beta}-A_{\alpha\beta})$, $\delta_i = d_i - D_i$, $\kappa_{i\alpha} = \lambda_{i\alpha} - \Lambda_{i\alpha}$.
 
-von Kármán 板施加**法线假设**：$\mathbf{d} = \mathbf{a}_3$，即变形后中面法线保持为法线且为单位矢量。在应变度量上，这意味着横向剪切和厚度伸缩为零：
+The von Kármán plate imposes the **normal hypothesis**: $\mathbf{d} = \mathbf{a}_3$, meaning the deformed normal remains normal and of unit length. In strain measures:
 
 $$
 \delta_\alpha = d_\alpha - D_\alpha = 0,\qquad
@@ -1172,30 +1171,30 @@ $$
 \tag{5.18}
 $$
 
-但**保留中等大小挠度**（$w \sim h$，$h$ 为板厚），使得面内应变 $e_{\alpha\beta}$ 包含转角二次项。为此引入中面位移场：
+However, **moderately large deflections** ($w \sim h$, where $h$ is the plate thickness) are permitted, so the membrane strain $e_{\alpha\beta}$ retains quadratic terms in the rotation. Introduce the mid-surface displacement field:
 
 $$
 \mathbf{r}(\theta^\alpha) = \mathbf{r}_0(\theta^\alpha) + u^\beta\mathbf{a}_\beta + w\mathbf{n},
 \tag{5.19}
 $$
 
-其中 $\mathbf{n}$ 为初始中面法向。对薄平板（$A_{\alpha\beta}=\delta_{\alpha\beta}$、$b_{\alpha\beta}=0$），直角坐标下 $e_{\alpha\beta}$ 精确到 $O(w^2)$ 为：
+where $\mathbf{n}$ is the initial unit normal. For an initially flat plate ($A_{\alpha\beta}=\delta_{\alpha\beta}$, $b_{\alpha\beta}=0$), in Cartesian coordinates $e_{\alpha\beta}$ expanded to $O(w^2)$ is:
 
 $$
 e_{\alpha\beta} = \tfrac12(u_{\alpha,\beta} + u_{\beta,\alpha}) + \tfrac12 w_{,\alpha}w_{,\beta},
 \tag{5.20}
 $$
 
-曲率变化为：
+and the curvature change is:
 
 $$
 \kappa_{\alpha\beta} \equiv \kappa_{3\alpha}|_{\mathbf{d}=\mathbf{a}_3} = -w_{,\alpha\beta}.
 \tag{5.21}
 $$
 
-(5.18) 中的二次项 $w_{,\alpha}w_{,\beta}$ 是 von Kármán 理论的关键：板的横向挠度在中等大小下会引起中面拉伸，产生面内薄膜力。这些薄膜力反过来影响弯曲刚度，导致载荷–挠度关系的非线性。
+The quadratic term $w_{,\alpha}w_{,\beta}$ in (5.18) is the hallmark of von Kármán theory: transverse deflections of moderate amplitude stretch the mid-surface, generating in-plane membrane forces that feed back into the bending response, producing a nonlinear load–deflection relation.
 
-**本构**（各向同性线弹性板）：
+**Constitutive law** (isotropic linear elastic plate):
 
 $$
 \begin{aligned}
@@ -1205,7 +1204,7 @@ M^{\beta\alpha} &= D\bigl[(1-\nu)\kappa^{\beta\alpha} + \nu\kappa^{\gamma}_{\;\g
 \tag{5.22}
 $$
 
-**von Kármán 方程组**：引入 Airy 应力函数 $\Phi$（满足 $N'^{\beta\alpha} = \varepsilon^{\beta\gamma}\varepsilon^{\alpha\delta}\Phi_{,\gamma\delta}$），平衡方程约化为两个耦合的四阶方程：
+**The von Kármán equations**: Introducing the Airy stress function $\Phi$ (such that $N'^{\beta\alpha} = \varepsilon^{\beta\gamma}\varepsilon^{\alpha\delta}\Phi_{,\gamma\delta}$), the equilibrium equations reduce to two coupled fourth-order PDEs:
 
 $$
 D\nabla^4 w = q + [\Phi, w],\qquad
@@ -1213,31 +1212,31 @@ D\nabla^4 w = q + [\Phi, w],\qquad
 \tag{5.23}
 $$
 
-其中 $[\cdot,\cdot]$ 为 Monge-Ampère 括号：
+where $[\cdot,\cdot]$ is the Monge-Ampère bracket:
 
 $$
 [f, g] = f_{,xx}g_{,yy} + f_{,yy}g_{,xx} - 2f_{,xy}g_{,xy}.
 \tag{5.24}
 $$
 
-方程组 (5.21) 揭示了 von Kármán 板的本质：左式为弯曲响应（含薄膜力作用），右式为薄膜响应（由几何非线性驱动）。两个方程通过 $[\Phi,w]$ 和 $[w,w]$ 高度耦合。
+System (5.21) captures the essence of von Kármán plate theory: the first equation describes bending under the combined action of transverse load and membrane forces, while the second governs the membrane response driven by geometric nonlinearity. The two equations are strongly coupled through $[\Phi,w]$ and $[w,w]$.
 
-> **适用范围**：$w \sim h$（挠度与板厚同量级），$w/L \lesssim 0.1$。当 $w \ll h$ 时退化为 Kirchhoff-Love 线性板（§5.2.2）；当 $w \gg h$ 时弯曲刚度可忽略，退化为薄膜理论（§3.7）。
+> **Applicability**: $w \sim h$ (deflection comparable to thickness), $w/L \lesssim 0.1$. When $w \ll h$, the theory reduces to the linear Kirchhoff–Love plate (§5.2.2); when $w \gg h$, bending stiffness becomes negligible and the membrane theory of §3.7 applies.
 
-#### 5.2.2 Kirchhoff-Love 板：小挠度线性化
+#### 5.2.2 Kirchhoff–Love Plate: Small-Deflection Linearization
 
-当挠度远小于板厚（$w \ll h$）时，(5.18) 中的二次项可忽略，面内与弯曲变形解耦。控制方程退化为双调和方程：
+When the deflection is much smaller than the thickness ($w \ll h$), the quadratic term in (5.18) can be neglected, decoupling in-plane and bending deformations. The governing equation reduces to the biharmonic equation:
 
 $$
 D\nabla^4 w = q,
 \tag{5.25}
 $$
 
-这是经典板理论中最基础的方程。对于简支、固支、自由边等标准边界条件，已有大量的解析解（Navier 双级数解、Levy 单级数解）。对应于 Cosserat 板理论，Kirchhoff-Love 板施加了完整的法线假设 (5.16) 和小变形线性化。
+the fundamental equation of classical plate theory. Analytical solutions for standard boundary conditions (simply supported, clamped, free edges) are available via Navier double-series or Levy single-series methods. Relative to the Cosserat plate, the Kirchhoff–Love plate imposes the full normal hypothesis (5.16) plus small-deformation linearization.
 
-#### 5.2.3 Reissner-Mindlin 板：含剪切变形的中厚板
+#### 5.2.3 Reissner–Mindlin Plate: Shear-Deformable Moderately Thick Plates
 
-Reissner-Mindlin 板放松了 $\mathbf{d} = \mathbf{a}_3$ 的法线假设，允许 $\delta_\alpha = d_\alpha \neq 0$（即横向剪切）。运动学：
+The Reissner–Mindlin plate relaxes the normal hypothesis $\mathbf{d} = \mathbf{a}_3$, allowing $\delta_\alpha = d_\alpha \neq 0$ (transverse shear). Kinematically:
 
 $$
 \gamma_{\alpha 3} \approx \delta_\alpha \neq 0,\qquad
@@ -1245,7 +1244,7 @@ $$
 \tag{5.26}
 $$
 
-其中 $\phi_\alpha$ 为独立截面转角。控制方程为两个耦合的二阶方程组（线性）：
+where $\phi_\alpha$ are the independent cross-sectional rotations. The governing equations form a coupled second-order system (linear):
 
 $$
 \begin{aligned}
@@ -1255,15 +1254,15 @@ D\nabla^2 \phi_\alpha + \tfrac{1+\nu}{2}D(\phi_{\beta,\beta\alpha} - \phi_{\alph
 \tag{5.27}
 $$
 
-当 $\kappa_s Gh \to \infty$（剪切刚度趋于无穷）时，$\delta_\alpha \to 0$、$\phi_\alpha \to -w_{,\alpha}$，退化为 Kirchhoff-Love 板 (5.23)。对中厚板（$h/L \gtrsim 1/10$），Reissner-Mindlin 理论比 Kirchhoff-Love 更准确。
+As $\kappa_s Gh \to \infty$ (infinite shear stiffness), $\delta_\alpha \to 0$ and $\phi_\alpha \to -w_{,\alpha}$, recovering the Kirchhoff–Love plate (5.23). For moderately thick plates ($h/L \gtrsim 1/10$), Reissner–Mindlin theory is significantly more accurate.
 
-### 5.3 壳的约化路径：一般壳 → DMV 壳
+### 5.3 Shell Reduction: General Shell → DMV Shell
 
-#### 5.3.1 DMV (Donnell–Mushtari–Vlasov) 壳理论
+#### 5.3.1 The DMV (Donnell–Mushtari–Vlasov) Shell Theory
 
-Cosserat 壳在工程壳理论中最核心的简化是 **DMV 近似**（Donnell–Mushtari–Vlasov），适用于**浅壳**（初始曲率半径 $R \gg$ 面内尺寸）和**中等挠度**（$w \sim h$）。其运动学假设与 von Kármán 板相同（$\mathbf{d} = \mathbf{a}_3$），但多出了初始曲率 $b_{\alpha\beta}$ 的贡献。
+The most widely used engineering simplification of the Cosserat shell is the **DMV approximation** (Donnell–Mushtari–Vlasov), applicable to **shallow shells** (radius of curvature $R \gg$ in-plane dimensions) with **moderate deflections** ($w \sim h$). The kinematic hypothesis is identical to the von Kármán plate ($\mathbf{d} = \mathbf{a}_3$), but the initial curvature $b_{\alpha\beta}$ contributes an additional term.
 
-**应变度量**在 DMV 近似下为：
+**Strain measures** under the DMV approximation:
 
 $$
 e_{\alpha\beta} = \tfrac12(u_{\alpha,\beta} + u_{\beta,\alpha}) + \tfrac12 w_{,\alpha}w_{,\beta} + b_{\alpha\beta} w,
@@ -1275,9 +1274,9 @@ $$
 \tag{5.29}
 $$
 
-与 von Kármán 板 (5.18) 相比，唯一新增的是 $b_{\alpha\beta}w$ 项——它反映初始曲率在横向挠度下产生的薄膜应变，即壳的**拱效应**（arch action）。
+Compared with the von Kármán plate (5.18), the sole new term is $b_{\alpha\beta}w$, which captures the **arch action**: the initial curvature generates membrane strain when the shell deflects transversely, coupling bending and stretching even without geometric nonlinearity.
 
-**DMV 控制方程**（采用 Airy 应力函数 $\Phi$，以直角投影坐标写出）：
+**DMV governing equations** (in Cartesian projection coordinates, using the Airy stress function $\Phi$):
 
 $$
 D\nabla^4 w = q + [\Phi, w] + \nabla_k^2\Phi,\qquad
@@ -1285,9 +1284,9 @@ D\nabla^4 w = q + [\Phi, w] + \nabla_k^2\Phi,\qquad
 \tag{5.30}
 $$
 
-其中 $\nabla_k^2$ 为**曲率算子**（对圆柱壳 $\nabla_k^2 = R^{-1}\partial^2/\partial x^2$）。与 von Kármán 板方程 (5.21) 对比，多出的 $-\nabla_k^2 w$ 和 $\nabla_k^2\Phi$ 项是壳区别于板的关键——**曲率耦合**导致薄膜力与弯曲变形通过初始几何直接相互作用，无需依赖 $[w,w]$ 这类非线性项。
+where $\nabla_k^2$ is the **curvature operator** (for a cylindrical shell, $\nabla_k^2 = R^{-1}\partial^2/\partial x^2$). Compared with the von Kármán plate equations (5.21), the extra terms $-\nabla_k^2 w$ and $\nabla_k^2\Phi$ are what distinguish shell from plate behavior—**curvature coupling** allows membrane and bending actions to interact through the initial geometry even in the absence of the nonlinear $[w,w]$ term.
 
-对于**圆柱壳**（半径 $R$，轴向 $x$，环向 $y$），(5.28) 化为经典的 Donnell 方程：
+For a **cylindrical shell** (radius $R$, axial coordinate $x$, circumferential $y$), (5.28) specializes to the classical Donnell equations:
 
 $$
 D\nabla^4 w = q + \Phi_{,yy} w_{,xx} + \Phi_{,xx} w_{,yy} - 2\Phi_{,xy} w_{,xy} + \frac{1}{R}\Phi_{,xx},
@@ -1299,72 +1298,71 @@ $$
 \tag{5.32}
 $$
 
-**适用范围**：
+**Range of validity**:
+- $R \gg h$ (thin shell)
+- $w \sim h$ (moderate deflection)
+- Shallow shell: $L \lesssim R/2$ (subtended angle $\lesssim 30^\circ$)
 
-- 初始曲率 $R \gg h$（薄壳）
-- 挠度 $w \sim h$（中等挠度）
-- 浅壳：面内尺寸 $L \lesssim R/2$（对应弧角 $\lesssim 30^\circ$）
+#### 5.3.2 Other Classical Shell Theories and Their Relation to DMV
 
-#### 5.3.2 其他经典壳理论与 DMV 的定位
+DMV is the most commonly used engineering shell theory, but it is by no means the only one. The table below situates it among other classical theories and their relation to the Cosserat shell:
 
-DMV 是工程壳理论中最常用的简化，但远非唯一。下表列出其他经典理论及其与 Cosserat 壳的关系：
+| Theory | Reduction Path | Cosserat Shell Correspondence | Application |
+|--------|----------------|-------------------------------|-------------|
+| **Kirchhoff–Love shell** | $\mathbf{d}=\mathbf{a}_3$ + linearization | Linear $e_{\alpha\beta},\kappa_{\alpha\beta}$ | Small-deflection thin shell |
+| **Reissner–Naghdi shell** | First-order shear deformation | $\delta_\alpha \neq 0$ retained | Moderately thick shell |
+| **Koiter shell** | $\mathbf{d}=\mathbf{a}_3$ + exact curvature | $e_{\alpha\beta}$ with full nonlinearity | Large deformation, arbitrary curvature |
+| **DMV shell** | $\mathbf{d}=\mathbf{a}_3$ + shallow + moderate rotation | (5.26)–(5.27) | Shallow shell, moderate deflection |
 
-| 理论                          | 约化方式                                      | 与 Cosserat 壳的对应                          | 适用场景           |
-| ----------------------------- | --------------------------------------------- | --------------------------------------------- | ------------------ |
-| **Kirchhoff–Love 壳**  | $\mathbf{d}=\mathbf{a}_3$ + 线性化          | $e_{\alpha\beta},\kappa_{\alpha\beta}$ 线性 | 小变形薄壳         |
-| **Reissner–Naghdi 壳** | 一阶剪切变形                                  | $\delta_\alpha \neq 0$ 保留                 | 中厚壳             |
-| **Koiter 壳**           | $\mathbf{d}=\mathbf{a}_3$ + 精确曲率        | $e_{\alpha\beta}$ 含精确非线性              | 任意曲率薄壳大变形 |
-| **DMV 壳**              | $\mathbf{d}=\mathbf{a}_3$ + 浅壳 + 中等转角 | (5.26)–(5.27)                                | 浅壳中等变形       |
-
-Koiter (1960, 1966) 理论可视为 DMV 在任意曲率下的推广，其应变能统一包含薄膜与弯曲项：
+Koiter's theory (1960, 1966) generalizes DMV to arbitrary curvature, with a strain energy that unifies membrane and bending terms:
 
 $$
 \mathcal{E} = \tfrac12\int_\omega \bigl[ h \mathbf{A}^{\alpha\beta\gamma\delta} \rho_{\alpha\beta}\rho_{\gamma\delta} + \tfrac{h^3}{12} \mathbf{A}^{\alpha\beta\gamma\delta} \bar{\kappa}_{\alpha\beta}\bar{\kappa}_{\gamma\delta} \bigr] \mathrm{d}\omega,
 \tag{5.33}
 $$
 
-其中 $\rho_{\alpha\beta} = e_{\alpha\beta} + \tfrac12 w_{,\alpha}w_{,\beta} + \cdots$ 为含有几何非线性项的薄膜应变。当 $b_{\alpha\beta}$ 为常量且忽略高阶曲率项时，Koiter 理论退化为 DMV。
+where $\rho_{\alpha\beta} = e_{\alpha\beta} + \tfrac12 w_{,\alpha}w_{,\beta} + \cdots$ is the membrane strain including geometric nonlinearity. When $b_{\alpha\beta}$ is constant and higher-order curvature terms are neglected, Koiter's theory reduces to DMV.
 
-### 5.4 约化路径总览
+### 5.4 Overview of Reduction Paths
 
-以下从 Cosserat 理论的视角总结各经典理论的约化路径：
+The following table summarizes the reduction from the general Cosserat theory to each classical theory:
 
-| 约化步骤                                           | 杆                                               | 板                                                | 壳                                                          |
-| -------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- | ----------------------------------------------------------- |
-| **(0) 最一般**                               | Cosserat 杆：6 应变 + 6 曲率                     | Cosserat 板：3$e$ + 3 $\kappa$ + 2 $\delta$ | Cosserat 壳：3$e$ + 6 $\kappa_{i\alpha}$ + 3 $\delta$ |
-| **(I) 法线假设** $\mathbf{d}=\mathbf{a}_3$ | N/A                                              | 消去$\delta_\alpha, \delta_3$ → von Kármán   | 消去$\delta_\alpha, \delta_3$ → DMV/Koiter               |
-| **(II) 不可伸长+不可剪切**                   | $\gamma_{33}=\gamma_{\alpha 3}=0$ → Kirchhoff | N/A                                               | N/A                                                         |
-| **(III) 线性化**                             | Euler/Timoshenko                                 | Kirchhoff-Love                                    | Love/Flügge                                                |
-| **(IV) 浅壳近似**                            | N/A                                              | N/A                                               | DMV（叠加到 I+III）                                         |
+| Reduction Step | Rod | Plate | Shell |
+|----------------|-----|-------|-------|
+| **(0) Fully general** | Cosserat rod: 6 strains + 6 curvatures | Cosserat plate: 3 $e$ + 3 $\kappa$ + 2 $\delta$ | Cosserat shell: 3 $e$ + 6 $\kappa_{i\alpha}$ + 3 $\delta$ |
+| **(I) Normal hypothesis** $\mathbf{d}=\mathbf{a}_3$ | N/A | Eliminate $\delta_\alpha, \delta_3$ → von Kármán | Eliminate $\delta_\alpha, \delta_3$ → DMV/Koiter |
+| **(II) Inextensible + unshearable** | $\gamma_{33}=\gamma_{\alpha 3}=0$ → Kirchhoff | N/A | N/A |
+| **(III) Linearization** | Euler/Timoshenko | Kirchhoff–Love | Love/Flügge |
+| **(IV) Shallow shell** | N/A | N/A | DMV (superposed on I+III) |
 
-**关键结论**：
+**Key conclusions**:
 
-1. **约束即简化**：每一级约束减少一个应变自由度，对应一类经典理论。Kirchhoff 杆约束了 3 个应变，von Kármán 板约束了 3 个应变（$\delta_i$），DMV 壳同理。
-2. **非线性来源分层**：
+1. **Constraint implies simplification**: Each level of constraint eliminates one or more strain degrees of freedom, producing a corresponding classical theory. The Kirchhoff rod constrains 3 strains; the von Kármán plate constrains 3 ($\delta_i$); the DMV shell does the same.
 
-   - 几何非线性（大转角）→ Kirchhoff 杆、Euler 弹性线
-   - 薄膜-弯曲耦合非线性（中等挠度）→ von Kármán 板、DMV 壳
-   - 曲率耦合（线性但源于初始几何）→ DMV 壳的 $\nabla_k^2$ 项
-   - 材料非线性 → 替换 $A$ 为非线性函数（超出本节范围）
-3. **选择指南**（从 Cosserat 视角）：
+2. **Sources of nonlinearity are layered**:
+   - Geometric nonlinearity (large rotation) → Kirchhoff rod, Euler elastica
+   - Membrane–bending coupling (moderate deflection) → von Kármán plate, DMV shell
+   - Curvature coupling (linear, from initial geometry) → DMV $\nabla_k^2$ terms
+   - Material nonlinearity → replace $A$ with a nonlinear function (beyond this section)
 
-   - 若问题中所有 $\gamma_{ij}$ 均可忽略 → Kirchhoff 杆（而非完整的 Cosserat 杆）
-   - 若 $\delta_\alpha$ 可忽略但 $e_{\alpha\beta}$ 含 $w_{,\alpha}w_{,\beta}$ → von Kármán 板
-   - 若 $b_{\alpha\beta} w$ 不可忽略 → 使用壳理论而非板理论
-   - 若初始曲率大或精度要求高 → Koiter 壳优于 DMV
-   - 以上均不满足 → 回到第三、四部分的完整 Cosserat 理论
+3. **Selection guide** (from the Cosserat perspective):
+   - If all $\gamma_{ij}$ can be neglected → Kirchhoff rod (not the full Cosserat rod)
+   - If $\delta_\alpha$ are negligible but $e_{\alpha\beta}$ contains $w_{,\alpha}w_{,\beta}$ → von Kármán plate
+   - If $b_{\alpha\beta} w$ is significant → use shell theory, not plate theory
+   - If the initial curvature is large or high accuracy is needed → Koiter shell over DMV
+   - If none of the above apply → return to the full Cosserat theory of Parts 3 and 4
 
-> **总结 5.1**
+> **Summary 5.1**
 >
-> - Kirchhoff 杆 = Cosserat 杆 + $\gamma_{33}=\gamma_{\alpha 3}=0$；Euler 弹性线进一步限制为平面直杆，控制方程为 $\ddot{\phi} + (P/EI)\sin\phi = 0$
-> - von Kármán 板 = Cosserat 板 + $\mathbf{d}=\mathbf{a}_3$ + 中等挠度；非线性源自 $e_{\alpha\beta}$ 中的 $w_{,\alpha}w_{,\beta}$
-> - DMV 壳 = von Kármán 板 + 浅壳曲率项 $b_{\alpha\beta}w$；Koiter 理论推广到任意曲率
-> - Timoshenko 梁和 Reissner-Mindlin 板分别通过放松剪切约束（$\gamma_{\alpha 3} \neq 0$）扩展了 Kirchhoff 和 Kirchhoff-Love 理论的使用范围
-> - 全部经典理论均可视为 Cosserat 一般理论在特定约束与线性化下的特例，建议根据问题的变形模式与精度需求逐级选择
+> - The Kirchhoff rod = Cosserat rod + $\gamma_{33}=\gamma_{\alpha 3}=0$; the Euler elastica further restricts to a straight, planar rod, governed by $\ddot{\phi} + (P/EI)\sin\phi = 0$
+> - The von Kármán plate = Cosserat plate + $\mathbf{d}=\mathbf{a}_3$ + moderate deflection; nonlinearity arises from $w_{,\alpha}w_{,\beta}$ in $e_{\alpha\beta}$
+> - The DMV shell = von Kármán plate + shallow-shell curvature term $b_{\alpha\beta}w$; Koiter's theory extends DMV to arbitrary curvature
+> - The Timoshenko beam and Reissner–Mindlin plate extend the Kirchhoff and Kirchhoff–Love theories, respectively, by relaxing the shear constraint ($\gamma_{\alpha 3} \neq 0$)
+> - All classical theories are special cases of the general Cosserat theory under specific constraints and linearizations; choose the simplest theory that captures the dominant physics of the problem
 
----
+--
 
-## 第六部分 — 活动标架下的杆、板、壳理论
+## Part 6 — Rod, Plate, and Shell Theories in Moving Frames
 
 前面各节均在随体坐标系（convected coordinates）中建立理论，基矢量 $\mathbf{a}_i$ 随物质变形。本节改用**单位正交活动标架**（moving orthonormal frame），其基矢量 $\mathbf{e}_i$ 满足 $\mathbf{e}_i\cdot\mathbf{e}_j = \delta_{ij}$，方向由曲线/曲面的局部几何决定。活动标架在推导简化本构和数值实现方面有重要优势。
 
@@ -1695,9 +1693,9 @@ $$
 
 ---
 
-## 第七部分 — Cosserat 理论与 Ciarlet 微分几何壳理论的对比
+## Part 7 — Comparison of Cosserat and Ciarlet's Differential Geometry Shell Theory
 
-### 7.1 Ciarlet 壳理论概述
+### 7.1 Overview of Ciarlet's Shell Theory
 
 Ciarlet 的壳理论（[Ciarlet 2000, 2005]）从**三维弹性力学**出发，使用**渐近展开法**（asymptotic expansion）以厚度为小参数进行维度约化，而非引入独立 director。其核心框架建立在经典微分几何基础之上：
 
@@ -1719,7 +1717,7 @@ $$
 
 **次低阶（Koiter 理论）**：$O(\varepsilon^2)$ 项给出 Koiter 壳方程，同时包含膜和弯曲刚度。
 
-### 7.2 应变度量对比
+### 7.2 Comparison of Strain Measures
 
 **Ciarlet/Koiter 的应变度量**：完全由曲面第一、第二基本型的变化定义。
 
@@ -1751,7 +1749,7 @@ $$
 - Cosserat 的 $\delta_i$ 描述 director 的伸缩与剪切，在 Ciarlet 理论中无对应量（法向假设为直线且垂直于中面）。
 - 当 Cosserat 施加强约束 $\mathbf{d} = \mathbf{a}_3$（不可伸长、不可剪切）时，$\kappa_{\alpha\beta}$ 退化为 $b_{\alpha\beta}$ 的变化，即 $\rho_{\alpha\beta}$。
 
-### 7.3 能量与变分框架对比
+### 7.3 Comparison of Energy and Variational Frameworks
 
 **Ciarlet/Koiter 能量**：
 
@@ -1770,7 +1768,7 @@ $$
 
 其中 $A$ 可包含任意非线性函数。无强制性的一般理论保证（须通过本构假设逐例验证）。
 
-### 7.4 渐近分析与$\Gamma$-收敛
+### 7.4 Asymptotic Analysis and $\Gamma$-Convergence
 
 Ciarlet 方法的核心结果：当厚度 $\varepsilon \to 0$ 时，3D 弹性问题的解在适当意义下收敛到 2D 壳模型的解。
 
@@ -1786,7 +1784,7 @@ $$
 - 未约束 Cosserat 壳的 $\Gamma$-极限得到包含横向剪切能的 Reissner–Mindlin 型能量
 - 引入界面能的 Cosserat 模型（$\mu_c = \infty$）退化为二阶梯度模型（second gradient model）
 
-### 7.5 理论对比汇总
+### 7.5 Theoretical Comparison Summary
 
 | 对比方面               | Cosserat 壳理论                                                            | Ciarlet/Koiter 壳理论                                          |
 | ---------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -1804,7 +1802,7 @@ $$
 | **剪切修正系数** | 从 3D 自然确定（如 F1 模态的$\kappa = 6(1+\nu)^2/(7+14\nu+8\nu^2)$）     | 需额外引入（Reissner–Mindlin 型中）                           |
 | **数值方法**     | Cosserat 点（Rubin 2001），无剪切闭锁                                      | 标准有限元 + 剪切闭锁需处理                                    |
 
-### 7.6 桥接：当 Cosserat → Ciarlet
+### 7.6 Bridging Cosserat → Ciarlet
 
 当 Cosserat 壳的 director 被约束为单位法向且无横向剪切时，两者统一。设：
 
@@ -1833,7 +1831,7 @@ $$
 
 ---
 
-## 附录 — 从热力学第一定律出发的完整推导链
+## Appendix — Complete Derivation Chain from the First Law of Thermodynamics
 
 本附录详细展示从**热力学第一定律的积分形式**出发，经由**叠加刚体运动下的不变性**，推导杆和壳理论的完整方程链。附录中不省略任何中间步骤。
 
@@ -2340,7 +2338,7 @@ $$
 
 ---
 
-## 参考文献
+## References
 
 - Green, A. E. & Laws, N. (1966). A general theory of rods. *Proc. R. Soc. Lond. A*, 293, 145.
 - Green, A. E., Laws, N. & Naghdi, P. M. (1968). Rods, plates and shells. *Proc. Camb. Phil. Soc.*, 64, 895.

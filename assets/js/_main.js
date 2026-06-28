@@ -2,6 +2,77 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
+/* ==========================================================================
+   Password protection helpers
+   ========================================================================== */
+
+function base64ToBytes(b64) {
+  var bin = atob(b64);
+  var bytes = new Uint8Array(bin.length);
+  for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
+}
+
+async function deriveKey(password, salt) {
+  var enc = new TextEncoder();
+  var keyMaterial = await crypto.subtle.importKey("raw", enc.encode(password), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: base64ToBytes(salt), iterations: 600000, hash: "SHA-256" },
+    keyMaterial,
+    { name: "AES-GCM", length: 256 },
+    false,
+    ["decrypt"]
+  );
+}
+
+async function decryptContent(password, data) {
+  var key = await deriveKey(password, data.salt);
+  var ct = base64ToBytes(data.data);
+  var tag = base64ToBytes(data.tag);
+  var combined = new Uint8Array(ct.length + tag.length);
+  combined.set(ct);
+  combined.set(tag, ct.length);
+  var decrypted = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv: base64ToBytes(data.iv) },
+    key,
+    combined
+  );
+  return new TextDecoder().decode(decrypted);
+}
+
+function renderMathIn(container) {
+  if (typeof renderMathInElement === "function") {
+    try {
+      renderMathInElement(container, {
+        delimiters: [
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false }
+        ],
+        throwOnError: false
+      });
+    } catch (_) {}
+  }
+}
+
+function protectMathIn(md) {
+  var blocks = [];
+  var s = md.replace(/(\$\$[\s\S]*?\$\$)/g, function (m) {
+    blocks.push(m);
+    return "\x00MATH_" + (blocks.length - 1) + "\x00";
+  });
+  s = s.replace(/(\$(?:[^$\n]+?)\$)/g, function (m) {
+    blocks.push(m);
+    return "\x00MATH_" + (blocks.length - 1) + "\x00";
+  });
+  return { s: s, blocks: blocks };
+}
+
+function restoreMathIn(html, blocks) {
+  return html.replace(/\x00MATH_(\d+)\x00/g, function (_, idx) { return blocks[parseInt(idx)]; });
+}
+
 $(document).ready(function () {
   // Language auto-redirect on homepage based on saved preference
   var langPref = localStorage.getItem("lang");
@@ -74,6 +145,33 @@ $(document).ready(function () {
       bumpIt();
     }
   }, 250);
+
+  // Password protection unlock
+  if (window.ENCRYPTION_DATA && document.getElementById("unlock-btn")) {
+    $("#unlock-btn").on("click", async function () {
+      var pw = $("#password-input").val();
+      if (!pw) return;
+      $("#password-error").hide();
+      $("#password-loading").show();
+      try {
+        var md = await decryptContent(pw, window.ENCRYPTION_DATA);
+        if (typeof marked === "undefined") throw new Error("marked not loaded");
+        var protected_ = protectMathIn(md);
+        var html = marked.parse(protected_.s);
+        html = restoreMathIn(html, protected_.blocks);
+        $("#password-gate").hide();
+        $("#protected-content").html(html).show();
+        renderMathIn(document.getElementById("protected-content"));
+      } catch (e) {
+        $("#password-error").show();
+      }
+      $("#password-loading").hide();
+    });
+    $("#password-input").on("keypress", function (e) {
+      if (e.which === 13) $("#unlock-btn").click();
+    });
+    $("#password-input").focus();
+  }
 
   // FitVids init
   fitvids();

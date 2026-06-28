@@ -32,6 +32,9 @@
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
+      {% if post.password_protected %}
+        <i class="fa fa-lock" style="color:#c33;font-size:0.8em;margin-left:0.3em" title="Password protected"></i>
+      {% endif %}
       {% if post.lang %}
         <span class="lang-badge lang-{{ post.lang }}">{% if post.lang == "zh" %}中文{% else %}EN{% endif %}</span>
       {% endif %}
