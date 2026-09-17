@@ -3,7 +3,6 @@ title: "Synergistic prestress and interfacial interactions reinforce layered bru
 collection: publications
 permalink: /publication/2026-01-01-Synergistic-prestress-and-interfacial-interactions-reinforce-layered-brushiteSodium-alginate-composites
 date: 2026-01-01
-categories: [材料力学行为多尺度设计]
 venue: 'Advanced Functional Materials 36(9), e13381'
 citation: 'Chenglong Zhu, Quan Wang, <strong>Jiahao Li</strong>, Yinbo Zhu, Rongguang Che, Yidi Li, Jingjiang Wei, Siqian Lu, Hao Xie, Hao Wang, others, "Synergistic prestress and interfacial interactions reinforce layered brushite/Sodium alginate composites." <strong>Advanced Functional Materials 36(9), e13381, 2026.</strong>'
 ---

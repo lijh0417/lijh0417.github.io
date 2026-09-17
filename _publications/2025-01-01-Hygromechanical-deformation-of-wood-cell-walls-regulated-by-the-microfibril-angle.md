@@ -3,7 +3,6 @@ title: "Hygromechanical deformation of wood cell walls regulated by the microfib
 collection: publications
 permalink: /publication/2025-01-01-Hygromechanical-deformation-of-wood-cell-walls-regulated-by-the-microfibril-angle
 date: 2025-01-01
-categories: [材料力学行为多尺度设计]
 venue: 'Journal of Materials Chemistry A 13(3), 1973--1982'
 citation: 'RongZhuang Song, ZeZhou He, <strong>JiaHao Li</strong>, YuanZhen Hou, HengAn Wu, YinBo Zhu, "Hygromechanical deformation of wood cell walls regulated by the microfibril angle." <strong>Journal of Materials Chemistry A 13(3), 1973--1982, 2025.</strong>'
 ---

@@ -3,7 +3,6 @@ title: "Rejuvenation of Mechanical Fatigue Resistance in Two-dimensional Ferroel
 collection: publications
 permalink: /publication/2025-01-01-Rejuvenation-of-Mechanical-Fatigue-Resistance-in-Two-dimensional-Ferroelectric-CuInP2S6-by-Reversing-Ionic-Motion
 date: 2025-01-01
-categories: [材料力学行为多尺度设计]
 venue: 'Unknown venue'
 citation: 'Guorui Wang, Xiqi Wu, Shuai Han, Zhaoheng Zhang, Yafei Wang, <strong>Jiahao Li</strong>, Zhao Zhang, Dong Wang, Xinshuai Peng, Yixuan She, others, "Rejuvenation of Mechanical Fatigue Resistance in Two-dimensional Ferroelectric CuInP2S6 by Reversing Ionic Motion." <strong>Unknown venue, 2025.</strong>'
 ---

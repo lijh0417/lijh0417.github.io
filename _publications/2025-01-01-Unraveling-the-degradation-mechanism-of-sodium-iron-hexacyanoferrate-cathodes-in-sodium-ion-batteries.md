@@ -3,7 +3,6 @@ title: "Unraveling the degradation mechanism of sodium iron hexacyanoferrate cat
 collection: publications
 permalink: /publication/2025-01-01-Unraveling-the-degradation-mechanism-of-sodium-iron-hexacyanoferrate-cathodes-in-sodium-ion-batteries
 date: 2025-01-01
-categories: [材料力学行为多尺度设计]
 venue: 'Energy &amp; Environmental Science 18(19), 8791--8802'
 citation: 'Junyi Dai, <strong>Jiahao Li</strong>, Fangxin Ling, Yu Yao, Yanru Wang, Mingze Ma, Jian Feng, Jun Xia, Yinbo Zhu, Hai Yang, others, "Unraveling the degradation mechanism of sodium iron hexacyanoferrate cathodes in sodium ion batteries." <strong>Energy &amp; Environmental Science 18(19), 8791--8802, 2025.</strong>'
 ---

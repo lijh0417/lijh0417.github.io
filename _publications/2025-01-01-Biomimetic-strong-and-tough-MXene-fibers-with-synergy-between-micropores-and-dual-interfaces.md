@@ -3,9 +3,8 @@ title: "Biomimetic strong and tough MXene fibers with synergy between micropores
 collection: publications
 permalink: /publication/2025-01-01-Biomimetic-strong-and-tough-MXene-fibers-with-synergy-between-micropores-and-dual-interfaces
 date: 2025-01-01
-categories: [材料力学行为多尺度设计]
-venue: 'Nature Communications 16(1), 9645'
-citation: 'Jianfeng Gu, Donghui Li, Yichen Ren, <strong>JiaHao Li</strong>, Xinyi Ji, Xue Liu, Weiqing Zhan, Xialian Zhao, Quan Wang, Xiewen Liu, others, "Biomimetic strong and tough MXene fibers with synergy between micropores and dual interfaces." <strong>Nature Communications 16(1), 9645, 2025.</strong>'
+venue: 'Nature communications 16(1), 9645'
+citation: 'Jianfeng Gu, Donghui Li, Yichen Ren, <strong>JiaHao Li</strong>, Xinyi Ji, Xue Liu, Weiqing Zhan, Xialian Zhao, Quan Wang, Xiewen Liu, others, "Biomimetic strong and tough MXene fibers with synergy between micropores and dual interfaces." <strong>Nature communications 16(1), 9645, 2025.</strong>'
 ---
 
 **Authors:** Jianfeng Gu, Donghui Li, Yichen Ren, **JiaHao Li**, Xinyi Ji, Xue Liu, Weiqing Zhan, Xialian Zhao, Quan Wang, Xiewen Liu, others

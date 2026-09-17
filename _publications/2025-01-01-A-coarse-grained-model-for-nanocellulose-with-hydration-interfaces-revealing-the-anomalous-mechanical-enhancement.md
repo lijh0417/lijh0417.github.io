@@ -3,7 +3,6 @@ title: "A coarse-grained model for nanocellulose with hydration interfaces revea
 collection: publications
 permalink: /publication/2025-01-01-A-coarse-grained-model-for-nanocellulose-with-hydration-interfaces-revealing-the-anomalous-mechanical-enhancement
 date: 2025-01-01
-categories: [材料力学行为多尺度设计]
 venue: 'Extreme Mechanics Letters 78, 102361'
 citation: 'HaoWen Wan, YuanZhen Hou, <strong>JiaHao Li</strong>, RongZhuang Song, YinBo Zhu, HengAn Wu, "A coarse-grained model for nanocellulose with hydration interfaces revealing the anomalous mechanical enhancement." <strong>Extreme Mechanics Letters 78, 102361, 2025.</strong>'
 ---

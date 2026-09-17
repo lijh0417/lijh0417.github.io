@@ -3,7 +3,6 @@ title: "Thickness-Driven Phase Transition and Electromechanical Optimization in 
 collection: publications
 permalink: /publication/2026-01-01-Thickness-Driven-Phase-Transition-and-Electromechanical-Optimization-in-2D-Ferroelectric-CuInP2S6
 date: 2026-01-01
-categories: [材料力学行为多尺度设计]
 venue: 'ACS Materials Letters 8(4), 1085--1093'
 citation: 'Xiqi Wu, Guorui Wang, <strong>Jiahao Li</strong>, Xinan Chen, Yafei Wang, Zhao Zhang, Yixuan She, Zhong Zhang, "Thickness-Driven Phase Transition and Electromechanical Optimization in 2D Ferroelectric CuInP2S6." <strong>ACS Materials Letters 8(4), 1085--1093, 2026.</strong>'
 ---
