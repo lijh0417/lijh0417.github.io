@@ -29,6 +29,7 @@ Skills
 
 Awards & Achievements
 ======
+* **2026** --- National Scholarship, University of Science and Technology of China
 * **2025** --- National Scholarship, University of Science and Technology of China
 * **2024** --- National Scholarship, University of Science and Technology of China
 * **2022** --- Outstanding Graduate, Xi'an Jiaotong University
