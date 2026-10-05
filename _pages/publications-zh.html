@@ -7,20 +7,12 @@ ref: publications
 author_profile: true
 ---
 
-{% assign cat_list = "几何弹性理论|材料力学行为多尺度设计" | split: "|" %}
-{% assign cat_labels = "几何弹性理论|材料力学行为多尺度设计" | split: "|" %}
+{% assign all_pubs = site.publications | sort: "date" | reverse %}
+{% assign pubs_by_year = all_pubs | group_by_exp: "pub", "pub.date | date: '%Y'" %}
 
-{% for cat in cat_list %}
-  {% assign idx = forloop.index0 %}
-  {% assign cat_pubs = site.publications | where_exp: "pub", "pub.categories contains cat" | sort: "date" | reverse %}
-  {% if cat_pubs.size > 0 %}
-    {% assign pubs_by_year = cat_pubs | group_by_exp: "pub", "pub.date | date: '%Y'" %}
-    <h2>{{ cat_labels[idx] }}</h2>
-    {% for year in pubs_by_year %}
-      <h3>{{ year.name }}</h3>
-      {% for post in year.items %}
-        {% include archive-single.html %}
-      {% endfor %}
-    {% endfor %}
-  {% endif %}
+{% for year in pubs_by_year %}
+  <h2>{{ year.name }}</h2>
+  {% for post in year.items %}
+    {% include archive-single.html %}
+  {% endfor %}
 {% endfor %}
