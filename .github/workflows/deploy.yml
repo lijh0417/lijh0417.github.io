@@ -36,6 +36,7 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Encrypt protected content
+        if: ${{ secrets.POST_PASSWORD != '' }}
         run: node scripts/encrypt-site.js
         env:
           POST_PASSWORD: ${{ secrets.POST_PASSWORD }}
