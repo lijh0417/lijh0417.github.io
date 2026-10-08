@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      POST_PASSWORD: ${{ secrets.POST_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,10 +38,8 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Encrypt protected content
-        if: ${{ secrets.POST_PASSWORD != '' }}
+        if: ${{ env.POST_PASSWORD != '' }}
         run: node scripts/encrypt-site.js
-        env:
-          POST_PASSWORD: ${{ secrets.POST_PASSWORD }}
 
       - uses: actions/configure-pages@v4
 
